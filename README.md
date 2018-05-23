@@ -165,6 +165,14 @@ In the browser, you should see that your data can now be defined per 'my-chart' 
 
 Today, we will focus on displaying and manipulating data.
 
+### Flex Layouts
+
+1. Read the below:
+
+https://docs.oracle.com/en/middleware/jet/5/develop/oracle-jet-flex-layouts.html#GUID-0F39F088-0814-42D2-9DC4-9EDF7656A120
+
+2. Use the classes oj-flex, oj-flex-item, oj-panel, oj-panel-alt1, and oj-panel-margin in your Views.
+
 ### Visualizing Data from a File
 
 In the first scenario, we move our hardcoded data from the ViewModels into a JSON file. From there, we load the data into our ViewModel, parse it, and then push it into a variable referenced in our view.
