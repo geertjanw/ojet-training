@@ -1,6 +1,4 @@
-# Workshop Scenarios
-
-## Three Day Oracle JET Workshop
+# Oracle JET Training Materials
 
 #### Day 1: Basics
 
