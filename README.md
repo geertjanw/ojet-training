@@ -167,7 +167,7 @@ Today, we will focus on displaying and manipulating data.
 
 ### Visualizing Data from a File
 
-In the first scenario, we move our hardcoded data from the CCA component into a JSON file. From there, we load the data into our ViewModel, parse it, and then push it into a variable referenced in our view.
+In the first scenario, we move our hardcoded data from the ViewModels into a JSON file. From there, we load the data into our ViewModel, parse it, and then push it into a variable referenced in our view.
 
 1. Move the data into a file named 'carsales.json', in a new folder named 'data', 'src/js'. Here's what its content should look like:
 
@@ -216,6 +216,8 @@ for (var i = 0; i < carSalesContent.length; i++) {
 ```
 
 In the browser, you should now see that the data is being loaded from a file. 
+
+Do the above for all the data in all your ViewModels, i.e., separate the data from your logic.
 
 ### Visualizing Data from a REST Endpoint
 
