@@ -11,8 +11,8 @@
    * Visualizing Data from a File
    * Visualizing Data from a REST Endpoint
    * Selecting a Row in the Table
-   * Adding Responsive Design
    * Adding CRUD Functionality
+   * Adding Responsive Design
    
 ## Day 1   
 
@@ -313,6 +313,12 @@ self.currentRowListener = function (event, data) {
 Selected: <span id="selectedName"></span>
 ```
 
+### Adding CRUD Functionality
+
+Explore this section in the Cookbook:
+
+http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=crud&demo=table
+
 ### Adding Responsive Design
 
 We'll create another table, different to the one above, this time to display different data depending on the resolution:
@@ -390,16 +396,6 @@ self.getCols();
 ```
 
 Resize the browser and notice that different columns are displayed depending on the resolution.
-
-### Adding CRUD Functionality
-
-Explore this section in the Cookbook:
-
-http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=crud&demo=table
-
-
-
-
 
 
 
