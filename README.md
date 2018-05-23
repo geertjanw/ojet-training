@@ -287,6 +287,10 @@ Now you should see the data from the REST endpoint in your table.
 
 http://www.oracle.com/webfolder/technetwork/jet/jsdocs/oj.ojTable.html
 
+Especially look at:
+
+http://www.oracle.com/webfolder/technetwork/jet/jsdocs/oj.ojTable.html#event:beforeCurrentRow
+
 2. In the ojTable in the View:
 
 ```html #button { border: none; }
