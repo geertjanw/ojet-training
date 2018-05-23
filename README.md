@@ -293,7 +293,11 @@ Now you should see the data from the REST endpoint in your table.
 
 ### Selecting a Row in the Table
 
-1. Read the JS documentation for ojTable:
+1. Read about ojTable events:
+
+http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=table&demo=eventTable
+
+2. Read the JS documentation for ojTable:
 
 http://www.oracle.com/webfolder/technetwork/jet/jsdocs/oj.ojTable.html
 
@@ -301,13 +305,13 @@ Especially look at:
 
 http://www.oracle.com/webfolder/technetwork/jet/jsdocs/oj.ojTable.html#event:beforeCurrentRow
 
-2. In the ojTable in the View:
+3. In the ojTable in the View:
 
 ```html #button { border: none; }
 on-oj-before-current-row='[[currentRowListener]]'
 ```
 
-3. In the ViewModel:
+4. In the ViewModel:
 
 ```js #button { border: none; }
 self.currentRowListener = function (event, data) {
@@ -321,12 +325,11 @@ self.currentRowListener = function (event, data) {
 };
 ```
 
-4. In the View, to display the selected name:
+5. In the View, to display the selected name:
 
 ```js #button { border: none; }
 Selected: <span id="selectedName"></span>
 ```
-
 ### Adding CRUD Functionality
 
 Explore this section in the Cookbook:
