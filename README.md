@@ -549,10 +549,16 @@ document.addEventListener("localeListener", function () {
 
 ### Internationalizing the Oracle JET Components
 
-1. Add the below to 'dashboarf.html':
+1. In 'dashboard.html', add the following:
 
 ```html #button { border: none; }
-<oj-input-date-time id="date"></oj-input-date-time>
+<oj-input-date id="date"></oj-input-date>
 ```
 
-2. In the application, switch from English to Arabic, and notice the calendar automatically displays Arabic months.
+2. In 'dashboard.js', include the following in the 'define' block:
+
+```js #button { border: none; }
+'ojs/ojdatetimepicker'
+```
+
+3. In the application, switch from English to Arabic, and notice the calendar automatically displays Arabic months.
