@@ -569,7 +569,9 @@ document.addEventListener("localeListener", function (event) {
 }); 
 ```
 
- This is a very powerful way of using event based programming.
+This is a very powerful way of using event based programming.
+
+More details relating to this: https://javascript.info/bubbling-and-capturing
 
 ### Internationalizing the Oracle JET Components
 
