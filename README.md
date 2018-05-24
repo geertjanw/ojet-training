@@ -457,6 +457,41 @@ self.setLangAction = function (event) {
 
 3. In the application, find the new 'Arabic' menu item, select it, and notice that the user interface switches from right to left.
 
+### Adding Translation Bundles
+
+1. In 'src/js', add a new folder named 'resources'. 
+
+2. In the 'resources' folder, create a folder named 'nls', containing 'l10.js', which is a file with this content:
+
+```js #button { border: none; }
+define({
+  "root": {
+    "dashboardLabel": "Dashboard",
+},
+  "ar": true,
+});
+```
+
+3. In the 'nls' folder, create a folder named 'ar', containing 'l10.js', which is a file with this content:
+
+```js #button { border: none; }
+define({
+  "dashboardLabel":"عدادات",
+});
+```
+
+4. In 'main.js', under the 'shim' section, add the following so that the translation bundles are found:
+
+```js #button { border: none; }
+config: {
+    ojL10n: {
+      merge: {
+        'ojtranslations/nls/ojtranslations': 'resources/nls/l10'
+      }
+    }
+  }
+```
+
 ### Internationalizing the Module Tabs
 
 Let's now internationalize the 'Dashboard', 'Incidents', 'Customers', and 'About' items in the tabs of the application, which are defined in the 'appController.js' file.
