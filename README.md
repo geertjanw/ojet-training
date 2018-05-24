@@ -547,3 +547,8 @@ document.addEventListener("localeListener", function () {
 
 6. Do the same for other texts, in the other modules in the application.
 
+
+```html #button { border: none; }
+<oj-input-date id="date"></oj-input-date>
+```
+
