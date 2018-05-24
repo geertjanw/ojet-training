@@ -531,7 +531,7 @@ self.dashboardLabel(oj.Translations.getTranslatedString('dashboardLabel'));
 self.dashboardHeaderLabel = ko.observable(oj.Translations.getTranslatedString('dashboardHeader'));
 ```
 
-3. In 'dashboard.js', listen for the localelistener event and update the dashboard header label with the current state of the translation bundle:
+3. In 'dashboard.js', listen for the 'localelistener' event and update the dashboard header label with the current state of the translation bundle:
 
 ```js #button { border: none; }
 document.addEventListener("localeListener", function () {
@@ -548,6 +548,29 @@ document.addEventListener("localeListener", function () {
 5. In the application, switch to Arabic and notice the H1 is now Arabic.
 
 6. Do the same for other texts, in the other modules in the application.
+
+### Experiment with the Event Based Programming
+
+1. Replace the EventListener in 'appController.js', to include a 'params' variable with a 'detail' object for the second argument, as shown here:
+
+```js #button { border: none; }
+var params = {
+    'bubbles': true,
+    'detail': {'message': self.dashboardLabel()}
+};
+document.dispatchEvent(new CustomEvent('localeListener', params));
+```
+
+2. Next, rewrite how how the listener is used, with the callback having an event payload that contains the 'detail' object that you can pull your values from.
+
+```js #button { border: none; }
+document.addEventListener("localeListener", function (event) {
+    console.log('EventValue: ' + event.detail.message);
+     self.localeGreeting(app.localeGreeting());
+}); 
+```
+
+ This is a very powerful way of using event based programming.
 
 ### Internationalizing the Oracle JET Components
 
@@ -568,3 +591,4 @@ document.addEventListener("localeListener", function () {
 4. Experiment with other components in the Oracle JET Cookbook and see what they look like in Arabic:
 
 http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html
+
