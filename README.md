@@ -14,7 +14,7 @@
    * Adding CRUD Functionality
    * Adding Responsive Design
    
-#### Day 2: Miscellaneous
+#### Day 3: Miscellaneous
 
    * Internationalization
    
