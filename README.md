@@ -564,3 +564,7 @@ document.addEventListener("localeListener", function () {
 ```
 
 3. In the application, switch from English to Arabic, and notice the calendar automatically displays Arabic months.
+
+4. Experiment with other components in the Oracle JET Cookbook and see what they look like in Arabic:
+
+http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html
