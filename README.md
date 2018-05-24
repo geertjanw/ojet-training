@@ -552,7 +552,7 @@ document.addEventListener("localeListener", function () {
 1. Add the below to 'dashboarf.html':
 
 ```html #button { border: none; }
-<oj-input-date id="date"></oj-input-date>
+<oj-input-date-time id="date"></oj-input-date-time>
 ```
 
 2. In the application, switch from English to Arabic, and notice the calendar automatically displays Arabic months.
