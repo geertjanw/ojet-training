@@ -420,7 +420,7 @@ Resize the browser and notice that different columns are displayed depending on 
 
 ## Day 3   
 
-### Internationalization
+### Adding a Language Switcher with RTL Support
 
 1. In 'index.html', find the responsive toolbar, oj-toolbar, and add new items to it for switching languages. Above the 'Preferences' oj-option, add the following:
 
@@ -438,22 +438,46 @@ Resize the browser and notice that different columns are displayed depending on 
 </oj-option>
 ```
 
-2. In 'appController.js', right below 'var self-this', add the 'setLangAction' that is referred to above:
+2. In 'appController.js', right below 'var self-this', add the 'setLangAction' method that is referred to above:
 
 ```js #button { border: none; }
 self.setLangAction = function (event) {
     var newLang = event.target.value;
-    self.selectedMenuItem(newLang);
     oj.Config.setLocale(newLang,
         function () {
             $('html').attr('lang', newLang);
             if (newLang === 'ar-EG') {
                 $('html').attr('dir', 'rtl');
-
             } else {
                 $('html').attr('dir', 'ltr');
             }
         });
 };
 ```
+
+3. In the application, find the new 'Arabic' menu item, select it, and notice that the user interface switches from right to left.
+
+### Internationalizing the Module Tabs
+
+Let's now internationalize the 'Dashboard', 'Incidents', 'Customers', and 'About' items in the tabs of the application, which are defined in the 'appController.js' file.
+
+1. In 'appController.js', add the following, under 'var self=this', to initialize the 'self.dashboardLabel':
+
+```js #button { border: none; }
+self.dashboardLabel = ko.observable(oj.Translations.getTranslatedString('dashboardLabel'));
+```
+
+2. In 'appController.js', in the 'setLangAction' method, below the if/else statement, refresh the 'self.dashboardLabel':
+
+```js #button { border: none; }
+self.dashboardLabel(oj.Translations.getTranslatedString('dashboardLabel'));
+```
+
+3. In 'appController.js', in the Navigation setup, in 'var navData', change 'name: 'Dashboard'' to 'name: self.dashboardLabel', so that the first item in the 'navData' array now looks like this:
+
+```js #button { border: none; }
+{name: self.dashboardLabel, id: 'dashboard',
+     iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-chart-icon-24'},
+```
+
 
