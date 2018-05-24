@@ -451,11 +451,13 @@ self.setLangAction = function (event) {
             } else {
                 $('html').attr('dir', 'ltr');
             }
+            document.dispatchEvent(new CustomEvent('localeListener'));
         });
 };
 ```
+Notice that we're dispatching an event, which can be finetuned further, so the modules can listen to it and react appropriately.
 
-3. In the application, find the new 'Arabic' menu item, select it, and notice that the user interface switches from right to left.
+4. In the application, find the new 'Arabic' menu item, select it, and notice that the user interface switches from right to left.
 
 ### Adding Translation Bundles
 
@@ -515,4 +517,33 @@ self.dashboardLabel(oj.Translations.getTranslatedString('dashboardLabel'));
      iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-chart-icon-24'},
 ```
 
+4. When you switch to 'Arabic' in the application, notice that the Dashboard label is now Arabic and it is English when you switch to 'English'.
+
+### Internationalizing the Module Texts
+
+1. Add a new string to your translation bundles, named 'dashboardHeader'.
+
+2. In 'dashboard.js', define a new variable for the dashboard header label, to initialize the variable with the current state of the translation bundle:
+
+```js #button { border: none; }
+self.dashboardHeaderLabel = ko.observable(oj.Translations.getTranslatedString('dashboardHeader'));
+```
+
+3. In 'dashboard.js', listen for the localelistener event and update the dashboard header label with the current state of the translation bundle:
+
+```js #button { border: none; }
+document.addEventListener("localeListener", function () {
+     self.dashboardHeaderLabel(oj.Translations.getTranslatedString('dashboardHeader'));
+});
+```
+
+4. In 'dashboard.html', replace the H1 with the following:
+
+```html #button { border: none; }
+<h1><oj-bind-text value="[[dashboardHeaderLabel]]"></oj-bind-text></h1>
+```
+
+5. In the application, switch to Arabic and notice the H1 is now Arabic.
+
+6. Do the same for other texts, in the other modules in the application.
 
