@@ -418,7 +418,7 @@ self.getCols();
 
 Resize the browser and notice that different columns are displayed depending on the resolution.
 
-## Day 3   
+## Day 3 Miscellaneous
 
 ### Adding a Language Switcher with RTL Support
 
@@ -547,8 +547,12 @@ document.addEventListener("localeListener", function () {
 
 6. Do the same for other texts, in the other modules in the application.
 
+### Internationalizing the Oracle JET Components
+
+1. Add the below to 'dashboarf.html':
 
 ```html #button { border: none; }
 <oj-input-date id="date"></oj-input-date>
 ```
 
+2. In the application, switch from English to Arabic, and notice the calendar automatically displays Arabic months.
