@@ -420,6 +420,8 @@ Resize the browser and notice that different columns are displayed depending on 
 
 ## Day 3 Miscellaneous
 
+In this part, we're going to add functionality to let the user switch from one language to another, in this case, from English to Arabic and back.
+
 ### Adding a Language Switcher with RTL Support
 
 1. In 'index.html', find the responsive toolbar, oj-toolbar, and add new items to it for switching languages. Above the 'Preferences' oj-option, add the following:
