@@ -566,7 +566,6 @@ document.dispatchEvent(new CustomEvent('localeListener', params));
 ```js #button { border: none; }
 document.addEventListener("localeListener", function (event) {
     console.log('EventValue: ' + event.detail.message);
-     self.localeGreeting(app.localeGreeting());
 }); 
 ```
 
