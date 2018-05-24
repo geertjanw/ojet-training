@@ -14,6 +14,10 @@
    * Adding CRUD Functionality
    * Adding Responsive Design
    
+#### Day 2: Miscellaneous
+
+   * Internationalization
+   
 ## Day 1   
 
 ### Getting Started
@@ -414,5 +418,42 @@ self.getCols();
 
 Resize the browser and notice that different columns are displayed depending on the resolution.
 
+## Day 3   
 
+### Internationalization
+
+1. In 'index.html', find the responsive toolbar, oj-toolbar, and add new items to it for switching languages. Above the 'Preferences' oj-option, add the following:
+
+```html #button { border: none; }
+<oj-option id="languages">
+    <span>Languages</span>
+    <oj-menu id="languages_menu">
+        <oj-option on-oj-action="[[setLangAction]]" id="english" value="english">
+            <span class="oj-fwk-icon oj-fwk-icon-arrow-n" slot="startIcon"></span>English
+        </oj-option>
+        <oj-option on-oj-action="[[setLangAction]]" id="arabic" value="ar-EG">
+            <span class="demo-icon-font demo-bookmark-icon-16" slot="startIcon"></span>Arabic
+        </oj-option>
+    </oj-menu>
+</oj-option>
+```
+
+2. In 'appController.js', right below 'var self-this', add the 'setLangAction' that is referred to above:
+
+```js #button { border: none; }
+self.setLangAction = function (event) {
+    var newLang = event.target.value;
+    self.selectedMenuItem(newLang);
+    oj.Config.setLocale(newLang,
+        function () {
+            $('html').attr('lang', newLang);
+            if (newLang === 'ar-EG') {
+                $('html').attr('dir', 'rtl');
+
+            } else {
+                $('html').attr('dir', 'ltr');
+            }
+        });
+};
+```
 
