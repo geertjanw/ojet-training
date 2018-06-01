@@ -318,13 +318,15 @@ on-oj-before-current-row='[[currentRowListener]]'
 4. In the ViewModel:
 
 ```js #button { border: none; }
+self.selectedName = ko.observable("[nothing selected]");
+
 self.currentRowListener = function (event, data) {
     var newCurrentRow = event.detail.currentRow;
     console.log(newCurrentRow);
     self.datasource().at(newCurrentRow['rowIndex']).
             then(function (rowObj) {
                 var obj = rowObj['data'];
-                $('#selectedName').text(obj.ename);
+                self.selectedName(obj.ename);
             });
 };
 ```
@@ -332,7 +334,7 @@ self.currentRowListener = function (event, data) {
 5. In the View, to display the selected name:
 
 ```js #button { border: none; }
-Selected: <span id="selectedName"></span>
+Selected: <oj-bind-text value="[[selectedName]]"></oj-bind-text>
 ```
 ### Adding CRUD Functionality
 
