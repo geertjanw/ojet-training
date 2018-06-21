@@ -208,7 +208,7 @@ ojet create component my-employee-form
 'jet-composites/my-employee-form/loader'
 ```
 
-4. Move the form-container into the HTML view of the 'my-employee-form' CCA component:
+4. Move the form-container into the 'my-employee-form-view.html' file of the 'my-employee-form' CCA component:
 
 ```html #button { border: none; }
 <oj-form-layout id="form-container" label-edge="top"> 
@@ -219,7 +219,9 @@ ojet create component my-employee-form
 </oj-form-layout> 
 ```
 
-5. Declare the 'my-employee-form' custom element a few times in 'Dashboard.html', as shown below, instead of the form-container that you currently have there, run 'ojet serve' in the Terminal again, and notice that you now see multiple forms.
+5. Move the references to 'ojs/ojinputtext' and to 'ojs/ojformlayout' from the 'define' block of 'Dashboard.js' to the 'define' block of 'my-employee-form-viewModel.js' file.
+
+6. Declare the 'my-employee-form' custom element a few times in 'Dashboard.html', as shown below, instead of the form-container that you currently have there, run 'ojet serve' in the Terminal again, and notice that you now see multiple forms.
 
 ```html #button { border: none; }
 <my-employee-form></my-employee-form>
