@@ -90,6 +90,79 @@ self.dataSource = new oj.CollectionDataGridDataSource(
 ```js #button { border: none; }
 'ojs/ojdatagrid', 'ojs/ojcollectiondatagriddatasource'
 ```
+
+### (c) Displaying the Selected Data in an Oracle JET Form
+
+1. Add properties, using Knockout Observables, to the 'Dashboard.js' file:
+
+```js #button { border: none; }
+var nextKey = 121;
+self.inputEmployeeID = ko.observable(nextKey);
+self.inputFirstName = ko.observable('Jane');
+self.inputLastName = ko.observable('Doe');
+self.inputHireDate = ko.observable(oj.IntlConverterUtils.dateToLocalIso(new Date()));
+self.inputSalary = ko.observable(15000);
+```
+
+2. Add code for updating the model when there are changes in the view:
+
+```js #button { border: none; }
+//build a new model from the observables in the form
+self.buildModel = function () {
+   return {
+     'EMPLOYEE_ID': self.inputEmployeeID(),
+     'FIRST_NAME': self.inputFirstName(),
+     'LAST_NAME': self.inputLastName(),
+     'HIRE_DATE': self.inputHireDate(),
+     'SALARY': self.inputSalary()
+   };
+};
+
+//used to update the fields based on the selected row:
+self.updateFields = function (model) {
+   self.inputEmployeeID(model.get('EMPLOYEE_ID'));
+   self.inputFirstName(model.get('FIRST_NAME'));
+   self.inputLastName(model.get('LAST_NAME'));
+   self.inputHireDate(model.get('HIRE_DATE'));
+   self.inputSalary(model.get('SALARY'));
+};
+```
+
+3. Create a selection handler that you'll be referencing in the grid:
+
+```js #button { border: none; }
+self.handleSelectionChanged = function (event) {
+     var selection = event.detail['value'][0];
+     if (selection != null) { 
+         var rowKey = selection['startKey']['row'];
+         self.modelToUpdate = self.collection.get(rowKey);
+         self.updateFields(self.modelToUpdate);
+     }
+};
+```
+
+4. Back
+
+```html #button { border: none; }
+on-selection-changed="[[handleSelectionChanged]]"
+```
+
+5. Display the values of the selected row in the table via the form below, add it below the grid in 'Dashboard.html':
+
+```html #button { border: none; }
+<div id="form-container" class="oj-form">
+      <label for="firstNameInput">First Name</label><br/>
+      <oj-input-text id="firstNameInput" value="{{inputFirstName}}"></oj-input-text><br/>
+      <label for="lastNameInput">Last Name</label><br/>
+      <oj-input-text id="lastNameInput" value="{{inputLastName}}"></oj-input-text><br/>
+      <label for="inputHireDate">Date Hired</label><br/>
+      <oj-input-text id="inputHireDate" value="{{inputHireDate}}"></oj-input-text><br/>
+      <label for="inputSalary">Salary</label><br/>
+      <oj-input-text id="inputSalary" value="{{inputSalary}}"></oj-input-text><br/>
+</div>
+```
+
+6. Include a reference to 'ojs/ojinputtext' in the 'define' block of 'Dashboard.js'.
    
 ## Day 3: Smart Usage of Oracle JET
 
