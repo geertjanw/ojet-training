@@ -293,7 +293,7 @@ You can refer to properties in the module so that when a row is selected in the 
 ```js #button { border: none; }
 'jet-composites/my-employee-form/loader'
 ```
-Next, create an Observable providing the data:
+Next, create an Observable Array providing the data:
 
 ```js #button { border: none; }
 self.employees = ko.observableArray([
