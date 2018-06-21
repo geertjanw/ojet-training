@@ -197,20 +197,29 @@ In this part, you create a reusable CCA component that follows the W3C Web Compo
 1. In the Terminal, in the root of your project, run the following:
 
 ```js #button { border: none; }
-ojet create component my-chart
+ojet create component my-employee-form
 ```
 
-2. Take a look at your source structure and find the new 'my-chart' CCA component.
+2. Take a look at your source structure and find the new 'my-employee-form' CCA component.
 
 3. Load the loader into the ViewModel, declare the new custom element in the View, then look in the browser and notice the message from the CCA component.
 
-4. Move the chart and the combobox into the 'my-chart' CCA component.
-
-5. Declare the 'my-chart' custom element a few more times and notice that you now see multiple charts.
+4. Move the form-container into the HTML view of the 'my-employee-form' CCA component:
 
 ```html #button { border: none; }
-<my-chart></my-chart>
-<my-chart></my-chart>
+<oj-form-layout id="form-container" label-edge="top"> 
+    <oj-input-text id="firstNameInput" label-hint="First Name" value="[[inputFirstName]]"></oj-input-text> 
+    <oj-input-text id="lastNameInput" label-hint="Last Name" value="[[inputLastName]]"></oj-input-text> 
+    <oj-input-text id="inputHireDate" label-hint="Date Hired" value="[[inputHireDate]]"></oj-input-text> 
+    <oj-input-text id="inputSalary" label-hint="Salary" value="[[inputSalary]]"></oj-input-text> 
+</oj-form-layout> 
+```
+
+5. Declare the 'my-employee-form' custom element a few times in 'Dashboard.html', instead of the form-container that you currently have there, and notice that you now see multiple charts.
+
+```html #button { border: none; }
+<my-employee-form></my-employee-form>
+<my-employee-form></my-employee-form>
 ```
 
 ### (b) Setting Properties
