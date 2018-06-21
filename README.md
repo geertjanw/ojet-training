@@ -288,6 +288,8 @@ You can refer to properties in the module so that when a row is selected in the 
 
 ### (b) Creating a Nested CCA Component
 
+We're going to reuse our CCA component inside a new CCA component, to provide a new view onto the same data.
+
 1. Let's reuse the CCA component in a different module, e.g., in the Incidents module, which consists of the 'incidents.html' and 'incidents.js' file. In the 'incidents.js' file, reference the CCA component in the 'define' block:
 
 ```js #button { border: none; }
@@ -347,7 +349,7 @@ Start the 'ojet serve' process again and note that you are now using a nested CC
 
 ### (c) Creating CRUD Functionality
 
-We're going to create a 'slot' in the 'my-employee-form' CCA component and fill it with buttons for doing CRUD functionality.
+We're going to create a 'slot' in the 'my-employee-form' CCA component and, in some of the usages of the 'my-employee-form' CCA component, we will fill it with buttons for doing CRUD functionality.
 
    1. In the 'component.json' file of the 'my-employee-form' CCA component, define the 'slots' section as follows:
 
@@ -366,6 +368,8 @@ We're going to create a 'slot' in the 'my-employee-form' CCA component and fill 
    <oj-slot name="toolbar"/>
 </div>
 ```
+
+We now have a slot for a toolbar and, in the Dashboard module, we'll add functionality for creating, deleting, and updating items. We'll not need this functionality in the Incidents module, where we're using the 'my-employee-form' together with the 'my-employee-form-container' simply as a view on our data.  
 
 #### Add
 
