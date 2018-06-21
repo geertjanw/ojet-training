@@ -221,7 +221,35 @@ ojet create component my-employee-form
 
 5. Move the references to 'ojs/ojinputtext' and to 'ojs/ojformlayout' from the 'define' block of 'Dashboard.js' to the 'define' block of 'my-employee-form-viewModel.js' file.
 
-6. Declare the 'my-employee-form' custom element a few times in 'Dashboard.html', as shown below, instead of the form-container that you currently have there, run 'ojet serve' in the Terminal again, and notice that you now see multiple forms.
+6. In 'component.json', within your 'my-employee-form' CCA component, add content to the 'properties' section, like this:
+
+```js #button { border: none; }
+"properties": {
+   "firstName": {
+       "type":"string"
+    },
+    "lastName": {
+       "type":"string"
+     },
+     "hireDate": {
+        "type":"string"
+     },
+     "hireSalary": {
+         "type":"number"
+     }
+  },
+```
+
+7. Back in the 'my-employee-form-view.html', reference the properties above via the $props construction:
+
+```html #button { border: none; }
+<oj-input-text id="firstNameInput" label-hint="First Name" value="[[$props.firstName]]"></oj-input-text> 
+<oj-input-text id="lastNameInput" label-hint="Last Name" value="[[$props.lastName]]"></oj-input-text> 
+<oj-input-text id="inputHireDate" label-hint="Date Hired" value="[[$props.hireDate]]"></oj-input-text> 
+<oj-input-text id="inputSalary" label-hint="Salary" value="[[$props.salary]]"></oj-input-text> 
+```
+
+8. Declare the 'my-employee-form' custom element a few times in 'Dashboard.html', as shown below, instead of the form-container that you currently have there, run 'ojet serve' in the Terminal again, and notice that you now see multiple forms.
 
 ```html #button { border: none; }
 <my-employee-form></my-employee-form>
