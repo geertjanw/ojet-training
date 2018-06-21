@@ -12,7 +12,7 @@ json-server --watch employeeData.json
 ```
    4. Go to http://localhost:3000/employees and see your data via your fake REST endpoint.
    
-<img src="Screen%20Shot%202018-06-21%20at%2015.15.15.png" alt="alt text" width="400" height="150">
+<img src="Screen%20Shot%202018-06-21%20at%2015.15.15.png" style="border:1px solid black" alt="alt text" width="400" height="250">
       
 ## Part 2: Basic Usage of Oracle JET
    
