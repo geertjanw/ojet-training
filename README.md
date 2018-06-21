@@ -14,7 +14,7 @@ json-server --watch employeeData.json
    
 ### (a) Getting Started
 
-Follow the instruction on the Getting Started page to install the ojet-cli:
+Follow the instructions on the Getting Started page to install the ojet-cli:
 
 http://www.oracle.com/webfolder/technetwork/jet/globalGetStarted.html
 
@@ -57,6 +57,30 @@ http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=barCh
 4. Look at the JS documentation, the description, variations, and tweak the code.
 
 5. Copy the HTML into the Dashboard View, the JavaScript into the Dashboard ViewModel, and reference the 'ojs/ojchart' in the define block of the Dashboard ViewModel. Look in the browser and see the Bar Chart is displayed.
+
+```html #button { border: none; }
+<oj-data-grid 
+     id="datagrid" 
+     style="height:400px; max-width:477px" 
+     data="[[dataSource]]" 
+     selection-mode.row="single" 
+     dnd.reorder.row="enable" 
+     header.column.style="width:100px" > 
+</oj-data-grid>
+```
+
+```js #button { border: none; }
+self.collection = new oj.Collection(null, {
+   model: new oj.Model.extend({idAttribute: 'EMPLOYEE_ID'}),
+   url: 'http://localhost:3000/employees'
+});
+
+self.dataSource = new oj.CollectionDataGridDataSource(
+   self.collection, {
+      rowHeader: 'EMPLOYEE_ID',
+      columns: ['FIRST_NAME', 'LAST_NAME', 'HIRE_DATE', 'SALARY']
+   });
+```   
 
 6. Change the 'bar' type to 'pie' by hand and then let the user do it by combining with a Combobox One:
 
