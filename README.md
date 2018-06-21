@@ -4,6 +4,8 @@ The purpose of this script is to put together a CRUD scenario in an Oracle JET a
 
 ## Part 1: Set Up the Environment
 
+In this part, you publish data that will be used in the other parts that follows.
+
    1. Set up the Fake REST Server: https://www.npmjs.com/package/fake-rest-server
    2. Download and put anywhere on disk: https://github.com/geertjanw/ojet-training/blob/master/employeeData.json
    3. Run in the terminal: 
@@ -17,6 +19,8 @@ json-server --watch employeeData.json
 </td></tr></table>
             
 ## Part 2: Simple Usage of Oracle JET
+
+In this part, you set up a new Oracle JET application, explore the Oracle JET Cookbook, and set up a grid and form that display the data published in the previous part.
    
 ### (a) Getting Started
 
@@ -185,6 +189,8 @@ on-selection-changed="[[handleSelectionChanged]]"
 </td></tr></table>
    
 ## Day 3: Smart Usage of Oracle JET
+
+In this part, you create a reusable CCA component that follows the W3C Web Component specification.
 
 ### (a) Getting Started
 
