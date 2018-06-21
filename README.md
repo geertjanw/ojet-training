@@ -1,5 +1,7 @@
 # Oracle JET Training Materials
 
+The purpose of this script is to put together a CRUD scenario in an Oracle JET application. You'll start by setting up a fake REST server, next you'll set up an Oracle JET application that connects to it and displays its payload, and finally you'll use the Composite Component Architecture to create a reusable custom element for displaying the payload in different modules and components.
+
 ## Part 1: Set Up the Environment
 
    1. Set up the Fake REST Server: https://www.npmjs.com/package/fake-rest-server
