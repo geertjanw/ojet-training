@@ -59,9 +59,9 @@ After a few moments, you should see this:
 
 ### (c) Showing Data in an Oracle JET Grid
 
-1. Explore the Oracle JET Cookbook: go to oraclejet.org and click 'Use Cookbook'.
+1. Explore the Oracle JET Cookbook: go to oraclejet.org, click 'Use Cookbook', and look around.
 
-2. Take a look at the ojDataGrid and CRUD scenarios:
+Especially, for purposes of these instructions, take a look at the ojDataGrid and CRUD scenarios:
 
 http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=crud&demo=CRUDGrid
 
@@ -69,7 +69,7 @@ http://www.oracle.com/webfolder/technetwork/jet/jsdocs/oj.ojDataGrid.html
 
 In the above, look at the JS documentation, the description, variations, etc.
 
-3. Here is a simple ojDataGrid, copy it into the 'Dashboard.html' file:
+2. Here is a simple ojDataGrid, a simplified version of the above references. Copy it below and paste it into the 'Dashboard.html' file in your application:
 
 ```html #button { border: none; }
 <oj-data-grid 
@@ -82,7 +82,7 @@ In the above, look at the JS documentation, the description, variations, etc.
 </oj-data-grid>
 ```
 
-4. Above, notice that 'dataSource' is referenced, which you need to define in 'Dashboard.js' copy/paste the following code for that purpose:
+3. Above, notice that 'dataSource' is referenced, which you need to define in 'Dashboard.js' copy/paste the following code for that purpose:
 
 ```js #button { border: none; }
 self.collection = new oj.Collection(null, {
@@ -97,11 +97,15 @@ self.dataSource = new oj.CollectionDataGridDataSource(
    });
 ```   
 
-5. To use the 'ojDataGrid', reference the following in the 'define' block of the 'Dashboard.js' file:
+4. To use the 'ojDataGrid', reference the following in the 'define' block of the 'Dashboard.js' file:
 
 ```js #button { border: none; }
 'ojs/ojdatagrid', 'ojs/ojcollectiondatagriddatasource'
 ```
+
+5. In your application, you should now see this:
+
+
 
 ### (c) Displaying the Selected Data in an Oracle JET Form
 
