@@ -331,12 +331,14 @@ ojet create component my-employee-form-container
 4. Similar as in the previous section, you now need to do the following:
 
    * load the 'loader.js' file from the 'my-employee-form-container' into the ViewModel of a module
+   
    * add an array property to the 'component.json' file of the 'my-employee-form-container' CCA module
 ```js #button { border: none; }
 "data": {
    "type":"array"
 }
 ```
+
    * move the View code from the module into the 'my-employee-form-container-view.html' file and reference the 'data' property:
 ```html #button { border: none; }   
 <oj-bind-for-each data="[[$props.data]]"> 
@@ -351,6 +353,8 @@ ojet create component my-employee-form-container
     </template> 
 </oj-bind-for-each>
 ```
+
+   * abc
 
 ### (c) Creating CRUD Functionality
 
