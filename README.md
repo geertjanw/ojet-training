@@ -12,8 +12,8 @@ json-server --watch employeeData.json
 ```
    4. Go to http://localhost:3000/employees and see your data via your fake REST endpoint.
    
-![Payload](https://github.com/geertjanw/ojet-training/blob/master/Screen%20Shot%202018-06-21%20at%2015.15.15.png
- "Payload" =250x)
+![Payload](https://github.com/geertjanw/ojet-training/blob/master/Screen%20Shot%202018-06-21%20at%2015.15.15.png =250x
+ "Payload")
       
 ## Part 2: Basic Usage of Oracle JET
    
