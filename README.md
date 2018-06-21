@@ -181,7 +181,7 @@ on-selection-changed="[[handleSelectionChanged]]"
 7. In your application, you should now see this:
 
 <table><tr><td>   
-<img src="Screen%20Shot%202018-06-21%20at%2015.50.55.png" alt="alt text" width="400" height="250">
+<img src="Screen%20Shot%202018-06-21%20at%2016.00.54.png" alt="alt text" width="400" height="250">
 </td></tr></table>
    
 ## Day 3: Smart Usage of Oracle JET
