@@ -3,7 +3,7 @@
 ## Part 1: Set Up the Environment
 
    1. Set up the Fake REST Server: https://www.npmjs.com/package/fake-rest-server
-   2. Download and put anywhere on disk: 
+   2. Download and put anywhere on disk: https://github.com/geertjanw/ojet-training/blob/master/employeeData.json
    3. Run in the terminal: 
 ```js #button { border: none; }
 json-server --watch employeeData.json
