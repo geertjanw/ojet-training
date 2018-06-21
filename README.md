@@ -322,6 +322,36 @@ Finally, display the CCA component for each of the 'employees':
 <my-employee-form-container data="[[data]]"/>
 ```
 
+3. In the Terminal, first kill the 'ojet' process, and then, in the root of your project, run the following:
+
+```js #button { border: none; }
+ojet create component my-employee-form-container
+```
+
+4. Similar as in the previous section, you now need to do the following:
+
+   * load the 'loader.js' file from the 'my-employee-form-container' into the ViewModel of a module
+   * add an array property to the 'component.json' file of the 'my-employee-form-container' CCA module
+```js #button { border: none; }
+"data": {
+   "type":"array"
+}
+```
+   * move the View code from the module into the 'my-employee-form-container-view.html' file and reference the 'data' property:
+```html #button { border: none; }   
+<oj-bind-for-each data="[[$props.data]]"> 
+    <template> 
+        <my-employee-form 
+            first-name="[[$current.data.name]]" 
+            last-name="[[$current.data.lastname]]" 
+            hire-date="1993-01-13" 
+            hire-salary="8000"> 
+        </my-employee-form> 
+        <hr/> 
+    </template> 
+</oj-bind-for-each>
+```
+
 ### (c) Creating CRUD Functionality
 
 
