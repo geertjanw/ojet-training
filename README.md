@@ -192,7 +192,7 @@ on-selection-changed="[[handleSelectionChanged]]"
 
 In this part, you create a reusable CCA component that follows the W3C Web Component specification.
 
-### (a) Getting Started
+### (a) Creating a CCA Component
 
 We'll create a new CCA component, add properties, and express them as attributes in the view of a module.
 
@@ -265,38 +265,15 @@ You can initialize the properties by using attributes with hyphens where the cam
 <my-employee-form first-name='Sally'></my-employee-form>
 ```
 
-You can refer to properties in the module so that when a row is selected in a table, the view is automatically updated:
+You can refer to properties in the module so that when a row is selected in the grid, the view is automatically updated:
 
 ```html #button { border: none; }
 <my-employee-form first-name='[[inputFirstName]]' last-name='[[inputLastName]]'></my-employee-form>
 ```
 
-### (b) Setting Properties
+### (b) Creating a Nested CCA Component
 
-1. In 'component.json', add a 'chartType' property:
+### (c) Creating CRUD Functionality
 
-```js #button { border: none; }
-"properties": {
-    "chartType": {
-        "type": "string"
-    }
-},
-```
 
-2. In 'dashboard.html', use the property in your 'my-chart' custom elements:
-
-```html #button { border: none; }
-<my-chart chart-type="bar"></my-chart>
-<my-chart chart-type="pie"></my-chart>
-```
-
-3. In 'my-chart-viewmodel.js', create a new Knockout property that is initialized by the custom element's context, i.e., by 'bar' and by 'pie' in the two examples above:
-
-```js #button { border: none; }
-self.chartType = ko.observable(context.properties.chartType);
-```
-
-4. In 'my-chart-view.html', change the value of the combobox to '{{chartType}}' and the type of the chart to '[[chartType]]'.
-
-5. After the above works correctly, replace some of the other properties in the CCA component so that they can be set from the Dashboard module.
 
