@@ -178,10 +178,10 @@ on-selection-changed="[[handleSelectionChanged]]"
 
 6. Include a reference to 'ojs/ojinputtext' and to 'ojs/ojformlayout' in the 'define' block of 'Dashboard.js'.
 
-7. In your application, you should now see this:
+7. In your application, you should now see this, i.e., when a row is selected its values should be visible in the form:
 
 <table><tr><td>   
-<img src="Screen%20Shot%202018-06-21%20at%2016.00.54.png" alt="alt text" width="400" height="250">
+<img src="Screen%20Shot%202018-06-21%20at%2016.02.46.png" alt="alt text" width="400" height="250">
 </td></tr></table>
    
 ## Day 3: Smart Usage of Oracle JET
