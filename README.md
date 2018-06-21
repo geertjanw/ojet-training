@@ -74,7 +74,7 @@ In the above, look at the JS documentation, the description, variations, etc.
 ```html #button { border: none; }
 <oj-data-grid 
      id="datagrid" 
-     style="height:400px; max-width:477px" 
+     style="height:200px; max-width:477px" 
      data="[[dataSource]]" 
      selection-mode.row="single" 
      dnd.reorder.row="enable" 
@@ -168,19 +168,21 @@ on-selection-changed="[[handleSelectionChanged]]"
 5. Display the values of the selected row in the table via the form below, add it below the grid in 'Dashboard.html':
 
 ```html #button { border: none; }
-<div id="form-container" class="oj-form">
-      <label for="firstNameInput">First Name</label><br/>
-      <oj-input-text id="firstNameInput" value="{{inputFirstName}}"></oj-input-text><br/>
-      <label for="lastNameInput">Last Name</label><br/>
-      <oj-input-text id="lastNameInput" value="{{inputLastName}}"></oj-input-text><br/>
-      <label for="inputHireDate">Date Hired</label><br/>
-      <oj-input-text id="inputHireDate" value="{{inputHireDate}}"></oj-input-text><br/>
-      <label for="inputSalary">Salary</label><br/>
-      <oj-input-text id="inputSalary" value="{{inputSalary}}"></oj-input-text><br/>
-</div>
+<oj-form-layout id="form-container" label-edge="top"> 
+    <oj-input-text id="firstNameInput" label-hint="First Name" value="[[inputFirstName]]"></oj-input-text> 
+    <oj-input-text id="lastNameInput" label-hint="Last Name" value="[[inputLastName]]"></oj-input-text> 
+    <oj-input-text id="inputHireDate" label-hint="Date Hired" value="[[inputHireDate]]"></oj-input-text> 
+    <oj-input-text id="inputSalary" label-hint="Salary" value="[[inputSalary]]"></oj-input-text> 
+</oj-form-layout> 
 ```
 
-6. Include a reference to 'ojs/ojinputtext' in the 'define' block of 'Dashboard.js'.
+6. Include a reference to 'ojs/ojinputtext' and to 'ojs/ojformlayout' in the 'define' block of 'Dashboard.js'.
+
+7. In your application, you should now see this:
+
+<table><tr><td>   
+<img src="Screen%20Shot%202018-06-21%20at%2015.50.55.png" alt="alt text" width="400" height="250">
+</td></tr></table>
    
 ## Day 3: Smart Usage of Oracle JET
 
