@@ -263,7 +263,7 @@ Take a look at your source structure, find the new 'my-employee-form' CCA compon
 <oj-input-text id="firstNameInput" label-hint="First Name" value="[[$props.firstName]]"></oj-input-text> 
 <oj-input-text id="lastNameInput" label-hint="Last Name" value="[[$props.lastName]]"></oj-input-text> 
 <oj-input-text id="inputHireDate" label-hint="Date Hired" value="[[$props.hireDate]]"></oj-input-text> 
-<oj-input-text id="inputSalary" label-hint="Salary" value="[[$props.salary]]"></oj-input-text> 
+<oj-input-text id="inputSalary" label-hint="Salary" value="[[$props.hireSalary]]"></oj-input-text> 
 ```
 
 7. Use the 'my-employee-form' custom element a few times in 'Dashboard.html', as shown below, instead of the form-container that you currently have there, then run 'ojet serve' in the Terminal again, and notice that you now see multiple forms.
