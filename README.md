@@ -5,7 +5,9 @@ The purpose of this script is to put together a CRUD scenario in an Oracle JET a
 Table of Contents
 
 Part 1: Set Up the Environment
+
 Part 2: Simple Usage of Oracle JET
+
 Part 3: Smart Usage of Oracle JET
 
 ## Part 1: Set Up the Environment
