@@ -349,15 +349,25 @@ Start the 'ojet serve' process again and note that you are now using a nested CC
 
 We're going to create a 'slot' in the 'my-employee-form' CCA component and fill it with buttons for doing CRUD functionality.
 
-#### Add
-
-1. In the 'component.json' file of the 'my-employee-form', define the 'slots' section as follows:
+   1. In the 'component.json' file of the 'my-employee-form' CCA component, define the 'slots' section as follows:
 
 ```js #button { border: none; }
 "slots": {
     "toolbar": {
         "description":"Toolbar placed below employee form."
     }
-}```
+}
+```
+
+   2. In 'my-employee-form-view.html', i.e., in the 'my-employee-form' CCA component, define where the slot will be rendered, e.g., below the form paste the following:
+   
+```html #button { border: none; }   
+<div>
+   <oj-slot name="toolbar"/>
+</div>
+```
+
+#### Add
+
 
 
