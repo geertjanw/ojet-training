@@ -20,7 +20,7 @@ http://www.oracle.com/webfolder/technetwork/jet/globalGetStarted.html
 
 The above can be summarized to the following:
 
-1. Download and install the latest LTS version of Node from nodejs.org.
+1. Download and install the latest LTS version of Node from http://nodejs.org.
 
 2. Install the Oracle JET command line tool:
 
