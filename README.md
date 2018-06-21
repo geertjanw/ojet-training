@@ -301,7 +301,7 @@ self.employees = ko.observableArray([
     {'name': 'Henry', 'lastname': 'Sykes'}
 ]);
 ```
-Finally, display the CCA component for each of the 'employees':
+Next, display the CCA component for each of the 'employees':
 ```html #button { border: none; }
 <oj-bind-for-each data="[[employees]]"> 
       <template> 
@@ -315,6 +315,8 @@ Finally, display the CCA component for each of the 'employees':
        </template> 
 </oj-bind-for-each>
 ```
+
+Now, in the application, you should see an employee form for each iteration of the 'employees' array.
 
 2. The HTML above is quite verbose, it could be expressed more compactly like this, assuming we had a CCA component named 'my-employee-container', which would automatically do the above for us:
 
