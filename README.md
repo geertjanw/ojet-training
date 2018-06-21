@@ -286,7 +286,9 @@ You can refer to properties in the module so that when a row is selected in the 
 <my-employee-form first-name='[[inputFirstName]]' last-name='[[inputLastName]]'></my-employee-form>
 ```
 
-9. Let's reuse the CCA component in a different module, e.g., in the Incidents module, which consists of the 'incidents.html' and 'incidents.js' file. In the 'incidents.js' file, reference the CCA component in the 'define' block:
+### (b) Creating a Nested CCA Component
+
+1. Let's reuse the CCA component in a different module, e.g., in the Incidents module, which consists of the 'incidents.html' and 'incidents.js' file. In the 'incidents.js' file, reference the CCA component in the 'define' block:
 
 ```js #button { border: none; }
 'jet-composites/my-employee-form/loader'
@@ -314,9 +316,11 @@ Finally, display the CCA component for each of the 'employees':
 </oj-bind-for-each>
 ```
 
-### (b) Creating a Nested CCA Component
+2. The HTML above is quite verbose, it could be expressed more compactly like this, assuming we had a CCA component named 'my-employee-container', which would automatically do the above for us:
 
-
+```html #button { border: none; }
+<my-employee-form-container data="[[data]]"/>
+```
 
 ### (c) Creating CRUD Functionality
 
