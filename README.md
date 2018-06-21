@@ -7,15 +7,15 @@ The purpose of this script is to put together a CRUD scenario in an Oracle JET a
 Part 1: Setting Up the Environment
 
 Part 2: Simple Usage of Oracle JET
--- Getting Started
--- Creating an Oracle JET Application
--- Showing Data in an Oracle JET Grid
--- Displaying the Selected Data in an Oracle JET Form
+   * Getting Started
+   * Creating an Oracle JET Application
+   * Showing Data in an Oracle JET Grid
+   * Displaying the Selected Data in an Oracle JET Form
 
 Part 3: Smart Usage of Oracle JET
--- Creating a CCA Component
--- Creating a Nested CCA Component
--- Creating CRUD Functionality
+   * Creating a CCA Component
+   * Creating a Nested CCA Component
+   * Creating CRUD Functionality
 
 ## Part 1: Set Up the Environment
 
