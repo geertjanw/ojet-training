@@ -14,7 +14,7 @@ json-server --watch employeeData.json
    
 <img src="Screen%20Shot%202018-06-21%20at%2015.15.15.png" alt="alt text" width="400" height="250">
       
-## Part 2: Basic Usage of Oracle JET
+## Part 2: Simple Usage of Oracle JET
    
 ### (a) Getting Started
 
