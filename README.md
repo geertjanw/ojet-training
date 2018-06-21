@@ -113,7 +113,7 @@ self.dataSource = new oj.CollectionDataGridDataSource(
 <img src="Screen%20Shot%202018-06-21%20at%2015.50.55.png" alt="alt text" width="400" height="250">
 </td></tr></table>
 
-### (c) Displaying the Selected Data in an Oracle JET Form
+### (d) Displaying the Selected Data in an Oracle JET Form
 
 1. Add properties, using Knockout Observables, to the 'Dashboard.js' file:
 
