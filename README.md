@@ -420,3 +420,11 @@ self.add = function (event) {
     </span>
 </my-employee-form>
 ```
+
+#### Delete
+
+to be done
+
+#### Update
+
+to be done
