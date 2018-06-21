@@ -27,22 +27,25 @@ The above can be summarized to the following:
 ```js #button { border: none; }
 npm install -g @oracle/ojet-cli
 ```
-3. Run the following in the terminal:
+
+### (b) Creating an Oracle JET Application
+
+1. Run the following in the terminal:
 
 ```js #button { border: none; }
 ojet create EmployeeManager --template=navdrawer
 ```
-4. Run the following in the terminal and look in the browser:
+2. Run the following in the terminal and look in the browser:
 
 ```js #button { border: none; }
 ojet serve
 ```
 
-5. Open your editor and eplore the source structure and learn about what everything does.
+3. Open your editor and eplore the source structure and learn about what everything does.
 
-6. Make a change in the 'Dashboard.html' file and notice what happens in the browser, without needing to refresh.
+4. Make a change in the 'Dashboard.html' file and notice what happens in the browser, without needing to refresh.
 
-### (b) Working with Oracle JET Components
+### (c) Working with Oracle JET Components
 
 1. Explore the Oracle JET Cookbook.
 
