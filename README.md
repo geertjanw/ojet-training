@@ -194,6 +194,8 @@ In this part, you create a reusable CCA component that follows the W3C Web Compo
 
 ### (a) Getting Started
 
+We'll create a new CCA component, add properties, and express them as attributes in the view of a module.
+
 1. In the Terminal, first kill the 'ojet' process, and then, in the root of your project, run the following:
 
 ```js #button { border: none; }
@@ -261,6 +263,12 @@ You can initialize the properties by using attributes with hyphens where the cam
 ```html #button { border: none; }
 <my-employee-form first-name='James' last-name='Smith'></my-employee-form>
 <my-employee-form first-name='Sally'></my-employee-form>
+```
+
+You can refer to properties in the module so that when a row is selected in a table, the view is automatically updated:
+
+```html #button { border: none; }
+<my-employee-form first-name='[[inputFirstName]]' last-name='[[inputLastName]]'></my-employee-form>
 ```
 
 ### (b) Setting Properties
