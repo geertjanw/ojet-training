@@ -12,8 +12,10 @@ json-server --watch employeeData.json
 ```
    4. Go to http://localhost:3000/employees and see your data via your fake REST endpoint:
    
+<table><tr><td>   
 <img src="Screen%20Shot%202018-06-21%20at%2015.15.15.png" alt="alt text" width="400" height="250">
-      
+</td></tr></table>
+            
 ## Part 2: Simple Usage of Oracle JET
    
 ### (a) Getting Started
@@ -47,7 +49,9 @@ ojet serve
 
 After a few moments, you should see this:
 
+<table><tr><td>   
 <img src="Screen%20Shot%202018-06-21%20at%2015.37.46.png" alt="alt text" width="400" height="250">
+</td></tr></table>
 
 3. In your editor, open the sources, explore the structure, and learn about what everything does.
 
