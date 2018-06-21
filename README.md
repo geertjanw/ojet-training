@@ -141,7 +141,7 @@ self.handleSelectionChanged = function (event) {
 };
 ```
 
-4. Back
+4. Back in 'Dashboard.html', add an attribute to connect selection changes to your handler above:
 
 ```html #button { border: none; }
 on-selection-changed="[[handleSelectionChanged]]"
