@@ -369,5 +369,50 @@ We're going to create a 'slot' in the 'my-employee-form' CCA component and fill 
 
 #### Add
 
+   1. Add a function to 'dashboard.js' for adding new items:
+   
+```js #button { border: none; }   
+self.add = function (event) {
+    if (self.inputEmployeeID(nextKey) < nextKey) {
+        self.inputEmployeeID(nextKey);
+    }
+    nextKey += 1;
+    self.inputEmployeeID(nextKey);
+    var recordAttrs = {
+        "id":
+                self.inputEmployeeID(),
+        "EMPLOYEE_ID":
+                self.inputEmployeeID(),
+        "FIRST_NAME":
+                self.inputFirstName(),
+        "LAST_NAME":
+                self.inputLastName(),
+        "HIRE_DATE":
+                self.inputHireDate(),
+        "SALARY":
+                self.inputSalary()
+    };
+    self.collection.create(recordAttrs, {
+        wait: true,
+        contentType: 'application/json',
+        success: function (model, response) {
+            console.log(self.inputEmployeeID() + ' -- new record added successfully')
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            console.log(self.inputEmployeeID() + " -- " + jqXHR);
+        }
+    });
+};
+```
 
+  2. In 'dashboard.html', change the 'my-employee-form' usage to add a button into the 'toolbar' slot and to enable the 'add' function to be invoked when the button is clicked:
 
+```html #button { border: none; }   
+<my-employee-form 
+    first-name='[[inputFirstName]]' 
+    last-name='[[inputLastName]]'>
+    <span slot="toolbar">
+        <oj-button id="saveBtn" on-click="[[add]]">Add Employee</oj-button>
+    </span>
+</my-employee-form>
+```
