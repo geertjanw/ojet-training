@@ -39,13 +39,13 @@ npm install -g @oracle/ojet-cli
 ```js #button { border: none; }
 ojet create EmployeeManager --template=navdrawer
 ```
-2. Run the following in the terminal and look in the browser:
+2. CD into 'EmployeeManager' and run the following in the terminal and look in the browser:
 
 ```js #button { border: none; }
 ojet serve
 ```
 
-3. Open your editor and eplore the source structure and learn about what everything does.
+3. In your editor, open the sources, explore the structure, and learn about what everything does.
 
 4. Make a change in the 'Dashboard.html' file and notice what happens in the browser, without needing to refresh.
 
