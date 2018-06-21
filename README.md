@@ -51,7 +51,7 @@ ojet serve
 
 ### (c) Showing Data in an Oracle JET Grid
 
-1. Explore the Oracle JET Cookbook -- go to oraclejet.org and click 'Use Cookbook'.
+1. Explore the Oracle JET Cookbook: go to oraclejet.org and click 'Use Cookbook'.
 
 2. Take a look at the ojDataGrid and CRUD scenarios:
 
