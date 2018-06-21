@@ -286,7 +286,37 @@ You can refer to properties in the module so that when a row is selected in the 
 <my-employee-form first-name='[[inputFirstName]]' last-name='[[inputLastName]]'></my-employee-form>
 ```
 
+9. Let's reuse the CCA component in a different module, e.g., in the Incidents module, which consists of the 'incidents.html' and 'incidents.js' file. In the 'incidents.js' file, reference the CCA component in the 'define' block:
+
+```js #button { border: none; }
+'jet-composites/my-employee-form/loader'
+```
+Next, create an Observable providing the data:
+
+```js #button { border: none; }
+self.employees = ko.observableArray([
+    {'name': 'Jack', 'lastname': 'Smith'},
+    {'name': 'Henry', 'lastname': 'Sykes'}
+]);
+```
+Finally, display the CCA component for each of the 'employees':
+```html #button { border: none; }
+<oj-bind-for-each data="[[employees]]"> 
+      <template> 
+             <my-employee-form 
+                  first-name="[[$current.data.name]]" 
+                  last-name="[[$current.data.lastname]]" 
+                  hire-date="1993-01-13" 
+                  hire-salary="8000"> 
+             </my-employee-form> 
+             <hr/> 
+       </template> 
+</oj-bind-for-each>
+```
+
 ### (b) Creating a Nested CCA Component
+
+
 
 ### (c) Creating CRUD Functionality
 
