@@ -45,21 +45,19 @@ ojet serve
 
 4. Make a change in the 'Dashboard.html' file and notice what happens in the browser, without needing to refresh.
 
-### (c) Working with Oracle JET Components
+### (c) Showing Data in an Oracle JET Grid
 
-1. Explore the Oracle JET Cookbook.
+1. Explore the Oracle JET Cookbook -- go to oraclejet.org and click 'Use Cookbook'.
 
-2. Especially explore the data visualization use cases:
+2. Take a look at the ojDataGrid and CRUD scenarios:
 
-http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=dataVisualizations&demo=gallery
+http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=crud&demo=CRUDGrid
 
-3. Take a look at the Bar Chart:
+http://www.oracle.com/webfolder/technetwork/jet/jsdocs/oj.ojDataGrid.html
 
-http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=barChart&demo=default
+In the above, look at the JS documentation, the description, variations, and tweak the code.
 
-4. Look at the JS documentation, the description, variations, and tweak the code.
-
-5. Copy the HTML into the Dashboard View, the JavaScript into the Dashboard ViewModel, and reference the 'ojs/ojchart' in the define block of the Dashboard ViewModel. Look in the browser and see the Bar Chart is displayed.
+3. Here is a simple ojDataGrid, copy it into the 'Dashboard.html' file:
 
 ```html #button { border: none; }
 <oj-data-grid 
@@ -71,6 +69,8 @@ http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=barCh
      header.column.style="width:100px" > 
 </oj-data-grid>
 ```
+
+4. Above, notice that 'dataSource' is referenced, which you need to define in 'Dashboard.js' copy/paste the following code for that purpose:
 
 ```js #button { border: none; }
 self.collection = new oj.Collection(null, {
@@ -85,9 +85,11 @@ self.dataSource = new oj.CollectionDataGridDataSource(
    });
 ```   
 
-6. Change the 'bar' type to 'pie' by hand and then let the user do it by combining with a Combobox One:
+5. To use the 'ojDataGrid', reference the following in the 'define' block of the 'Dashboard.js' file:
 
-http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=comboboxOne&demo=single
+```js #button { border: none; }
+'ojs/ojdatagrid', 'ojs/ojcollectiondatagriddatasource'
+```
    
 ## Day 3: Smart Usage of Oracle JET
 
