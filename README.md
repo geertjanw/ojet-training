@@ -1,25 +1,17 @@
 # Oracle JET Training Materials
 
-#### Day 1: Basics
+## Part 1: Set Up the Environment
 
-   * Getting Started
-   * Working with Oracle JET Components
-   * Working with Oracle JET Composite Components
+   1. Set up the Fake REST Server: https://www.npmjs.com/package/fake-rest-server
+   2. Download and put anywhere on disk: 
+   3. Run in the terminal: 
+```js #button { border: none; }
+json-server --watch employeeData.json
+```
+   4. Go to http://localhost:3000/employees and see your data via your fake REST endpoint.
    
-#### Day 2: Data
+## Part 2: Basic Usage of Oracle JET
    
-   * Visualizing Data from a File
-   * Visualizing Data from a REST Endpoint
-   * Selecting a Row in the Table
-   * Adding CRUD Functionality
-   * Adding Responsive Design
-   
-#### Day 3: Miscellaneous
-
-   * Internationalization
-   
-## Day 1   
-
 ### Getting Started
 
 1. Follow the instruction on the Getting Started page to install the ojet-cli:
@@ -62,6 +54,14 @@ http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=barCh
 http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=comboboxOne&demo=single
 
 In this scenario, also discuss the square braces vs. curly braces.
+
+   
+## Day 3: Smart Usage of Oracle JET
+
+   * Internationalization
+   
+## Day 1   
+
 
 ### Working with Oracle JET Composite Components
 
