@@ -55,7 +55,7 @@ http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=crud&
 
 http://www.oracle.com/webfolder/technetwork/jet/jsdocs/oj.ojDataGrid.html
 
-In the above, look at the JS documentation, the description, variations, and tweak the code.
+In the above, look at the JS documentation, the description, variations, etc.
 
 3. Here is a simple ojDataGrid, copy it into the 'Dashboard.html' file:
 
