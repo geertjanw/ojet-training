@@ -319,7 +319,7 @@ Finally, display the CCA component for each of the 'employees':
 2. The HTML above is quite verbose, it could be expressed more compactly like this, assuming we had a CCA component named 'my-employee-container', which would automatically do the above for us:
 
 ```html #button { border: none; }
-<my-employee-form-container data="[[data]]"/>
+<my-employee-form-container data="[[employees]]"/>
 ```
 
 3. In the Terminal, first kill the 'ojet' process, and then, in the root of your project, run the following:
@@ -330,31 +330,18 @@ ojet create component my-employee-form-container
 
 4. Similar as in the previous section, you now need to do the following:
 
-   * load the 'loader.js' file from the 'my-employee-form-container' into the ViewModel of a module
+   * load the 'loader.js' file from the 'my-employee-form-container' component into the ViewModel of a module, e.g., into 'incidents.js'
+   * add a property named 'data' of type 'array' to the 'component.json' file of the 'my-employee-form-container' component
+   * move the View code from the module into the 'my-employee-form-container-view.html' file and reference the 'data' property as '$props.data'
+   * load the 'loader.js' file from the 'my-employee-form' component in the ViewModel of the 'my-employee-form-container' component, i.e., into the 'my-employee-form-container-viewModel.js' file and note that you can now remove the reference to it from the 'incidents.js' file
    
-   * add an array property to the 'component.json' file of the 'my-employee-form-container' CCA module
-```js #button { border: none; }
-"data": {
-   "type":"array"
-}
+5. Use the new custom element, i.e., 'my-employee-form-container', as follows in 'incidents.html':
+
+```html #button { border: none; }
+<my-employee-form-container data="[[employees]]"/>
 ```
 
-   * move the View code from the module into the 'my-employee-form-container-view.html' file and reference the 'data' property:
-```html #button { border: none; }   
-<oj-bind-for-each data="[[$props.data]]"> 
-    <template> 
-        <my-employee-form 
-            first-name="[[$current.data.name]]" 
-            last-name="[[$current.data.lastname]]" 
-            hire-date="1993-01-13" 
-            hire-salary="8000"> 
-        </my-employee-form> 
-        <hr/> 
-    </template> 
-</oj-bind-for-each>
-```
-
-   * abc
+Start the 'ojet serve' process again and note that you are now using a nested CCA component.   
 
 ### (c) Creating CRUD Functionality
 
