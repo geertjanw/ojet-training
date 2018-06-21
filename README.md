@@ -14,24 +14,33 @@ json-server --watch employeeData.json
    
 ### (a) Getting Started
 
-1. Follow the instruction on the Getting Started page to install the ojet-cli:
+Follow the instruction on the Getting Started page to install the ojet-cli:
 
 http://www.oracle.com/webfolder/technetwork/jet/globalGetStarted.html
 
-2. Run the following in the terminal:
+The above can be summarized to the following:
+
+1. Download and install the latest LTS version of Node from nodejs.org.
+
+2. Install the Oracle JET command line tool:
 
 ```js #button { border: none; }
-ojet create BankAnalyzer --template=navdrawer
+npm install -g @oracle/ojet-cli
 ```
-3. Run the following in the terminal and look in the browser:
+3. Run the following in the terminal:
+
+```js #button { border: none; }
+ojet create EmployeeManager --template=navdrawer
+```
+4. Run the following in the terminal and look in the browser:
 
 ```js #button { border: none; }
 ojet serve
 ```
 
-4. Open your editor and eplore the source structure and learn about what everything does.
+5. Open your editor and eplore the source structure and learn about what everything does.
 
-5. Make a change in the 'Dashboard.html' file and notice what happens in the browser, without needing to refresh.
+6. Make a change in the 'Dashboard.html' file and notice what happens in the browser, without needing to refresh.
 
 ### (b) Working with Oracle JET Components
 
