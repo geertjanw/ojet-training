@@ -2,6 +2,12 @@
 
 The purpose of this script is to put together a CRUD scenario in an Oracle JET application. You'll start by setting up a fake REST server, next you'll set up an Oracle JET application that connects to it and displays its payload, and finally you'll use the Composite Component Architecture to create a reusable custom element for displaying the payload in different modules and components.
 
+Table of Contents
+
+Part 1: Set Up the Environment
+Part 2: Simple Usage of Oracle JET
+Part 3: Smart Usage of Oracle JET
+
 ## Part 1: Set Up the Environment
 
 In this part, you publish data that will be used in the other parts that follows.
