@@ -249,11 +249,18 @@ ojet create component my-employee-form
 <oj-input-text id="inputSalary" label-hint="Salary" value="[[$props.salary]]"></oj-input-text> 
 ```
 
-8. Declare the 'my-employee-form' custom element a few times in 'Dashboard.html', as shown below, instead of the form-container that you currently have there, run 'ojet serve' in the Terminal again, and notice that you now see multiple forms.
+8. Declare the 'my-employee-form' custom element a few times in 'Dashboard.html', as shown below, instead of the form-container that you currently have there, then run 'ojet serve' in the Terminal again, and notice that you now see multiple forms.
 
 ```html #button { border: none; }
 <my-employee-form></my-employee-form>
 <my-employee-form></my-employee-form>
+```
+
+You can initialize the properties by using attributes with hyphens where the camelcase is used, e.g., the 'firstName' property is expressed as the 'first-name' attribute, shown below:
+
+```html #button { border: none; }
+<my-employee-form first-name='James' last-name='Smith'></my-employee-form>
+<my-employee-form first-name='Sally'></my-employee-form>
 ```
 
 ### (b) Setting Properties
