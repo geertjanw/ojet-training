@@ -21,7 +21,7 @@ Part 3: Smart Usage of Oracle JET
 
 In this part, you publish data that will be used in the other parts that follows.
 
-   1. Set up the Fake REST Server: https://www.npmjs.com/package/fake-rest-server
+   1. Set up the Fake REST Server: https://scotch.io/tutorials/json-server-as-a-fake-rest-api-in-frontend-development
    2. Download and put anywhere on disk: https://github.com/geertjanw/ojet-training/blob/master/employeeData.json
    3. Run in the terminal: 
 ```js #button { border: none; }
