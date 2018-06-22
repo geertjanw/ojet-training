@@ -78,6 +78,8 @@ You should see this:
 <table><tr><td>   
 <img src="Screen%20Shot%202018-06-22%20at%2022.47.54.png" alt="alt text" width="400" height="250">
 </td></tr></table>
+
+You are now ready to get started with Oracle JET!
             
 ## Part 2: Simple Usage of Oracle JET
 
