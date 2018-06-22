@@ -4,7 +4,7 @@ The purpose of this script is to put together a CRUD scenario in an Oracle JET a
 
 #### Table of Contents
 
-Part 1: Setting Up the Environment
+Part 1: Set Up the Environment
    * Getting Node
    * Getting Data
    * Getting Oracle JET
