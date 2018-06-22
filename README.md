@@ -25,7 +25,7 @@ All the activities in this section should be done on the command line in a Termi
 
 ### (a) Getting Node
 
-Node.js is a JavaScript runtime, that provided 'npm', which is the Node Package Manager that you will use in the sections that follow to set up the environment that you need.
+Node.js is a JavaScript runtime, that provides 'npm', which is the Node Package Manager that you will use in the sections that follow to set up the environment that you need.
 
 1. Download and install the latest LTS version of Node from http://nodejs.org.
 
