@@ -5,9 +5,10 @@ The purpose of this script is to put together a CRUD scenario in an Oracle JET a
 #### Table of Contents
 
 Part 1: Setting Up the Environment
+   * Getting Data
+   * Getting Oracle JET
 
 Part 2: Simple Usage of Oracle JET
-   * Getting Started
    * Creating an Oracle JET Application
    * Showing Data in an Oracle JET Grid
    * Displaying the Selected Data in an Oracle JET Form
@@ -19,7 +20,9 @@ Part 3: Smart Usage of Oracle JET
 
 ## Part 1: Set Up the Environment
 
-In this part, you publish data that will be used in the other parts that follows.
+### (b) Getting Data
+
+In this part, you publish mock data that will be used in the other parts that follows.
 
    1. Set up the JSON Server: https://github.com/typicode/json-server
    2. Download and put anywhere on disk: https://github.com/geertjanw/ojet-training/blob/master/employeeData.json
@@ -32,12 +35,8 @@ json-server --watch employeeData.json
 <table><tr><td>   
 <img src="Screen%20Shot%202018-06-21%20at%2015.15.15.png" alt="alt text" width="400" height="250">
 </td></tr></table>
-            
-## Part 2: Simple Usage of Oracle JET
 
-In this part, you set up a new Oracle JET application, explore the Oracle JET Cookbook, and set up a grid and form that display the data published in the previous part.
-   
-### (a) Getting Started
+### (b) Getting Oracle JET
 
 Follow the instructions on the Getting Started page to install the ojet-cli:
 
@@ -52,8 +51,12 @@ The above can be summarized to the following:
 ```js #button { border: none; }
 npm install -g @oracle/ojet-cli
 ```
+            
+## Part 2: Simple Usage of Oracle JET
 
-### (b) Creating an Oracle JET Application
+In this part, you set up a new Oracle JET application, explore the Oracle JET Cookbook, and set up a grid and form that display the data published in the previous part.
+   
+### (a) Creating an Oracle JET Application
 
 1. Run the following in the terminal:
 
@@ -76,7 +79,7 @@ After a few moments, you should see this:
 
 4. Make a change in the 'Dashboard.html' file and notice what happens in the browser, without needing to refresh.
 
-### (c) Showing Data in an Oracle JET Grid
+### (b) Showing Data in an Oracle JET Grid
 
 1. Explore the Oracle JET Cookbook: go to oraclejet.org, click 'Use Cookbook', and look around.
 
@@ -128,7 +131,7 @@ self.dataSource = new oj.CollectionDataGridDataSource(
 <img src="Screen%20Shot%202018-06-21%20at%2015.50.55.png" alt="alt text" width="400" height="250">
 </td></tr></table>
 
-### (d) Displaying the Selected Data in an Oracle JET Form
+### (c) Displaying the Selected Data in an Oracle JET Form
 
 1. Add properties, using Knockout Observables, to the 'Dashboard.js' file:
 
