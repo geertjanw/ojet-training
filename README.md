@@ -33,7 +33,7 @@ Node.js is a JavaScript runtime, that provided 'npm', which is the Node Package 
 ```js #button { border: none; }   
 node -v
 ```   
-3. To verify Node is installed, run the following, which should show you the version of the Node Package Manager:
+3. To verify the Node Package Manager is installed, run the following, which should show you the version of the Node Package Manager:
 ```js #button { border: none; }   
 npm -v
 ```   
