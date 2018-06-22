@@ -20,11 +20,20 @@ Part 3: Smart Usage of Oracle JET
 
 ## Part 1: Set Up the Environment
 
+All the activities in this section should be done on the command line in a Terminal window.
+
+### (a) Getting Node
+
+1. Download and install the latest LTS version of Node from http://nodejs.org.
+
 ### (b) Getting Data
 
 In this part, you publish mock data that will be used in the other parts that follows.
 
    1. Set up the JSON Server: https://github.com/typicode/json-server
+```js #button { border: none; }   
+npm install -g json-server
+```   
    2. Download and put anywhere on disk: https://github.com/geertjanw/ojet-training/blob/master/employeeData.json
    3. Run in the terminal: 
 ```js #button { border: none; }
@@ -36,20 +45,20 @@ json-server --watch employeeData.json
 <img src="Screen%20Shot%202018-06-21%20at%2015.15.15.png" alt="alt text" width="400" height="250">
 </td></tr></table>
 
-### (b) Getting Oracle JET
+### (c) Getting Oracle JET
 
-Follow the instructions on the Getting Started page to install the ojet-cli:
+In this part, you install the Oracle JET command-line interface.
 
-http://www.oracle.com/webfolder/technetwork/jet/globalGetStarted.html
-
-The above can be summarized to the following:
-
-1. Download and install the latest LTS version of Node from http://nodejs.org.
-
-2. Install the Oracle JET command line tool:
+1. Install the Oracle JET command-line interface:
 
 ```js #button { border: none; }
 npm install -g @oracle/ojet-cli
+```
+
+2. Run the following to check installation succeeded:
+
+```js #button { border: none; }
+ojet serve
 ```
             
 ## Part 2: Simple Usage of Oracle JET
