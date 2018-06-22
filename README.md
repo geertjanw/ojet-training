@@ -72,6 +72,12 @@ npm install -g @oracle/ojet-cli
 ```js #button { border: none; }
 ojet help
 ```
+
+You should see this:
+
+<table><tr><td>   
+<img src="Screen%20Shot%202018-06-22%20at%2022.47.54.png" alt="alt text" width="400" height="250">
+</td></tr></table>
             
 ## Part 2: Simple Usage of Oracle JET
 
