@@ -58,7 +58,7 @@ npm install -g @oracle/ojet-cli
 2. Run the following to check installation succeeded:
 
 ```js #button { border: none; }
-ojet serve
+ojet help
 ```
             
 ## Part 2: Simple Usage of Oracle JET
