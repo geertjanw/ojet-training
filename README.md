@@ -40,7 +40,7 @@ npm -v
 
 ### (b) Getting Data
 
-In this part, you publish mock data that will be used in the other parts that follows.
+In this part, you publish mock data that will be visualized in the Oracle JET application that you'll create via the instructions that follow.
 
    1. Set up the JSON Server: https://github.com/typicode/json-server
 ```js #button { border: none; }   
