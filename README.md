@@ -5,6 +5,7 @@ The purpose of this script is to put together a CRUD scenario in an Oracle JET a
 #### Table of Contents
 
 Part 1: Setting Up the Environment
+   * Getting Node
    * Getting Data
    * Getting Oracle JET
 
@@ -24,7 +25,18 @@ All the activities in this section should be done on the command line in a Termi
 
 ### (a) Getting Node
 
+Node.js is a JavaScript runtime, that provided 'npm', which is the Node Package Manager that you will use in the sections that follow to set up the environment that you need.
+
 1. Download and install the latest LTS version of Node from http://nodejs.org.
+
+2. To verify Node is installed, run the following, which should show you your version of Node:
+```js #button { border: none; }   
+node -v
+```   
+3. To verify Node is installed, run the following, which should show you the version of the Node Package Manager:
+```js #button { border: none; }   
+npm -v
+```   
 
 ### (b) Getting Data
 
