@@ -142,13 +142,13 @@ In the above, look at the JS documentation, the description, variations, etc.
 
 ```js #button { border: none; }
 self.collection = new oj.Collection(null, {
-   model: new oj.Model.extend({idAttribute: 'EMPLOYEE_ID'}),
+   model: new oj.Model.extend({idAttribute: 'id'}),
    url: 'http://localhost:3000/employees'
 });
 
 self.dataSource = new oj.CollectionDataGridDataSource(
    self.collection, {
-      rowHeader: 'EMPLOYEE_ID',
+      rowHeader: 'id',
       columns: ['FIRST_NAME', 'LAST_NAME', 'HIRE_DATE', 'SALARY']
    });
 ```   
@@ -184,7 +184,7 @@ self.inputSalary = ko.observable(15000);
 //build a new model from the observables in the form
 self.buildModel = function () {
    return {
-     'EMPLOYEE_ID': self.inputEmployeeID(),
+     'id': self.inputEmployeeID(),
      'FIRST_NAME': self.inputFirstName(),
      'LAST_NAME': self.inputLastName(),
      'HIRE_DATE': self.inputHireDate(),
@@ -194,7 +194,7 @@ self.buildModel = function () {
 
 //used to update the fields based on the selected row:
 self.updateFields = function (model) {
-   self.inputEmployeeID(model.get('EMPLOYEE_ID'));
+   self.inputEmployeeID(model.get('id'));
    self.inputFirstName(model.get('FIRST_NAME'));
    self.inputLastName(model.get('LAST_NAME'));
    self.inputHireDate(model.get('HIRE_DATE'));
@@ -421,8 +421,6 @@ self.add = function (event) {
     self.inputEmployeeID(nextKey);
     var recordAttrs = {
         "id":
-                self.inputEmployeeID(),
-        "EMPLOYEE_ID":
                 self.inputEmployeeID(),
         "FIRST_NAME":
                 self.inputFirstName(),
