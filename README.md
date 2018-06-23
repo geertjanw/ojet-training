@@ -42,10 +42,11 @@ npm -v
 
 In this part, you set up the [JSON Server](https://scotch.io/tutorials/json-server-as-a-fake-rest-api-in-frontend-development) to publish mock data that will be visualized in the Oracle JET application that you'll create via the instructions that follow.
 
-   1. Set up the JSON Server: https://github.com/typicode/json-server
+   1. Set up the JSON Server, as follows:
 ```js #button { border: none; }   
 npm install -g json-server
 ```   
+Details: https://github.com/typicode/json-server
    2. Download and put anywhere on disk: https://github.com/geertjanw/ojet-training/blob/master/employeeData.json
    3. Run in the terminal: 
 ```js #button { border: none; }
