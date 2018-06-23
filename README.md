@@ -47,6 +47,7 @@ In this part, you set up the [JSON Server](https://scotch.io/tutorials/json-serv
 npm install -g json-server
 ```   
 Details: https://github.com/typicode/json-server
+
    2. Download and put anywhere on disk: https://github.com/geertjanw/ojet-training/blob/master/employeeData.json
    3. Run in the terminal: 
 ```js #button { border: none; }
