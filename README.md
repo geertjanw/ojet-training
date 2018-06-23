@@ -455,7 +455,7 @@ self.add = function (event) {
     first-name='[[inputFirstName]]' 
     last-name='[[inputLastName]]'>
     <span slot="toolbar">
-        <oj-button id="saveBtn" on-click="[[add]]">Add Employee</oj-button>
+        <oj-button id="saveBtn" on-click="[[add]]">Add</oj-button>
     </span>
 </my-employee-form>
 ```
@@ -480,8 +480,8 @@ self.remove = function () {
     hire-date='[[inputHireDate]]'
     hire-salary='[[inputSalary]]'>
     <span slot="toolbar">
-        <oj-button id="saveBtn" on-click="[[add]]">Add Employee</oj-button>
-        <oj-button id="remoBtn" data-bind="click: remove">Remove</oj-button>
+        <oj-button id="saveBtn" on-click="[[add]]">Add</oj-button>
+        <oj-button id="remoBtn" on-click="[[remove]]">Remove</oj-button>
     </span>
 </my-employee-form>
 ```
