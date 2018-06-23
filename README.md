@@ -138,7 +138,7 @@ In the above, look at the JS documentation, the description, variations, etc.
 </oj-data-grid>
 ```
 
-3. Above, notice that 'dataSource' is referenced, which you need to define in 'Dashboard.js' copy/paste the following code for that purpose:
+3. Above, notice that 'dataSource' is referenced, which you need to define in 'Dashboard.js'. Copy/paste the following code for that purpose into 'Dashboard.js' (paste it directly below the 'var self = this' statement):
 
 ```js #button { border: none; }
 self.collection = new oj.Collection(null, {
@@ -262,7 +262,7 @@ Take a look at your source structure, find the new 'my-employee-form' CCA compon
 'jet-composites/my-employee-form/loader'
 ```
 
-3. Move the form-container into the 'my-employee-form-view.html' file of the 'my-employee-form' CCA component:
+3. Move the form-container (from step 5 in the previous section) into the 'my-employee-form-view.html' file of the 'my-employee-form' CCA component:
 
 ```html #button { border: none; }
 <oj-form-layout id="form-container" label-edge="top"> 
@@ -273,7 +273,7 @@ Take a look at your source structure, find the new 'my-employee-form' CCA compon
 </oj-form-layout> 
 ```
 
-4. Move the references 'ojs/ojinputtext' and to 'ojs/ojformlayout' from the 'define' block of 'Dashboard.js' to the 'define' block of 'my-employee-form-viewModel.js' file.
+4. Move the references to 'ojs/ojinputtext' and 'ojs/ojformlayout' from the 'define' block of 'Dashboard.js' to the 'define' block of 'my-employee-form-viewModel.js' file.
 
 5. In 'component.json', within your 'my-employee-form' CCA component, add content to the 'properties' section, like this:
 
