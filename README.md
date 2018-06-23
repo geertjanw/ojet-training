@@ -474,8 +474,7 @@ self.remove = function () {
     first-name='[[inputFirstName]]' 
     last-name='[[inputLastName]]'
     hire-date='[[inputHireDate]]'
-    hire-salary='[[inputSalary]]'
-    >
+    hire-salary='[[inputSalary]]'>
     <span slot="toolbar">
         <oj-button id="saveBtn" on-click="[[add]]">Add Employee</oj-button>
         <oj-button id="remoBtn" data-bind="click: remove">Remove</oj-button>
