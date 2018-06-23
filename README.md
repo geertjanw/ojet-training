@@ -453,7 +453,9 @@ self.add = function (event) {
 ```html #button { border: none; }   
 <my-employee-form 
     first-name='[[inputFirstName]]' 
-    last-name='[[inputLastName]]'>
+    last-name='[[inputLastName]]'
+    hire-date='[[inputHireDate]]'
+    hire-salary='[[inputSalary]]'>
     <span slot="toolbar">
         <oj-button id="saveBtn" on-click="[[add]]">Add</oj-button>
     </span>
