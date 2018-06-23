@@ -141,9 +141,13 @@ In the above, look at the JS documentation, the description, variations, etc.
 3. Above, notice that 'dataSource' is referenced, which you need to define in 'Dashboard.js'. Copy/paste the following code for that purpose into 'Dashboard.js' (paste it directly below the 'var self = this' statement):
 
 ```js #button { border: none; }
+self.url = 'http://localhost:3000/employees';
+
 self.collection = new oj.Collection(null, {
-   model: new oj.Model.extend({idAttribute: 'id'}),
-   url: 'http://localhost:3000/employees'
+    model: new oj.Model.extend({
+        idAttribute: 'id',
+        urlRoot: self.url}),
+    url: self.url
 });
 
 self.dataSource = new oj.CollectionDataGridDataSource(
