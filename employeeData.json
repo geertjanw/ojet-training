@@ -1,7 +1,7 @@
 {
   "employees": [
     {
-      "EMPLOYEE_ID": 100,
+      "id": 100,
       "FIRST_NAME": "Steven",
       "LAST_NAME": "King",
       "EMAIL": "SKING",
@@ -11,27 +11,7 @@
       "DEPARTMENT_ID": 90
     },
     {
-      "EMPLOYEE_ID": 101,
-      "FIRST_NAME": "Neena",
-      "LAST_NAME": "Kochhar",
-      "EMAIL": "NKOCHHAR",
-      "PHONE_NUMBER": "515.123.4568",
-      "HIRE_DATE": "1989-09-21",
-      "SALARY": 17000,
-      "DEPARTMENT_ID": 90
-    },
-    {
-      "EMPLOYEE_ID": 102,
-      "FIRST_NAME": "Lex",
-      "LAST_NAME": "De Haan",
-      "EMAIL": "LDEHAAN",
-      "PHONE_NUMBER": "515.123.4569",
-      "HIRE_DATE": "1993-01-13",
-      "SALARY": 17000,
-      "DEPARTMENT_ID": 90
-    },
-    {
-      "EMPLOYEE_ID": 103,
+      "id": 103,
       "FIRST_NAME": "Alexander",
       "LAST_NAME": "Hunold",
       "EMAIL": "AHUNOLD",
@@ -41,17 +21,7 @@
       "DEPARTMENT_ID": 60
     },
     {
-      "EMPLOYEE_ID": 104,
-      "FIRST_NAME": "Bruce",
-      "LAST_NAME": "Ernst",
-      "EMAIL": "BERNST",
-      "PHONE_NUMBER": "590.423.4568",
-      "HIRE_DATE": "1991-05-21",
-      "SALARY": 6000,
-      "DEPARTMENT_ID": 60
-    },
-    {
-      "EMPLOYEE_ID": 105,
+      "id": 105,
       "FIRST_NAME": "David",
       "LAST_NAME": "Austin",
       "EMAIL": "DAUSTIN",
@@ -61,7 +31,7 @@
       "DEPARTMENT_ID": 60
     },
     {
-      "EMPLOYEE_ID": 106,
+      "id": 106,
       "FIRST_NAME": "Valli",
       "LAST_NAME": "Pataballa",
       "EMAIL": "VPATABAL",
@@ -71,7 +41,7 @@
       "DEPARTMENT_ID": 60
     },
     {
-      "EMPLOYEE_ID": 107,
+      "id": 107,
       "FIRST_NAME": "Diana",
       "LAST_NAME": "Lorentz",
       "EMAIL": "DLORENTZ",
@@ -81,7 +51,7 @@
       "DEPARTMENT_ID": 60
     },
     {
-      "EMPLOYEE_ID": 108,
+      "id": 108,
       "FIRST_NAME": "Nancy",
       "LAST_NAME": "Greenberg",
       "EMAIL": "NGREENBE",
@@ -91,7 +61,7 @@
       "DEPARTMENT_ID": 100
     },
     {
-      "EMPLOYEE_ID": 109,
+      "id": 109,
       "FIRST_NAME": "Daniel",
       "LAST_NAME": "Faviet",
       "EMAIL": "DFAVIET",
@@ -101,7 +71,7 @@
       "DEPARTMENT_ID": 100
     },
     {
-      "EMPLOYEE_ID": 110,
+      "id": 110,
       "FIRST_NAME": "John",
       "LAST_NAME": "Chen",
       "EMAIL": "JCHEN",
@@ -111,7 +81,7 @@
       "DEPARTMENT_ID": 100
     },
     {
-      "EMPLOYEE_ID": 111,
+      "id": 111,
       "FIRST_NAME": "Ismael",
       "LAST_NAME": "Sciarra",
       "EMAIL": "ISCIARRA",
@@ -121,7 +91,7 @@
       "DEPARTMENT_ID": 100
     },
     {
-      "EMPLOYEE_ID": 112,
+      "id": 112,
       "FIRST_NAME": "Jose Manuel",
       "LAST_NAME": "Urman",
       "EMAIL": "JMURMAN",
@@ -131,7 +101,7 @@
       "DEPARTMENT_ID": 100
     },
     {
-      "EMPLOYEE_ID": 113,
+      "id": 113,
       "FIRST_NAME": "Luis",
       "LAST_NAME": "Popp",
       "EMAIL": "LPOPP",
@@ -141,7 +111,7 @@
       "DEPARTMENT_ID": 100
     },
     {
-      "EMPLOYEE_ID": 114,
+      "id": 114,
       "FIRST_NAME": "Den",
       "LAST_NAME": "Raphaely",
       "EMAIL": "DRAPHEAL",
@@ -151,7 +121,7 @@
       "DEPARTMENT_ID": 30
     },
     {
-      "EMPLOYEE_ID": 115,
+      "id": 115,
       "FIRST_NAME": "Alexander",
       "LAST_NAME": "Khoo",
       "EMAIL": "AKHOO",
@@ -161,7 +131,7 @@
       "DEPARTMENT_ID": 30
     },
     {
-      "EMPLOYEE_ID": 116,
+      "id": 116,
       "FIRST_NAME": "Shelli",
       "LAST_NAME": "Baida",
       "EMAIL": "SBAIDA",
@@ -171,7 +141,7 @@
       "DEPARTMENT_ID": 30
     },
     {
-      "EMPLOYEE_ID": 117,
+      "id": 117,
       "FIRST_NAME": "Sigal",
       "LAST_NAME": "Tobias",
       "EMAIL": "STOBIAS",
@@ -181,7 +151,7 @@
       "DEPARTMENT_ID": 30
     },
     {
-      "EMPLOYEE_ID": 118,
+      "id": 118,
       "FIRST_NAME": "Guy",
       "LAST_NAME": "Himuro",
       "EMAIL": "GHIMURO",
@@ -191,7 +161,7 @@
       "DEPARTMENT_ID": 30
     },
     {
-      "EMPLOYEE_ID": 119,
+      "id": 119,
       "FIRST_NAME": "Karen",
       "LAST_NAME": "Colmenares",
       "EMAIL": "KCOLMENA",
@@ -201,7 +171,7 @@
       "DEPARTMENT_ID": 30
     },
     {
-      "EMPLOYEE_ID": 120,
+      "id": 120,
       "FIRST_NAME": "Matthew",
       "LAST_NAME": "Weiss",
       "EMAIL": "MWEISS",
