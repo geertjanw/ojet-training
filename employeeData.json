@@ -11,6 +11,26 @@
       "DEPARTMENT_ID": 90
     },
     {
+        "id": 101,
+        "FIRST_NAME": "Neena",
+        "LAST_NAME": "Kochhar",
+        "EMAIL": "NKOCHHAR",
+        "PHONE_NUMBER": "515.123.4568",
+        "HIRE_DATE": "1989-09-21",
+        "SALARY": 17000,
+        "DEPARTMENT_ID": 90
+    },
+    {
+        "id": 102,
+        "FIRST_NAME": "Lex",
+        "LAST_NAME": "De Haan",
+        "EMAIL": "LDEHAAN",
+        "PHONE_NUMBER": "515.123.4569",
+        "HIRE_DATE": "1993-01-13",
+        "SALARY": 17000,
+        "DEPARTMENT_ID": 90
+    },
+    {
       "id": 103,
       "FIRST_NAME": "Alexander",
       "LAST_NAME": "Hunold",
