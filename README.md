@@ -125,7 +125,7 @@ http://www.oracle.com/webfolder/technetwork/jet/jsdocs/oj.ojDataGrid.html
 
 In the above, look at the JS documentation, the description, variations, etc.
 
-2. Here is a simple ojDataGrid, a simplified version of the above references. Copy it below and paste it into the 'Dashboard.html' file in your application:
+2. Here is a simple ojDataGrid, a simplified version of the above references. Copy it below and paste it into the 'dashboard.html' file in your application:
 
 ```html #button { border: none; }
 <oj-data-grid 
@@ -138,7 +138,7 @@ In the above, look at the JS documentation, the description, variations, etc.
 </oj-data-grid>
 ```
 
-3. Above, notice that 'dataSource' is referenced, which you need to define in 'Dashboard.js'. Copy/paste the following code for that purpose into 'Dashboard.js' (paste it directly below the 'var self = this' statement):
+3. Above, notice that 'dataSource' is referenced, which you need to define in 'dashboard.js'. Copy/paste the following code for that purpose into 'dashboard.js' (paste it directly below the 'var self = this' statement):
 
 ```js #button { border: none; }
 self.url = 'http://localhost:3000/employees';
@@ -163,7 +163,7 @@ self.dataSource = new oj.CollectionDataGridDataSource(
 'ojs/ojdatagrid', 'ojs/ojcollectiondatagriddatasource'
 ```
 
-5. In your application, you should now see this:
+5. Save your changes. In your application, you should now see this:
 
 <table><tr><td>   
 <img src="Screen%20Shot%202018-06-21%20at%2015.50.55.png" alt="alt text" width="400" height="250">
@@ -336,7 +336,7 @@ We're going to reuse our CCA component inside a new CCA component, to provide a 
 ```js #button { border: none; }
 'jet-composites/my-employee-form/loader'
 ```
-Next, create an Observable Array providing the data:
+Next, create an Observable Array providing the data, in 'incidents.js':
 
 ```js #button { border: none; }
 self.employees = ko.observableArray([
@@ -344,7 +344,7 @@ self.employees = ko.observableArray([
     {'name': 'Henry', 'lastname': 'Sykes'}
 ]);
 ```
-Next, display the CCA component for each of the 'employees':
+Next, display the CCA component for each of the 'employees', in 'incidents.html':
 ```html #button { border: none; }
 <oj-bind-for-each data="[[employees]]"> 
       <template> 
