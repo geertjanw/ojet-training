@@ -412,6 +412,8 @@ We now have a slot for a toolbar and, in the Dashboard module, we'll add functio
 
 #### Update
 
+The syntax introduced below is based on the [Backbone 'remove' construction](http://backbonejs.org/#Collection-remove).
+
  1. Add a function to 'dashboard.js' for updating items:
    
 ```js #button { border: none; }  
@@ -494,6 +496,8 @@ Also, change the square braces in the view of the 'my-employee-form' component t
 4. In the application, try out your new Update functionality.
 
 #### Delete
+
+The syntax introduced below is based on the [Backbone 'remove' construction](http://backbonejs.org/#Collection-remove).
 
  1. Add a function to 'dashboard.js' for removing the current item:
    
