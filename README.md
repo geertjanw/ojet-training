@@ -435,10 +435,10 @@ self.update = function () {
  
  ```html #button { border: none; }   
  <my-employee-form
-    first-name='{{inputFirstName}}'
-    last-name='{{inputLastName}}'
-    hire-date='{{inputHireDate}}'
-    hire-salary='{{inputSalary}}'>
+    first-name='[[inputFirstName]]'
+    last-name='[[inputLastName]]'
+    hire-date='[[inputHireDate]]'
+    hire-salary='[[inputSalary]]'>
     <span slot="toolbar">
         <oj-button on-click="[[update]]">Update</oj-button>
     </span>
@@ -462,10 +462,10 @@ self.remove = function () {
 
 ```html #button { border: none; }   
 <my-employee-form
-    first-name='{{inputFirstName}}'
-    last-name='{{inputLastName}}'
-    hire-date='{{inputHireDate}}'
-    hire-salary='{{inputSalary}}'>
+    first-name='[[inputFirstName]]'
+    last-name='[[inputLastName]]'
+    hire-date='[[inputHireDate]]'
+    hire-salary='[[inputSalary]]'>
     <span slot="toolbar">
         <oj-button on-click="[[update]]">Update</oj-button>
         <oj-button on-click="[[remove]]">Delete</oj-button>
@@ -501,10 +501,10 @@ self.create = function (event) {
 
 ```html #button { border: none; }   
 <my-employee-form
-    first-name='{{inputFirstName}}'
-    last-name='{{inputLastName}}'
-    hire-date='{{inputHireDate}}'
-    hire-salary='{{inputSalary}}'>
+    first-name='[[inputFirstName]]'
+    last-name='[[inputLastName]]'
+    hire-date='[[inputHireDate]]'
+    hire-salary='[[inputSalary]]'>
     <span slot="toolbar">
         <oj-button on-click="[[create]]">Create</oj-button>
         <oj-button on-click="[[update]]">Update</oj-button>
