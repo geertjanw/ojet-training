@@ -5,7 +5,7 @@ The purpose of this script is to put together a CRUD scenario in an Oracle JET a
 The application you'll create in this workshop will look as follows:
 
 <table><tr><td>   
-<img src="Screen%20Shot%202018-06-24%20at%2022.35.42.png" alt="alt text" width="500" height="400">
+<img src="Screen%20Shot%202018-06-24%20at%2022.35.42.png" alt="alt text" width="500" height="420">
 </td></tr></table>
 
 #### Table of Contents
