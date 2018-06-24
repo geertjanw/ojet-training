@@ -111,7 +111,7 @@ After a few moments, you should see this:
 
 3. In your editor, open the sources, explore the structure, and learn about what everything does.
 
-4. Make a change in the 'Dashboard.html' file and notice what happens in the browser, without needing to refresh.
+4. Make a change in the 'dashboard.html' file and notice what happens in the browser, without needing to refresh.
 
 ### (b) Showing Data in an Oracle JET Grid
 
@@ -157,7 +157,7 @@ self.dataSource = new oj.CollectionDataGridDataSource(
    });
 ```   
 
-4. To use the 'ojDataGrid', reference the following in the 'define' block of the 'Dashboard.js' file:
+4. To use the 'ojDataGrid', reference the following in the 'define' block of the 'dashboard.js' file:
 
 ```js #button { border: none; }
 'ojs/ojdatagrid', 'ojs/ojcollectiondatagriddatasource'
@@ -171,7 +171,7 @@ self.dataSource = new oj.CollectionDataGridDataSource(
 
 ### (c) Displaying the Selected Data in an Oracle JET Form
 
-1. Add properties, using Knockout Observables, to the 'Dashboard.js' file:
+1. Add properties, using Knockout Observables, to the 'dashboard.js' file:
 
 ```js #button { border: none; }
 var nextKey = 121;
@@ -219,13 +219,13 @@ self.handleSelectionChanged = function (event) {
 };
 ```
 
-4. Back in 'Dashboard.html', add an attribute to connect selection changes to your handler above:
+4. Back in 'dashboard.html', add an attribute to connect selection changes to your handler above:
 
 ```html #button { border: none; }
 on-selection-changed="[[handleSelectionChanged]]"
 ```
 
-5. Display the values of the selected row in the table via the form below, add it below the grid in 'Dashboard.html':
+5. Display the values of the selected row in the table via the form below, add it below the grid in 'dashboard.html':
 
 ```html #button { border: none; }
 <oj-form-layout id="form-container" label-edge="top"> 
@@ -236,7 +236,7 @@ on-selection-changed="[[handleSelectionChanged]]"
 </oj-form-layout> 
 ```
 
-6. Include a reference to 'ojs/ojinputtext' and to 'ojs/ojformlayout' in the 'define' block of 'Dashboard.js'.
+6. Include a reference to 'ojs/ojinputtext' and to 'ojs/ojformlayout' in the 'define' block of 'dashboard.js'.
 
 7. In your application, you should now see this, i.e., when a row is selected its values should be visible in the form:
 
@@ -277,7 +277,7 @@ Take a look at your source structure, find the new 'my-employee-form' CCA compon
 </oj-form-layout> 
 ```
 
-4. Move the references to 'ojs/ojinputtext' and 'ojs/ojformlayout' from the 'define' block of 'Dashboard.js' to the 'define' block of 'my-employee-form-viewModel.js' file.
+4. Move the references to 'ojs/ojinputtext' and 'ojs/ojformlayout' from the 'define' block of 'dashboard.js' to the 'define' block of 'my-employee-form-viewModel.js' file.
 
 5. In 'component.json', within your 'my-employee-form' CCA component, add content to the 'properties' section, like this:
 
@@ -307,7 +307,7 @@ Take a look at your source structure, find the new 'my-employee-form' CCA compon
 <oj-input-text id="inputSalary" label-hint="Salary" value="[[$props.hireSalary]]"></oj-input-text> 
 ```
 
-7. Use the 'my-employee-form' custom element a few times in 'Dashboard.html', as shown below, instead of the form-container that you currently have there, then run 'ojet serve' in the Terminal again, and notice that you now see multiple forms.
+7. Use the 'my-employee-form' custom element a few times in 'dashboard.html', as shown below, instead of the form-container that you currently have there, then run 'ojet serve' in the Terminal again, and notice that you now see multiple forms.
 
 ```html #button { border: none; }
 <my-employee-form></my-employee-form>
