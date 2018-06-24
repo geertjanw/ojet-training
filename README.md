@@ -478,29 +478,17 @@ self.remove = function () {
    1. Add a function to 'dashboard.js' for adding new items:
    
 ```js #button { border: none; }   
-self.add = function (event) {
+self.create = function (event) {
     if (self.inputEmployeeID(nextKey) < nextKey) {
         self.inputEmployeeID(nextKey);
     }
     nextKey += 1;
     self.inputEmployeeID(nextKey);
-    var recordAttrs = {
-        "id":
-                self.inputEmployeeID(),
-        "FIRST_NAME":
-                self.inputFirstName(),
-        "LAST_NAME":
-                self.inputLastName(),
-        "HIRE_DATE":
-                self.inputHireDate(),
-        "SALARY":
-                self.inputSalary()
-    };
-    self.collection.create(recordAttrs, {
+    self.collection.create(self.buildModel(), {
         wait: true,
         contentType: 'application/json',
         success: function (model, response) {
-            console.log(self.inputEmployeeID() + ' -- new record added successfully')
+            console.log(self.inputEmployeeID() + ' -- new record created successfully')
         },
         error: function (jqXHR, textStatus, errorThrown) {
             console.log(self.inputEmployeeID() + " -- " + jqXHR);
@@ -512,13 +500,15 @@ self.add = function (event) {
   2. In 'dashboard.html', change the 'my-employee-form' usage to add a button into the 'toolbar' slot and to enable the 'add' function to be invoked when the button is clicked:
 
 ```html #button { border: none; }   
-<my-employee-form 
-    first-name='[[inputFirstName]]' 
-    last-name='[[inputLastName]]'
-    hire-date='[[inputHireDate]]'
-    hire-salary='[[inputSalary]]'>
+<my-employee-form
+    first-name='{{inputFirstName}}'
+    last-name='{{inputLastName}}'
+    hire-date='{{inputHireDate}}'
+    hire-salary='{{inputSalary}}'>
     <span slot="toolbar">
-        <oj-button id="saveBtn" on-click="[[add]]">Add</oj-button>
+        <oj-button on-click="[[create]]">Create</oj-button>
+        <oj-button on-click="[[update]]">Update</oj-button>
+        <oj-button on-click="[[remove]]">Delete</oj-button>
     </span>
 </my-employee-form>
 ```
