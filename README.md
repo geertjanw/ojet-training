@@ -5,7 +5,7 @@ The purpose of this script is to put together a CRUD scenario in an Oracle JET a
 #### Table of Contents
 
 Part 1: Set Up the Environment
-   * Getting Node
+   * Getting the Node Package Manager
    * Getting Data
    * Getting Oracle JET
 
@@ -23,9 +23,9 @@ Part 3: Smart Usage of Oracle JET
 
 All the activities in this section should be done on the command line in a Terminal window.
 
-### (a) Getting Node
+### (a) Getting the Node Package Manager
 
-Node.js is a JavaScript runtime, that provides 'npm', which is the Node Package Manager that you will use in the sections that follow to set up the environment that you need.
+Node.js is a JavaScript runtime, which provides 'npm', that is, the Node Package Manager, that you will use in the sections that follow to set up the environment that you need.
 
 To verify the Node Package Manager is installed, run the following, which should show you the version of the Node Package Manager:
 ```js #button { border: none; }   
