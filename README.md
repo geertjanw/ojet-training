@@ -488,9 +488,9 @@ self.remove = function () {
 ```
 3. In the application, try out your new Delete functionality.
 
-#### Add
+#### Create
 
-   1. Add a function to 'dashboard.js' for adding new items:
+   1. Add a function to 'dashboard.js' for creating new items:
    
 ```js #button { border: none; }   
 self.create = function (event) {
