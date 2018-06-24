@@ -497,7 +497,7 @@ Also, change the square braces in the view of the 'my-employee-form' component t
 
 #### Delete
 
-The syntax introduced below is based on the [Backbone 'remove' construction](http://backbonejs.org/#Collection-remove).
+The syntax introduced below is based on the [Backbone 'remove' construction](http://backbonejs.org/#Collection-remove) and the [Backbone 'destroy' construction](http://backbonejs.org/#Model-destroy).
 
  1. Add a function to 'dashboard.js' for removing the current item:
    
