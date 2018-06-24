@@ -178,7 +178,7 @@ var nextKey = 121;
 self.inputEmployeeID = ko.observable(nextKey);
 self.inputFirstName = ko.observable('Jane');
 self.inputLastName = ko.observable('Doe');
-self.inputHireDate = ko.observable(oj.IntlConverterUtils.dateToLocalIso(new Date()));
+self.inputHireDate = ko.observable('2008-02-01');
 self.inputSalary = ko.observable(15000);
 ```
 
