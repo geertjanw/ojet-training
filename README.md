@@ -486,6 +486,7 @@ self.remove = function () {
     </span>
 </my-employee-form>
 ```
+3. In the application, try out your new Delete functionality.
 
 #### Add
 
@@ -527,6 +528,6 @@ self.create = function (event) {
 </my-employee-form>
 ```
 
-
+3. In the application, try out your new Create functionality.
 
 
