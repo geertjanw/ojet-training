@@ -440,7 +440,7 @@ self.update = function () {
     hire-date='[[inputHireDate]]'
     hire-salary='[[inputSalary]]'>
     <span slot="toolbar">
-        **<oj-button on-click="[[update]]">Update</oj-button>**
+        `**`<oj-button on-click="[[update]]">Update</oj-button>`**`
     </span>
 </my-employee-form>
 ```
