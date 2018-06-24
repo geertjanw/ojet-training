@@ -459,7 +459,7 @@ self.update = function () {
 </my-employee-form>
 ```
 
-We also need to enable the 'my-employee-form' CCA component to push changes back to the Dashboard module. Therefore, change the 'component.json' file in the 'my-employee-form' CCA component to have writable properties, as shown below:
+We also need to enable the 'my-employee-form' CCA component to push changes back to the Dashboard module. Therefore, change the 'component.json' file in the 'my-employee-form' CCA component to have writeback properties, as shown below:
 
 ```js #button { border: none; }  
 "properties": {
