@@ -440,12 +440,26 @@ self.update = function () {
     hire-date='[[inputHireDate]]'
     hire-salary='[[inputSalary]]'>
     <span slot="toolbar">
-        `**`<oj-button on-click="[[update]]">Update</oj-button>`**`
+        <oj-button on-click="[[update]]">Update</oj-button>
     </span>
 </my-employee-form>
 ```
 
-3. In the application, try out your new Update functionality.
+3. Change the square braces to curly braces for each of the attributes, because now we want to change the underlying property, instead of simply displaying its current value: 
+ 
+ ```html #button { border: none; }   
+ <my-employee-form
+    first-name='{{inputFirstName}}'
+    last-name='{{inputLastName}}'
+    hire-date='{{inputHireDate}}'
+    hire-salary='{{inputSalary}}'>
+    <span slot="toolbar">
+        <oj-button on-click="[[update]]">Update</oj-button>
+    </span>
+</my-employee-form>
+```
+
+4. In the application, try out your new Update functionality.
 
 #### Delete
 
@@ -462,10 +476,10 @@ self.remove = function () {
 
 ```html #button { border: none; }   
 <my-employee-form
-    first-name='[[inputFirstName]]'
-    last-name='[[inputLastName]]'
-    hire-date='[[inputHireDate]]'
-    hire-salary='[[inputSalary]]'>
+    first-name='{{inputFirstName}}'
+    last-name='{{inputLastName}}'
+    hire-date='{{inputHireDate}}'
+    hire-salary='{{inputSalary}}'>
     <span slot="toolbar">
         <oj-button on-click="[[update]]">Update</oj-button>
         <oj-button on-click="[[remove]]">Delete</oj-button>
@@ -501,10 +515,10 @@ self.create = function (event) {
 
 ```html #button { border: none; }   
 <my-employee-form
-    first-name='[[inputFirstName]]'
-    last-name='[[inputLastName]]'
-    hire-date='[[inputHireDate]]'
-    hire-salary='[[inputSalary]]'>
+    first-name='{{inputFirstName}}'
+    last-name='{{inputLastName}}'
+    hire-date='{{inputHireDate}}'
+    hire-salary='{{inputSalary}}'>
     <span slot="toolbar">
         <oj-button on-click="[[create]]">Create</oj-button>
         <oj-button on-click="[[update]]">Update</oj-button>
