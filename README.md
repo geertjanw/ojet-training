@@ -410,7 +410,42 @@ We're going to create a 'slot' (i.e., a placeholder) in the 'my-employee-form' C
 </div>
 ```
 
-We now have a slot for a toolbar and, in the Dashboard module, we'll add functionality for creating, deleting, and updating items. We'll not need this functionality in the Incidents module, where we're using the 'my-employee-form' together with the 'my-employee-form-container' simply as a view on our data.  
+We now have a slot for a toolbar and, in the Dashboard module, we'll add functionality for updating, deleting, and creating items. We'll not need this functionality in the Incidents module, where we're using the 'my-employee-form' together with the 'my-employee-form-container' simply as a view on our data.  
+
+#### Update
+
+ 1. Add a function to 'dashboard.js' for updating items:
+   
+```js #button { border: none; }  
+self.update = function () {
+    self.empl = self.collection.get(self.inputEmployeeID());
+    self.empl.save(self.buildModel(), {
+        contentType: 'application/json',
+        success: function (model, response) {
+            console.log(self.inputEmployeeID() + ' -- updated successfully')
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            console.log(self.inputEmployeeID() + " -- " + jqXHR);
+        }
+    });
+};
+```
+
+ 2. In 'dashboard.html', change the 'my-employee-form' usage to add a button into the 'toolbar' slot and to enable the 'update' function to be invoked when the button is clicked:
+ 
+ ```html #button { border: none; }   
+ <my-employee-form
+    first-name='{{inputFirstName}}'
+    last-name='{{inputLastName}}'
+    hire-date='{{inputHireDate}}'
+    hire-salary='{{inputSalary}}'>
+    <span slot="toolbar">
+        <oj-button id="saveBtn" on-click="[[update]]">Update</oj-button>
+    </span>
+</my-employee-form>
+```
+
+3. In the application, try out your new Update functionality.
 
 #### Add
 
@@ -488,6 +523,4 @@ self.remove = function () {
 </my-employee-form>
 ```
 
-#### Update
 
-to be done
