@@ -522,6 +522,8 @@ self.remove = function () {
 
 #### Create
 
+The syntax introduced below is based on the [Backbone 'create' construction](http://backbonejs.org/#Collection-create).
+
    1. Add a function to 'dashboard.js' for creating new items:
    
 ```js #button { border: none; }   
