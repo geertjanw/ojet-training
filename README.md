@@ -445,7 +445,7 @@ self.update = function () {
 </my-employee-form>
 ```
 
-3. Change the square braces to curly braces for each of the attributes, because now we want to change the underlying property, instead of simply displaying its current value: 
+3. Change the square braces to curly braces for each of the attributes, because now we want to change the underlying properties, instead of simply displaying their current values: 
  
  ```html #button { border: none; }   
  <my-employee-form
