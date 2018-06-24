@@ -32,7 +32,7 @@ To verify the Node Package Manager is installed, run the following, which should
 npm -v
 ```
 
-If version 5.6 or higher is not shown, you need to install the latest LTS version of Node.
+If version 5.6.0 or higher is not shown, you need to install the latest LTS version of Node.
 
 Download and install the latest LTS version of Node from http://nodejs.org.
 
