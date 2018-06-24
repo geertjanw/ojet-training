@@ -27,16 +27,14 @@ All the activities in this section should be done on the command line in a Termi
 
 Node.js is a JavaScript runtime, that provides 'npm', which is the Node Package Manager that you will use in the sections that follow to set up the environment that you need.
 
-1. Download and install the latest LTS version of Node from http://nodejs.org.
-
-2. To verify Node is installed, run the following, which should show you your version of Node:
-```js #button { border: none; }   
-node -v
-```   
-3. To verify the Node Package Manager is installed, run the following, which should show you the version of the Node Package Manager:
+To verify the Node Package Manager is installed, run the following, which should show you the version of the Node Package Manager:
 ```js #button { border: none; }   
 npm -v
-```   
+```
+
+If version 5.6 or higher is not shown, you need to install the latest LTS version of Node.
+
+Download and install the latest LTS version of Node from http://nodejs.org.
 
 ### (b) Getting Data
 
