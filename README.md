@@ -440,7 +440,7 @@ self.update = function () {
     hire-date='{{inputHireDate}}'
     hire-salary='{{inputSalary}}'>
     <span slot="toolbar">
-        <oj-button id="saveBtn" on-click="[[update]]">Update</oj-button>
+        <oj-button on-click="[[update]]">Update</oj-button>
     </span>
 </my-employee-form>
 ```
@@ -452,7 +452,7 @@ self.update = function () {
  1. Add a function to 'dashboard.js' for removing the current item:
    
 ```js #button { border: none; }  
-self.delete = function () {
+self.remove = function () {
     self.modelToUpdate = self.collection.remove(self.buildModel());
     self.modelToUpdate.destroy();
 };
@@ -467,8 +467,8 @@ self.delete = function () {
     hire-date='{{inputHireDate}}'
     hire-salary='{{inputSalary}}'>
     <span slot="toolbar">
-        <oj-button id="saveBtn" on-click="[[update]]">Update</oj-button>
-        <oj-button id="saveBtn" on-click="[[delete]]">Delete</oj-button>
+        <oj-button on-click="[[update]]">Update</oj-button>
+        <oj-button on-click="[[remove]]">Delete</oj-button>
     </span>
 </my-employee-form>
 ```
