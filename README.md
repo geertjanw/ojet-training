@@ -447,6 +447,32 @@ self.update = function () {
 
 3. In the application, try out your new Update functionality.
 
+#### Delete
+
+ 1. Add a function to 'dashboard.js' for removing the current item:
+   
+```js #button { border: none; }  
+self.delete = function () {
+    self.modelToUpdate = self.collection.remove(self.buildModel());
+    self.modelToUpdate.destroy();
+};
+```
+
+2. In 'dashboard.html', change the 'my-employee-form' usage to add a button into the 'toolbar' slot and to enable the 'remove' function to be invoked when the button is clicked:
+
+```html #button { border: none; }   
+<my-employee-form
+    first-name='{{inputFirstName}}'
+    last-name='{{inputLastName}}'
+    hire-date='{{inputHireDate}}'
+    hire-salary='{{inputSalary}}'>
+    <span slot="toolbar">
+        <oj-button id="saveBtn" on-click="[[update]]">Update</oj-button>
+        <oj-button id="saveBtn" on-click="[[delete]]">Delete</oj-button>
+    </span>
+</my-employee-form>
+```
+
 #### Add
 
    1. Add a function to 'dashboard.js' for adding new items:
@@ -497,30 +523,6 @@ self.add = function (event) {
 </my-employee-form>
 ```
 
-#### Delete
 
- 1. Add a function to 'dashboard.js' for removing the current item:
-   
-```js #button { border: none; }  
-self.remove = function () {
-    self.collection.remove(self.modelToUpdate);
-    self.modelToUpdate.destroy();
-};
-```
-
-2. In 'dashboard.html', change the 'my-employee-form' usage to add a button into the 'toolbar' slot and to enable the 'remove' function to be invoked when the button is clicked:
-
-```html #button { border: none; }   
-<my-employee-form 
-    first-name='[[inputFirstName]]' 
-    last-name='[[inputLastName]]'
-    hire-date='[[inputHireDate]]'
-    hire-salary='[[inputSalary]]'>
-    <span slot="toolbar">
-        <oj-button id="saveBtn" on-click="[[add]]">Add</oj-button>
-        <oj-button id="remoBtn" on-click="[[remove]]">Remove</oj-button>
-    </span>
-</my-employee-form>
-```
 
 
