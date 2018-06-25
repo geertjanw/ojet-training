@@ -480,7 +480,7 @@ self.update = function () {
   }
 ```
 
-{{}}, instead of [[]], allows to push observable value change from CCA back to the variable defined in dashboard module.
+{{}}, instead of [[]], enables us to push observable value changes from the CCA component back to the variable defined in the Dashboard module. We're going to use this construction below, now that we have set our properties to be 'writeback', we can change our bindings from read-only, i.e., [[]], to read-write {{}}.
 
 Change the square braces in the view of the 'my-employee-form' component to curly braces because you want to not only display values but change the underlying properties too:
 
