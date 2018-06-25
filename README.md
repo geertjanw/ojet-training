@@ -353,10 +353,21 @@ In this part, we're going to reuse our CCA component inside a new CCA component,
 Next, create an Observable Array providing the data, in 'incidents.js':
 
 ```js #button { border: none; }
-self.employees = ko.observableArray([
-    {'name': 'Jack', 'lastname': 'Smith'},
-    {'name': 'Henry', 'lastname': 'Sykes'}
-]);
+self.employees = ko.observableArray();
+$.getJSON("http://localhost:3000/employees").
+        then(function (data) {
+            var tempArray = [];
+            $.each(data, function () {
+                tempArray.push({
+                    empno: this.id,
+                    name: this.FIRST_NAME,
+                    lastname: this.LAST_NAME,
+                    hiredate: this.HIRE_DATE,
+                    salary: this.SALARY
+                });
+            });
+            self.employees(tempArray);
+        });
 ```
 Next, display the CCA component for each of the 'employees', in 'incidents.html':
 ```html #button { border: none; }
