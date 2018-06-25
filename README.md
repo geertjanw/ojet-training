@@ -422,7 +422,7 @@ ojet create component my-employee-form-container
 4. Similar as in the previous section, you now need to do the following:
 
    * load the 'loader.js' file from the 'my-employee-form-container' component into the ViewModel of a module, e.g., into 'incidents.js'
-   * add a property named 'data' of type 'array' to the 'component.json' file of the 'my-employee-form-container' component
+   * add a property named 'data' of type 'array' to the 'component.json' file of the 'my-employee-form-container' component:
 ```js #button { border: none; }   
 "properties": {
     "data": {
