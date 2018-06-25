@@ -183,7 +183,7 @@ self.dataSource = new oj.CollectionDataGridDataSource(
 }
 ```
 
-Be aware that the order in which the parameters are listed must match the order of their references in the callback function, i.e., 'text!../endpoints.json' is 4th in the list in the define block and therefore its reference 'endpoints' must be 4th in the list in the callback function, as shown below:
+Be aware that the order in which the parameters are listed in a 'define' block must match the order in which they are referenced in the callback function, i.e., 'text!../endpoints.json' is 4th in the list in the define block and therefore its reference 'endpoints' must be 4th in the list in the callback function, as shown below:
 
 ```js #button { border: none; }
 define(['ojs/ojcore', 'knockout', 'jquery', 'text!../endpoints.json', 
