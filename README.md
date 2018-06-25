@@ -190,10 +190,10 @@ self.dataSource = new oj.CollectionDataGridDataSource(
 ```js #button { border: none; }
 var nextKey = 121;
 self.inputEmployeeID = ko.observable(nextKey);
-self.inputFirstName = ko.observable('Jane');
-self.inputLastName = ko.observable('Doe');
-self.inputHireDate = ko.observable('2008-02-01');
-self.inputSalary = ko.observable(15000);
+self.inputFirstName = ko.observable();
+self.inputLastName = ko.observable();
+self.inputHireDate = ko.observable();
+self.inputSalary = ko.observable();
 ```
 
 2. Add code for updating the model when there are changes in the view:
