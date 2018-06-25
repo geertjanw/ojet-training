@@ -271,7 +271,7 @@ on-selection-changed="[[handleSelectionChanged]]"
 <img src="Screen%20Shot%202018-06-21%20at%2016.02.46.png" alt="alt text" width="400" height="250">
 </td></tr></table>
    
-## Day 3: Smart Usage of Oracle JET
+## Part 3: Smart Usage of Oracle JET
 
 In this part, you create a reusable CCA component that follows the W3C Web Component specification.
 
