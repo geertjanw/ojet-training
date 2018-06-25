@@ -365,8 +365,8 @@ Next, display the CCA component for each of the 'employees', in 'incidents.html'
              <my-employee-form 
                   first-name="[[$current.data.name]]" 
                   last-name="[[$current.data.lastname]]" 
-                  hire-date="1993-01-13" 
-                  hire-salary="8000"> 
+                  hire-date="[[$current.data.hiredate]]" 
+                  hire-salary="[[$current.data.salary]]"> 
              </my-employee-form> 
              <hr/> 
        </template> 
@@ -400,7 +400,34 @@ ojet create component my-employee-form-container
 <my-employee-form-container data="[[employees]]"/>
 ```
 
-Start the 'ojet serve' process again and note that you are now using a nested CCA component.   
+Start the 'ojet serve' process again and note that you are now using a nested CCA component.
+
+6. We can make the container CCA component more interesting by including an [ojAccordion](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=accordion&demo=basicAccordion):
+
+```html #button { border: none; }
+<oj-accordion id="accordionPage">
+    <oj-bind-for-each data="[[$props.data]]"> 
+        <template> 
+            <oj-collapsible>
+                <span slot="header">
+                    <span>
+                        <oj-bind-text value="[[$current.data.empno]]"></oj-bind-text>
+                    </span>
+                </span>
+                <my-employee-form 
+                    first-name="[[$current.data.name]]" 
+                    last-name="[[$current.data.lastname]]" 
+                    hire-date="[[$current.data.hiredate]]" 
+                    hire-salary="[[$current.data.hiresalary]]"> 
+                </my-employee-form> 
+            </oj-collapsible>
+            <hr/> 
+        </template> 
+    </oj-bind-for-each>
+</oj-accordion>
+```
+
+**Note:** To do the above, you'll need to reference 'ojs/ojaccordion' in the 'define' block of the CCA component's ViewModel.
 
 ### (c) Creating CRUD Functionality
 
