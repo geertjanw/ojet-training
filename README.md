@@ -390,7 +390,7 @@ $.getJSON("http://localhost:3000/employees").
 ```
 Next, display the CCA component for each of the 'employees', in 'incidents.html':
 ```html #button { border: none; }
-<oj-bind-for-each data="[[$props.data]]"> 
+<oj-bind-for-each data="[[employees]]"> 
       <template> 
              <my-employee-form 
                   first-name="[[$current.data.name]]" 
@@ -430,7 +430,20 @@ ojet create component my-employee-form-container
     }
 }
 ```
-   * move the View code from the module, i.e., from the 'incidents.html' file, into the 'my-employee-form-container-view.html' file and reference the 'data' property as '$props.data'
+   * move the View code from the module, i.e., from the 'incidents.html' file, into the 'my-employee-form-container-view.html' file and reference the 'data' property as '$props.data', as shown below:
+```html #button { border: none; }
+<oj-bind-for-each data="[[employees]]"> 
+      <template> 
+             <my-employee-form 
+                  first-name="[[$current.data.name]]" 
+                  last-name="[[$current.data.lastname]]" 
+                  hire-date="[[$current.data.hiredate]]" 
+                  hire-salary="[[$current.data.salary]]"> 
+             </my-employee-form> 
+             <hr/> 
+       </template> 
+</oj-bind-for-each>
+```
    * load the 'loader.js' file from the 'my-employee-form' component in the ViewModel of the 'my-employee-form-container' component, i.e., into the 'my-employee-form-container-viewModel.js' file and note that you can now remove the reference to it from the 'incidents.js' file
    
 5. Use the new custom element, i.e., 'my-employee-form-container', as follows in 'incidents.html':
