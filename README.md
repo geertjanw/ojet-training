@@ -334,6 +334,8 @@ Take a look at your source structure, find the new 'my-employee-form' CCA compon
 <oj-input-text id="inputSalary" label-hint="Salary" value="[[$props.hireSalary]]"></oj-input-text> 
 ```
 
+**Tip:** What is "$props"? Use ''$props'' to reference properties that need to be visualized in the view of CCA components.
+
 7. Use the 'my-employee-form' custom element a few times in 'dashboard.html', as shown below, instead of the form-container that you currently have there, then run 'ojet serve' in the Terminal again, and notice that you now see multiple forms.
 
 ```html #button { border: none; }
