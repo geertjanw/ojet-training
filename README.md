@@ -457,21 +457,7 @@ self.update = function () {
 </my-employee-form>
 ```
 
-3. Change the square braces to curly braces for each of the attributes, because now we want to change the underlying properties, instead of simply displaying their current values: 
- 
- ```html #button { border: none; }   
- <my-employee-form
-    first-name='{{inputFirstName}}'
-    last-name='{{inputLastName}}'
-    hire-date='{{inputHireDate}}'
-    hire-salary='{{inputSalary}}'>
-    <span slot="toolbar">
-        <oj-button on-click="[[update]]">Update</oj-button>
-    </span>
-</my-employee-form>
-```
-
-We also need to enable the 'my-employee-form' CCA component to push changes back to the Dashboard module. Therefore, change the 'component.json' file in the 'my-employee-form' CCA component to have writeback properties, as shown below:
+3. We need to enable the 'my-employee-form' CCA component to push changes back to the Dashboard module. Therefore, change the 'component.json' file in the 'my-employee-form' CCA component to have writeback properties, as shown below:
 
 ```js #button { border: none; }  
 "properties": {
@@ -494,7 +480,7 @@ We also need to enable the 'my-employee-form' CCA component to push changes back
   }
 ```
 
-Also, change the square braces in the view of the 'my-employee-form' component to curly braces because you want to not only display values but change the underlying properties too:
+Also change the square braces in the view of the 'my-employee-form' component to curly braces because you want to not only display values but change the underlying properties too:
 
  ```html #button { border: none; }   
 <oj-form-layout id="form-container" label-edge="top">
@@ -503,6 +489,20 @@ Also, change the square braces in the view of the 'my-employee-form' component t
     <oj-input-text id="inputHireDate" label-hint="Date Hired" value="{{$props.hireDate}}"></oj-input-text>
     <oj-input-text id="inputSalary" label-hint="Salary" value="{{$props.hireSalary}}"></oj-input-text>
 </oj-form-layout>
+```
+
+Next, change the references in the 'my-employee-form' custom element, from square braces to curly braces, for each of the attributes, because now we want to change the underlying properties, instead of simply displaying their current values: 
+ 
+ ```html #button { border: none; }   
+ <my-employee-form
+    first-name='{{inputFirstName}}'
+    last-name='{{inputLastName}}'
+    hire-date='{{inputHireDate}}'
+    hire-salary='{{inputSalary}}'>
+    <span slot="toolbar">
+        <oj-button on-click="[[update]]">Update</oj-button>
+    </span>
+</my-employee-form>
 ```
 
 4. In the application, try out your new Update functionality.
