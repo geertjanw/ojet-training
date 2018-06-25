@@ -480,7 +480,7 @@ self.update = function () {
   }
 ```
 
-{{}}, instead of [[]], enables us to push observable value changes from the CCA component back to the variable defined in the Dashboard module. We're going to use this construction below, now that we have set our properties to be 'writeback', we can change our bindings from read-only, i.e., [[]], to read-write {{}}.
+{{}}, instead of [[]], enables us to push observable value changes from the CCA component back to the variables defined in the Dashboard module. We're going to use this construction below, because now that we have set our properties to be 'writeback', we can change our bindings from read-only, i.e., [[]], to read-write {{}}.
 
 Change the square braces in the view of the 'my-employee-form' component to curly braces because you want to not only display values but change the underlying properties too:
 
@@ -493,7 +493,7 @@ Change the square braces in the view of the 'my-employee-form' component to curl
 </oj-form-layout>
 ```
 
-Next, change the references in the 'my-employee-form' custom element, from square braces to curly braces, for each of the attributes, because now we want to change the underlying properties, instead of simply displaying their current values: 
+Next, change the bindings in the 'my-employee-form' custom element, from square braces to curly braces, for each of the attributes, because now we want to change the underlying properties, instead of simply displaying their current values: 
  
  ```html #button { border: none; }   
  <my-employee-form
