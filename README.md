@@ -450,7 +450,11 @@ Start the 'ojet serve' process again and note that you are now using a nested CC
 
 ### (c) Creating CRUD Functionality
 
-We're going to create a 'slot' (i.e., a placeholder) in the 'my-employee-form' CCA component and, in some of the usages of the 'my-employee-form' CCA component, we will fill it with buttons for doing CRUD functionality.
+We're going to create a 'slot' (i.e., a placeholder) in the 'my-employee-form' CCA component and, in some of the usages of the 'my-employee-form' CCA component, we will fill it with buttons for doing CRUD functionality, as shown below:
+
+<table><tr><td>   
+<img src="Screen%20Shot%202018-06-24%20at%2022.35.42.png" alt="alt text" width="500" height="420">
+</td></tr></table>
 
    1. In the 'component.json' file of the 'my-employee-form' CCA component, define the 'slots' section as follows:
 
