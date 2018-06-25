@@ -390,7 +390,7 @@ $.getJSON("http://localhost:3000/employees").
 ```
 Next, display the CCA component for each of the 'employees', in 'incidents.html':
 ```html #button { border: none; }
-<oj-bind-for-each data="[[employees]]"> 
+<oj-bind-for-each data="[[$props.data]]"> 
       <template> 
              <my-employee-form 
                   first-name="[[$current.data.name]]" 
