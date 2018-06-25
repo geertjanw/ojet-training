@@ -350,7 +350,7 @@ You can refer to properties in the module so that when a row is selected in the 
 In this part, we're going to reuse our CCA component inside a new CCA component, to provide a new view for the same type of data, i.e., employee data.
 
 <table><tr><td>   
-<img src="Screen%20Shot%202018-06-25%20at%2012.54.40.png" alt="alt text" width="500" height="420">
+<img src="Screen%20Shot%202018-06-25%20at%2014.25.16.png" alt="alt text" width="500" height="420">
 </td></tr></table>
 
 1. Let's start by reusing the 'my-employee-form' CCA component in a different module, e.g., in the Incidents module, which consists of the 'incidents.html' and 'incidents.js' file. In the 'incidents.js' file, reference the CCA component at the end of the 'define' block:
