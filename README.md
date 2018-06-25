@@ -161,7 +161,7 @@ self.dataSource = new oj.CollectionDataGridDataSource(
    });
 ```   
 
-4. To use the 'ojDataGrid', reference the following in the 'define' block of the 'dashboard.js' file:
+4. To use the 'ojDataGrid', reference the following at the end of the 'define' block of the 'dashboard.js' file:
 
 ```js #button { border: none; }
 'ojs/ojdatagrid', 'ojs/ojcollectiondatagriddatasource'
@@ -240,7 +240,11 @@ on-selection-changed="[[handleSelectionChanged]]"
 </oj-form-layout> 
 ```
 
-6. Include a reference to 'ojs/ojinputtext' and to 'ojs/ojformlayout' in the 'define' block of 'dashboard.js'.
+6. To use the 'ojInputText' and 'ojDialog', reference the following at the end of the 'define' block of the 'dashboard.js' file:
+
+```js #button { border: none; }
+'ojs/ojinputtext', 'ojs/ojformlayout'
+```
 
 7. In your application, you should now see this, i.e., when a row is selected its values should be visible in the form:
 
@@ -281,7 +285,7 @@ Take a look at your source structure, find the new 'my-employee-form' CCA compon
 </oj-form-layout> 
 ```
 
-4. Move the references to 'ojs/ojinputtext' and 'ojs/ojformlayout' from the 'define' block of 'dashboard.js' to the 'define' block of 'my-employee-form-viewModel.js' file.
+4. Move the references to 'ojs/ojinputtext' and 'ojs/ojformlayout' from the end of the 'define' block of the 'dashboard.js' file to the end of the 'define' block of the 'my-employee-form-viewModel.js' file.
 
 5. In 'component.json', within your 'my-employee-form' CCA component, add content to the 'properties' section, like this:
 
@@ -335,7 +339,7 @@ You can refer to properties in the module so that when a row is selected in the 
 
 We're going to reuse our CCA component inside a new CCA component, to provide a new view onto the same data.
 
-1. Let's reuse the CCA component in a different module, e.g., in the Incidents module, which consists of the 'incidents.html' and 'incidents.js' file. In the 'incidents.js' file, reference the CCA component in the 'define' block:
+1. Let's reuse the CCA component in a different module, e.g., in the Incidents module, which consists of the 'incidents.html' and 'incidents.js' file. In the 'incidents.js' file, reference the CCA component at the end of the 'define' block:
 
 ```js #button { border: none; }
 'jet-composites/my-employee-form/loader'
