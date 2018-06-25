@@ -1,6 +1,6 @@
 # Oracle JET Training Materials
 
-The purpose of this script is to put together a CRUD scenario in an Oracle JET application. You'll start by setting up [JSON Server, which is a fake REST server](https://scotch.io/tutorials/json-server-as-a-fake-rest-api-in-frontend-development), next you'll set up an Oracle JET application that connects to it and displays its payload, and finally you'll use the Composite Component Architecture to create a reusable custom element for displaying the payload in different modules and components, interacting with CRUD functionality defined in the application.
+The purpose of this script is to show how to put together a CRUD scenario in an Oracle JET application. You'll start by setting up [JSON Server, which is a fake REST server](https://scotch.io/tutorials/json-server-as-a-fake-rest-api-in-frontend-development), next you'll set up an Oracle JET application that connects to it and displays its payload, and finally you'll use the Composite Component Architecture to create a reusable custom element for displaying the payload in different modules and components, interacting with CRUD functionality defined in the application.
 
 The application you'll create in this workshop will look as follows:
 
