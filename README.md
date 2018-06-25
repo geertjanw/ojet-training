@@ -430,9 +430,9 @@ ojet create component my-employee-form-container
     }
 }
 ```
-   * move the View code from the module, i.e., from the 'incidents.html' file, into the 'my-employee-form-container-view.html' file and reference the 'data' property as '$props.data', as shown below:
+   * move the View code from the module, i.e., from the 'incidents.html' file, into the 'my-employee-form-container-view.html' file and reference the 'data' property as '$props.data', as shown below and use $current to refer to each iteration in the for-each loop provided by the oj-bind-for-each:
 ```html #button { border: none; }
-<oj-bind-for-each data="[[employees]]"> 
+<oj-bind-for-each data="[[$props.data]]"> 
       <template> 
              <my-employee-form 
                   first-name="[[$current.data.name]]" 
