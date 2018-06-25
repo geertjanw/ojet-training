@@ -403,6 +403,8 @@ Next, display the CCA component for each of the 'employees', in 'incidents.html'
 </oj-bind-for-each>
 ```
 
+**Tip:** What is "$current.data"? Use "$current.data" to reference the current row and access its data.
+
 Now, in the application, you should see an employee form for each iteration of the 'employees' array.
 
 2. The HTML above is quite verbose, it could be expressed more compactly like this, assuming we had a CCA component named 'my-employee-container', which would automatically do the above for us:
