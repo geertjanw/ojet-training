@@ -422,14 +422,7 @@ ojet create component my-employee-form-container
 4. Similar as in the previous section, you now need to do the following:
 
    * load the 'loader.js' file from the 'my-employee-form-container' component into the ViewModel of a module, e.g., into 'incidents.js'
-   * add a property named 'data' of type 'array' to the 'component.json' file of the 'my-employee-form-container' component:
-```js #button { border: none; }   
-"properties": {
-    "data": {
-        "type": "array"
-    }
-}
-```
+   * add a property named 'data' of type 'array' to the 'component.json' file of the 'my-employee-form-container' component
    * move the View code from the module, i.e., from the 'incidents.html' file, into the 'my-employee-form-container-view.html' file and reference the 'data' property as '$props.data', as shown below and use $current to refer to each iteration in the for-each loop provided by the oj-bind-for-each:
 ```html #button { border: none; }
 <oj-bind-for-each data="[[$props.data]]"> 
