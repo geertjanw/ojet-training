@@ -339,7 +339,7 @@ You can refer to properties in the module so that when a row is selected in the 
 
 ### (b) Creating a Nested CCA Component
 
-We're going to reuse our CCA component inside a new CCA component, to provide a new view onto the same data.
+In this part, we're going to reuse our CCA component inside a new CCA component, to provide a new view onto the same data.
 
 1. Let's reuse the CCA component in a different module, e.g., in the Incidents module, which consists of the 'incidents.html' and 'incidents.js' file. In the 'incidents.js' file, reference the CCA component at the end of the 'define' block:
 
