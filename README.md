@@ -480,7 +480,9 @@ self.update = function () {
   }
 ```
 
-Also change the square braces in the view of the 'my-employee-form' component to curly braces because you want to not only display values but change the underlying properties too:
+{{}}, instead of [[]], allows to push observable value change from CCA back to the variable defined in dashboard module.
+
+Change the square braces in the view of the 'my-employee-form' component to curly braces because you want to not only display values but change the underlying properties too:
 
  ```html #button { border: none; }   
 <oj-form-layout id="form-container" label-edge="top">
