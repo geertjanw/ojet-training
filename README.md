@@ -437,29 +437,27 @@ Start the 'ojet serve' process again and note that you are now using a nested CC
 6. We can make the container CCA component more interesting by including an [ojAccordion](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=accordion&demo=basicAccordion):
 
 ```html #button { border: none; }
-<oj-accordion id="accordionPage">
-    <oj-bind-for-each data="[[$props.data]]"> 
-        <template> 
-            <oj-collapsible>
-                <span slot="header">
-                    <span>
-                        <oj-bind-text value="[[$current.data.empno]]"></oj-bind-text>
-                    </span>
+<oj-bind-for-each data="[[$props.data]]">--> 
+    <template> 
+        <oj-collapsible>
+            <span slot="header">
+                <span>
+                    <oj-bind-text value="[[$current.data.empno]]"></oj-bind-text>
                 </span>
-                <my-employee-form 
-                    first-name="[[$current.data.name]]" 
-                    last-name="[[$current.data.lastname]]" 
-                    hire-date="[[$current.data.hiredate]]" 
-                    hire-salary="[[$current.data.hiresalary]]"> 
-                </my-employee-form> 
-            </oj-collapsible>
-            <hr/> 
-        </template> 
-    </oj-bind-for-each>
-</oj-accordion>
+            </span>
+            <my-employee-form 
+                first-name="[[$current.data.name]]" 
+                last-name="[[$current.data.lastname]]" 
+                hire-date="[[$current.data.hiredate]]" 
+                hire-salary="[[$current.data.hiresalary]]"> 
+            </my-employee-form>
+        </oj-collapsible>
+        <hr/> 
+    </template>
+</oj-bind-for-each>
 ```
 
-**Note:** To do the above, you'll need to reference 'ojs/ojaccordion' in the 'define' block of the CCA component's ViewModel.
+**Note:** To do the above, you'll need to reference 'ojs/ojcollapsible' in the 'define' block of the CCA component's ViewModel.
 
 ### (c) Creating CRUD Functionality
 
