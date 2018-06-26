@@ -437,7 +437,7 @@ Start the 'ojet serve' process again and note that you are now using a nested CC
 6. We can make the container CCA component more interesting by including an [ojCollapsible](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=collapsible&demo=basicCollapsible):
 
 ```html #button { border: none; }
-<oj-bind-for-each data="[[$props.data]]">--> 
+<oj-bind-for-each data="[[$props.data]]">
     <template> 
         <oj-collapsible>
             <span slot="header">
