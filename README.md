@@ -434,7 +434,7 @@ ojet create component my-employee-form-container
 
 Start the 'ojet serve' process again and note that you are now using a nested CCA component.
 
-6. We can make the container CCA component more interesting by including an [ojAccordion](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=accordion&demo=basicAccordion):
+6. We can make the container CCA component more interesting by including an [ojCollapsible](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=collapsible&demo=basicCollapsible):
 
 ```html #button { border: none; }
 <oj-bind-for-each data="[[$props.data]]">--> 
