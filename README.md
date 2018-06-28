@@ -281,7 +281,7 @@ In this part, you create a reusable CCA component that follows the W3C Web Compo
 
 We'll create a new CCA component, add properties, and express them as attributes in the view of a module.
 
-1. In the Terminal, first kill the 'ojet' process, and then, in the root of your project, run the following:
+1. In the Terminal window, first kill the 'ojet' process, using Ctrl-C, and then, in the root of your project, run the following:
 
 ```js #button { border: none; }
 ojet create component my-employee-form
@@ -415,7 +415,7 @@ Now, in the application, you should see an employee form for each iteration of t
 <my-employee-form-container data="[[employees]]"/>
 ```
 
-3. In the Terminal, first kill the 'ojet' process, and then, in the root of your project, run the following:
+3. In the Terminal window, first kill the 'ojet' process, using Ctrl-C, and then, in the root of your project, run the following:
 
 ```js #button { border: none; }
 ojet create component my-employee-form-container
