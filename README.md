@@ -196,7 +196,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'text!../endpoints.json',
 
 ### (c) Displaying the Selected Data in an Oracle JET Form
 
-1. Add properties, using Knockout Observables, to the 'dashboard.js' file:
+1. Add properties, using [Knockout observables](http://knockoutjs.com/documentation/observables.html), to the 'dashboard.js' file:
 
 ```js #button { border: none; }
 var nextKey = 121;
