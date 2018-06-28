@@ -194,6 +194,8 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'text!../endpoints.json',
         function (oj, ko, $, endpoints) {
 ```
 
+After adding new files, first kill the 'ojet' process in the Terminal window, using Ctrl-C, and then restart it. The 'watch' process, provided by 'ojet', will only look for changes to existing files; it will not build and re-serve new files.
+
 ### (c) Displaying the Selected Data in an Oracle JET Form
 
 1. Add properties, using [Knockout observables](http://knockoutjs.com/documentation/observables.html), to the 'dashboard.js' file:
