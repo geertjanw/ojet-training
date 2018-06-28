@@ -373,7 +373,7 @@ In this part, we're going to reuse our CCA component inside a new CCA component,
 ```js #button { border: none; }
 'jet-composites/my-employee-form/loader'
 ```
-Next, create an Observable Array providing the data, in 'incidents.js':
+Next, create a [Knockout observable array](http://knockoutjs.com/documentation/observableArrays.html) providing the data, in 'incidents.js':
 
 ```js #button { border: none; }
 self.employees = ko.observableArray();
