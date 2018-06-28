@@ -56,9 +56,9 @@ Details: https://github.com/typicode/json-server
    
 https://github.com/geertjanw/ojet-training/blob/master/employeeData.json
 
-**Tip:** Do not put the above file in an Oracle JET application, instead, put it somewhere completely separate, e.g., on your Desktop, and run the command below in the Terminal from there.
+**Tip:** Do not put the above file in an Oracle JET application, instead, put it somewhere completely separate, e.g., on your Desktop, and run the command below in the Terminal window from there.
 
-   3. Run in the terminal: 
+   3. Run in the Terminal window: 
 ```js #button { border: none; }
 json-server --watch employeeData.json
 ```
