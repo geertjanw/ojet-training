@@ -25,10 +25,7 @@ Part 3: Smart Usage of Oracle JET
    * Creating a Nested CCA Component
    * Creating CRUD Functionality
    
-Part 4: Adding Translation Bundles
-   * Creating a CCA Component
-   * Creating a Nested CCA Component
-   * Creating CRUD Functionality
+Part 4: Internationalization
 
 ## Part 1: Set Up the Environment
 
