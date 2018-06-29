@@ -688,7 +688,7 @@ define(['ojs/ojcore', 'text!../endpoints.json'], function (oj, endpoints) {
 
 2. In 'dashboard.js', load the above in the 'define' block as '../factories/EmployeeFactory' and reference it in the callback function in the corresponding position as, for example, 'EmployeeFactory'.
 
-3. Now you can reuse the 'EmployeeFactory' as follows, when defining the data source of a DataGrid:
+3. Now you can reuse the 'EmployeeFactory' as follows, when defining the data source of the DataGrid discussed earlier:
 
 ```js #button { border: none; }   
 self.collection = EmployeeFactory.createEmployeeCollection();
