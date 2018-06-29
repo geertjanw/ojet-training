@@ -24,6 +24,11 @@ Part 3: Smart Usage of Oracle JET
    * Creating a CCA Component
    * Creating a Nested CCA Component
    * Creating CRUD Functionality
+   
+Part 4: Adding Translation Bundles
+   * Creating a CCA Component
+   * Creating a Nested CCA Component
+   * Creating CRUD Functionality
 
 ## Part 1: Set Up the Environment
 
@@ -651,7 +656,7 @@ self.create = function (event) {
 
 3. In the application, try out your new Create functionality.
 
-### Adding Translation Bundles
+## Part 4: Adding Translation Bundles
 
 1. In 'src/js', add a new folder named 'resources'. 
 
@@ -686,7 +691,7 @@ config: {
   }
 ```
 
-### Internationalizing the Module Tabs
+### (a) Internationalizing the Module Tabs
 
 Let's now internationalize the 'Dashboard', 'Incidents', 'Customers', and 'About' items in the tabs of the application, which are defined in the 'appController.js' file.
 
@@ -711,7 +716,7 @@ self.dashboardLabel(oj.Translations.getTranslatedString('dashboardLabel'));
 
 4. When you switch to 'Arabic' in the application, notice that the Dashboard label is now Arabic and it is English when you switch to 'English'.
 
-### Internationalizing the Module Texts
+### (b) Internationalizing the Module Texts
 
 1. Add a new string to your translation bundles, named 'dashboardHeader'.
 
@@ -739,7 +744,7 @@ document.addEventListener("localeListener", function () {
 
 6. Do the same for other texts, in the other modules in the application.
 
-### Experiment with the Event Based Programming
+### (c) Experiment with the Event Based Programming
 
 1. Replace the EventListener in 'appController.js', to include a 'params' variable with a 'detail' object for the second argument, as shown here:
 
@@ -763,7 +768,7 @@ This is a very powerful way of using event based programming.
 
 More details relating to this: https://javascript.info/bubbling-and-capturing
 
-### Internationalizing the Oracle JET Components
+### (d) Internationalizing the Oracle JET Components
 
 1. In 'dashboard.html', add the following:
 
