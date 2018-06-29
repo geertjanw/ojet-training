@@ -656,7 +656,50 @@ self.create = function (event) {
 
 3. In the application, try out your new Create functionality.
 
-## Part 4: Adding Translation Bundles
+## Part 4: Internationalization
+
+In this part, we're going to add a language switcher and related resources for switching from English to Arabic and back.
+
+### (a) Adding a Language Switcher with RTL Support
+
+1. In 'index.html', find the responsive toolbar, oj-toolbar, and add new items to it for switching languages. Above the 'Preferences' oj-option, add the following:
+
+```html #button { border: none; }
+<oj-option id="languages">
+    <span>Languages</span>
+    <oj-menu id="languages_menu">
+        <oj-option on-oj-action="[[setLangAction]]" id="english" value="english">
+            <span class="oj-fwk-icon oj-fwk-icon-arrow-n" slot="startIcon"></span>English
+        </oj-option>
+        <oj-option on-oj-action="[[setLangAction]]" id="arabic" value="ar-EG">
+            <span class="demo-icon-font demo-bookmark-icon-16" slot="startIcon"></span>Arabic
+        </oj-option>
+    </oj-menu>
+</oj-option>
+```
+
+2. In 'appController.js', right below 'var self-this', add the 'setLangAction' method that is referred to above:
+
+```js #button { border: none; }
+self.setLangAction = function (event) {
+    var newLang = event.target.value;
+    oj.Config.setLocale(newLang,
+        function () {
+            $('html').attr('lang', newLang);
+            if (newLang === 'ar-EG') {
+                $('html').attr('dir', 'rtl');
+            } else {
+                $('html').attr('dir', 'ltr');
+            }
+            document.dispatchEvent(new CustomEvent('localeListener'));
+        });
+};
+```
+Notice that we're dispatching an event, which can be finetuned further, so the modules can listen to it and react appropriately.
+
+4. In the application, find the new 'Arabic' menu item, select it, and notice that the user interface switches from right to left.
+
+### (b) Adding Translation Bundles
 
 1. In 'src/js', add a new folder named 'resources'. 
 
@@ -691,7 +734,7 @@ config: {
   }
 ```
 
-### (a) Internationalizing the Module Tabs
+### (c) Internationalizing the Module Tabs
 
 Let's now internationalize the 'Dashboard', 'Incidents', 'Customers', and 'About' items in the tabs of the application, which are defined in the 'appController.js' file.
 
@@ -716,7 +759,7 @@ self.dashboardLabel(oj.Translations.getTranslatedString('dashboardLabel'));
 
 4. When you switch to 'Arabic' in the application, notice that the Dashboard label is now Arabic and it is English when you switch to 'English'.
 
-### (b) Internationalizing the Module Texts
+### (d) Internationalizing the Module Texts
 
 1. Add a new string to your translation bundles, named 'dashboardHeader'.
 
@@ -744,7 +787,7 @@ document.addEventListener("localeListener", function () {
 
 6. Do the same for other texts, in the other modules in the application.
 
-### (c) Experiment with the Event Based Programming
+### (e) Experiment with the Event Based Programming
 
 1. Replace the EventListener in 'appController.js', to include a 'params' variable with a 'detail' object for the second argument, as shown here:
 
@@ -768,7 +811,7 @@ This is a very powerful way of using event based programming.
 
 More details relating to this: https://javascript.info/bubbling-and-capturing
 
-### (d) Internationalizing the Oracle JET Components
+### (f) Internationalizing the Oracle JET Components
 
 1. In 'dashboard.html', add the following:
 
