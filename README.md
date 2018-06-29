@@ -657,6 +657,8 @@ self.create = function (event) {
 
 ## Part 4: Centralized Data Management
 
+Rather than accessing common data separately in different modules, you can create a factory that can be shared between modules, as outlined below.
+
 1. Create a new folder named 'src/js/factories' and create in it 'EmployeeFactory.js', as shown below:
 
 ```js #button { border: none; }   
