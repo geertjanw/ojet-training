@@ -651,4 +651,137 @@ self.create = function (event) {
 
 3. In the application, try out your new Create functionality.
 
+### Adding Translation Bundles
+
+1. In 'src/js', add a new folder named 'resources'. 
+
+2. In the 'resources' folder, create a folder named 'nls', containing 'l10.js', which is a file with this content:
+
+```js #button { border: none; }
+define({
+  "root": {
+    "dashboardLabel": "Dashboard",
+},
+  "ar": true,
+});
+```
+
+3. In the 'nls' folder, create a folder named 'ar', containing 'l10.js', which is a file with this content:
+
+```js #button { border: none; }
+define({
+  "dashboardLabel":"عدادات",
+});
+```
+
+4. In 'main.js', under the 'shim' section, add the following so that the translation bundles are found:
+
+```js #button { border: none; }
+config: {
+    ojL10n: {
+      merge: {
+        'ojtranslations/nls/ojtranslations': 'resources/nls/l10'
+      }
+    }
+  }
+```
+
+### Internationalizing the Module Tabs
+
+Let's now internationalize the 'Dashboard', 'Incidents', 'Customers', and 'About' items in the tabs of the application, which are defined in the 'appController.js' file.
+
+1. In 'appController.js', add the following, under 'var self=this', to initialize the 'self.dashboardLabel':
+
+```js #button { border: none; }
+self.dashboardLabel = ko.observable(oj.Translations.getTranslatedString('dashboardLabel'));
+```
+
+2. In 'appController.js', in the 'setLangAction' method, below the if/else statement, refresh the 'self.dashboardLabel':
+
+```js #button { border: none; }
+self.dashboardLabel(oj.Translations.getTranslatedString('dashboardLabel'));
+```
+
+3. In 'appController.js', in the Navigation setup, in 'var navData', change 'name: 'Dashboard'' to 'name: self.dashboardLabel', so that the first item in the 'navData' array now looks like this:
+
+```js #button { border: none; }
+{name: self.dashboardLabel, id: 'dashboard',
+     iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-chart-icon-24'},
+```
+
+4. When you switch to 'Arabic' in the application, notice that the Dashboard label is now Arabic and it is English when you switch to 'English'.
+
+### Internationalizing the Module Texts
+
+1. Add a new string to your translation bundles, named 'dashboardHeader'.
+
+2. In 'dashboard.js', define a new variable for the dashboard header label, to initialize the variable with the current state of the translation bundle:
+
+```js #button { border: none; }
+self.dashboardHeaderLabel = ko.observable(oj.Translations.getTranslatedString('dashboardHeader'));
+```
+
+3. In 'dashboard.js', listen for the 'localelistener' event and update the dashboard header label with the current state of the translation bundle:
+
+```js #button { border: none; }
+document.addEventListener("localeListener", function () {
+     self.dashboardHeaderLabel(oj.Translations.getTranslatedString('dashboardHeader'));
+});
+```
+
+4. In 'dashboard.html', replace the H1 with the following:
+
+```html #button { border: none; }
+<h1><oj-bind-text value="[[dashboardHeaderLabel]]"></oj-bind-text></h1>
+```
+
+5. In the application, switch to Arabic and notice the H1 is now Arabic.
+
+6. Do the same for other texts, in the other modules in the application.
+
+### Experiment with the Event Based Programming
+
+1. Replace the EventListener in 'appController.js', to include a 'params' variable with a 'detail' object for the second argument, as shown here:
+
+```js #button { border: none; }
+var params = {
+    'bubbles': true,
+    'detail': {'message': self.dashboardLabel()}
+};
+document.dispatchEvent(new CustomEvent('localeListener', params));
+```
+
+2. Next, rewrite how how the listener is used, with the callback having an event payload that contains the 'detail' object that you can pull your values from.
+
+```js #button { border: none; }
+document.addEventListener("localeListener", function (event) {
+    console.log('EventValue: ' + event.detail.message);
+}); 
+```
+
+This is a very powerful way of using event based programming.
+
+More details relating to this: https://javascript.info/bubbling-and-capturing
+
+### Internationalizing the Oracle JET Components
+
+1. In 'dashboard.html', add the following:
+
+```html #button { border: none; }
+<oj-input-date id="date"></oj-input-date>
+```
+
+2. In 'dashboard.js', include the following in the 'define' block:
+
+```js #button { border: none; }
+'ojs/ojdatetimepicker'
+```
+
+3. In the application, switch from English to Arabic, and notice the calendar automatically displays Arabic months.
+
+4. Experiment with other components in the Oracle JET Cookbook and see what they look like in Arabic:
+
+http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html
+
+
 
