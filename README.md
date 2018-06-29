@@ -25,7 +25,9 @@ Part 3: Smart Usage of Oracle JET
    * Creating a Nested CCA Component
    * Creating CRUD Functionality
    
-Part 4: Internationalization
+Part 4: Centralized Data Management
+
+Part 5: Internationalization
 
 ## Part 1: Set Up the Environment
 
@@ -653,7 +655,81 @@ self.create = function (event) {
 
 3. In the application, try out your new Create functionality.
 
-## Part 4: Internationalization
+## Part 4: Centralized Data Management
+
+1. Create a new folder named 'src/js/factories' and create in it 'EmployeeFactory.js', as shown below:
+
+```js #button { border: none; }   
+define(['ojs/ojcore', 'text!../endpoints.json'], function (oj, endpoints) {
+    var EmployeeFactory = {
+        resourceUrl: JSON.parse(endpoints).employees,
+        // Create a single employee instance:
+        createEmployeeModel: function () {
+            var Employee = oj.Model.extend({
+                urlRoot: this.resourceUrl, 
+                idAttribute: "id"
+            });
+            return new Employee();
+        },
+        // Create a employee collection:
+        createEmployeeCollection: function () {
+            var Employees = oj.Collection.extend({
+                url: this.resourceUrl, 
+                model: this.createEmployeeModel()
+            });
+            return new Employees();
+        }
+    };
+    return EmployeeFactory;
+});
+```
+
+2. In 'dashboard.js', load the above in the 'define' block as '../factories/EmployeeFactory' and reference it in the callback function in the corresponding position as, for example, 'EmployeeFactory'.
+
+3. Now you can reuse the 'EmployeeFactory' as follows, when defining the data source of a DataGrid:
+
+```js #button { border: none; }   
+self.collection = EmployeeFactory.createEmployeeCollection();
+self.dataSource = new oj.CollectionDataGridDataSource(
+        self.collection, {
+            rowHeader: 'id',
+            columns: ['FIRST_NAME', 'LAST_NAME', 'HIRE_DATE', 'SALARY']
+        });
+```        
+
+Alternatively, you can convert the collection to an observable array, as follows:
+
+```js #button { border: none; }   
+self.collection = EmployeeFactory.createEmployeeCollection();
+self.collection.fetch();
+self.employees = oj.KnockoutUtils.map(self.collection, null, true);
+```
+
+**Note:** Add 'ojs/ojknockout-model' to the 'define' block of modules that use [oj.KnockoutUtils.map](http://www.oracle.com/webfolder/technetwork/jet/jsdocs/oj.KnockoutUtils.html).
+
+Once you have an observable array, such as 'employees' above, you can use it as follows, as shown earlier:
+
+```html #button { border: none; }   
+<oj-bind-for-each data='[[employees]]'>
+    <template> 
+        <oj-collapsible>
+            <span slot="header">
+                <span>
+                    <oj-bind-text value="[[$current.data.id]]"></oj-bind-text>
+                </span>
+            </span>
+            <span>
+                <h2><oj-bind-text value="[[$current.data.FIRST_NAME]]"></oj-bind-text></h2>
+                <h3><oj-bind-text value="[[$current.data.LAST_NAME]]"></oj-bind-text></h3>
+                <h3><oj-bind-text value="[[$current.data.HIRE_DATE]]"></oj-bind-text></h3>
+            </span>
+        </oj-collapsible>
+        <hr/> 
+    </template>
+</oj-bind-for-each>
+```
+
+## Part 5: Internationalization
 
 In this part, we're going to add a language switcher and related resources for switching from English to Arabic and back.
 
