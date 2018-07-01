@@ -736,6 +736,8 @@ Once you have an observable array, such as 'employees' above, you can use it as 
 
 In this part, we set up a clien-side filter, based on the FIRST_NAME field from our endpoint.
 
+Details on the below are [here in the Cookbook](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=filter&demo=full).
+
 In the view, e.g., 'incidents.html', add an input field that visualizes the filter:
 
 ```html #button { border: none; }   
