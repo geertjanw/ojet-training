@@ -27,7 +27,9 @@ Part 3: Smart Usage of Oracle JET
    
 Part 4: Centralized Data Management
 
-Part 5: Internationalization
+Part 5: Filtering
+
+Part 6: Internationalization
 
 ## Part 1: Set Up the Environment
 
@@ -730,8 +732,57 @@ Once you have an observable array, such as 'employees' above, you can use it as 
     </template>
 </oj-bind-for-each>
 ```
+## Part 5: Filtering
 
-## Part 5: Internationalization
+In this part, we set up a clien-side filter, based on the FIRST_NAME field from our endpoint.
+
+In the view, e.g., 'incidents.html', add an input field that visualizes the filter:
+
+```html #button { border: none; }   
+<oj-input-text  
+       maxlength="30" 
+       placeholder="Type to filter first name" 
+       on-raw-value-changed="[[filterChanged]]" 
+       value="{{filter}}">
+</oj-input-text>
+```
+
+In the ViewModel, e.g., 'incidents.js', add the logic below:
+
+```js #button { border: none; }   
+self.collection = EmployeeFactory.createEmployeeCollection();
+self.collection.fetch();
+
+self.filter = ko.observableArray('');
+
+self.filterChanged = function (event) {
+    var filter = event.target.rawValue;
+    var filteredCollection = self.collection;
+    if (self.originalCollection == undefined && filter !== undefined) {
+        self.originalCollection = filteredCollection.clone();
+    }
+    var ret = 
+        self.originalCollection !== undefined ? 
+        self.originalCollection.where({FIRST_NAME: {value: filter, comparator: self.nameFilter}}) : [];
+    if (ret.length == 0) {
+        while (!filteredCollection.isEmpty()) {
+            filteredCollection.pop();
+        }
+    } else {
+        filteredCollection.reset(ret);
+        self.datasource(oj.KnockoutUtils.map(self.collection, null, true)());
+    }
+};
+
+self.nameFilter = function (model, attr, value) {
+    var deptName = model.get("FIRST_NAME");
+    return (deptName.toLowerCase().indexOf(value.toLowerCase()) > -1);
+};
+
+self.datasource = oj.KnockoutUtils.map(self.collection, null, true);
+```
+
+## Part 6: Internationalization
 
 In this part, we're going to add a language switcher and related resources for switching from English to Arabic and back.
 
