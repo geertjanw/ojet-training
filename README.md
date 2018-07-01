@@ -734,7 +734,11 @@ Once you have an observable array, such as 'employees' above, you can use it as 
 ```
 ## Part 5: Filtering
 
-In this part, we set up a clien-side filter, based on the FIRST_NAME field from our endpoint.
+In this part, we set up a clien-side filter, based on the FIRST_NAME field from our endpoint, as shown below:
+
+<table><tr><td>   
+<img src="Screen%20Shot%202018-07-01%20at%2010.41.37.png" alt="alt text" width="500" height="420">
+</td></tr></table>
 
 Details on the below are [here in the Cookbook](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=filter&demo=full).
 
