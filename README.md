@@ -527,7 +527,7 @@ self.update = function () {
     hire-date='[[inputHireDate]]'
     hire-salary='[[inputSalary]]'>
     <span slot="toolbar">
-        <oj-button on-click="[[update]]">Update</oj-button>
+        <oj-button on-oj-action="[[update]]">Update</oj-button>
     </span>
 </my-employee-form>
 ```
@@ -577,7 +577,7 @@ Next, change the bindings in the 'my-employee-form' custom element, from square 
     hire-date='{{inputHireDate}}'
     hire-salary='{{inputSalary}}'>
     <span slot="toolbar">
-        <oj-button on-click="[[update]]">Update</oj-button>
+        <oj-button on-oj-action="[[update]]">Update</oj-button>
     </span>
 </my-employee-form>
 ```
@@ -606,8 +606,8 @@ self.remove = function () {
     hire-date='{{inputHireDate}}'
     hire-salary='{{inputSalary}}'>
     <span slot="toolbar">
-        <oj-button on-click="[[update]]">Update</oj-button>
-        <oj-button on-click="[[remove]]">Delete</oj-button>
+        <oj-button on-oj-action="[[update]]">Update</oj-button>
+        <oj-button on-oj-action="[[remove]]">Delete</oj-button>
     </span>
 </my-employee-form>
 ```
@@ -648,9 +648,9 @@ self.create = function (event) {
     hire-date='{{inputHireDate}}'
     hire-salary='{{inputSalary}}'>
     <span slot="toolbar">
-        <oj-button on-click="[[create]]">Create</oj-button>
-        <oj-button on-click="[[update]]">Update</oj-button>
-        <oj-button on-click="[[remove]]">Delete</oj-button>
+        <oj-button on-oj-action="[[create]]">Create</oj-button>
+        <oj-button on-oj-action="[[update]]">Update</oj-button>
+        <oj-button on-oj-action="[[remove]]">Delete</oj-button>
     </span>
 </my-employee-form>
 ```
