@@ -532,6 +532,8 @@ self.update = function () {
 </my-employee-form>
 ```
 
+**Note:** You could use on-click instead of on-oj-action, though note that on-oj-action has built-in accessibility across devices.
+
 3. We need to enable the 'my-employee-form' CCA component to push changes back to the Dashboard module. Therefore, change the 'component.json' file in the 'my-employee-form' CCA component to have writeback properties, as shown below:
 
 ```js #button { border: none; }  
