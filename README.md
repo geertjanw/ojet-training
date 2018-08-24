@@ -693,6 +693,8 @@ self.create = function (event) {
 
 ## Part 4: Advanced Usage of Oracle JET
 
+The sections below are more challenging than the earlier parts, focusing on features that may become more relevant to an Oracle JET project in the later stages of development.
+
 ### Centralized Data Management
 
 Rather than accessing common data separately in different modules, you can create a factory that can be shared between modules, as outlined below.
