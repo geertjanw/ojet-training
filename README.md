@@ -104,7 +104,7 @@ ojet --version
 
 You should see this:
 
-```js #button { border: none; }
+```html #button { border: none; }
 Oracle JET Command Line Interface, version: 5.2.0
 ```
 
