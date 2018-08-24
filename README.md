@@ -331,7 +331,7 @@ define(['ojs/ojcore', 'knockout', 'jquery',
     'ojs/ojcollectiondatagriddatasource',
     'ojs/ojinputtext', 
     'ojs/ojformlayout', 
-    'jet-composites/my-employee-form/loader']
+    'my-employee-form/loader']
 ```
 
 4. Move the form-container (from step 5 in the previous section) into the 'my-employee-form-view.html' file of the 'my-employee-form' CCA component:
