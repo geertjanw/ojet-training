@@ -217,6 +217,12 @@ After adding new files, first kill the 'ojet' process in the Terminal window, us
 
 ### (c) Displaying the Selected Data in an Oracle JET Form
 
+In this section, you'll add a form that will display the values of the currently selected row, as shown here:
+
+<table><tr><td>   
+<img src="Screen%20Shot%202018-06-21%20at%2016.02.46.png" alt="alt text" width="400" height="250">
+</td></tr></table>
+
 1. Add properties, using [Knockout observables](http://knockoutjs.com/documentation/observables.html), to the 'dashboard.js' file:
 
 ```js #button { border: none; }
