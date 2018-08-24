@@ -322,10 +322,16 @@ ojet create component my-employee-form
 
 Take a look at your source structure, find the new 'my-employee-form' CCA component, and explore its structure.
 
-3. Load the loader in the 'define' block of the ViewModel:
+3. Load the loader at the end of the 'define' block of the ViewModel:
 
 ```js #button { border: none; }
-'jet-composites/my-employee-form/loader'
+define(['ojs/ojcore', 'knockout', 'jquery', 
+    'text!../endpoints.json',
+    'ojs/ojdatagrid', 
+    'ojs/ojcollectiondatagriddatasource',
+    'ojs/ojinputtext', 
+    'ojs/ojformlayout', 
+    'jet-composites/my-employee-form/loader']
 ```
 
 4. Move the form-container (from step 5 in the previous section) into the 'my-employee-form-view.html' file of the 'my-employee-form' CCA component:
