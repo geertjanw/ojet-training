@@ -84,7 +84,7 @@ In this part, you install the Oracle JET command-line interface.
 npm install -g @oracle/ojet-cli
 ```
 
-2. Run the following to check installation succeeded:
+2. Run the following to check installation succeeded and to see the available commands:
 
 ```js #button { border: none; }
 ojet help
@@ -95,6 +95,18 @@ You should see this:
 <table><tr><td>   
 <img src="Screen%20Shot%202018-06-22%20at%2022.47.54.png" alt="alt text" width="400" height="250">
 </td></tr></table>
+
+3. Run the following to check that you have the correct version of Oracle JET:
+
+```js #button { border: none; }
+ojet --version
+```
+
+You should see this:
+
+```js #button { border: none; }
+Oracle JET Command Line Interface, version: 5.2.0
+```
 
 You are now ready to get started with Oracle JET!
             
