@@ -410,7 +410,7 @@ In this part, we're going to reuse our CCA component inside a new CCA component,
 1. Let's start by reusing the 'my-employee-form' CCA component in a different module, e.g., in the Incidents module, which consists of the 'incidents.html' and 'incidents.js' file. In the 'incidents.js' file, reference the CCA component at the end of the 'define' block:
 
 ```js #button { border: none; }
-'jet-composites/my-employee-form/loader'
+'my-employee-form/loader'
 ```
 Next, create a [Knockout observable array](http://knockoutjs.com/documentation/observableArrays.html) providing the data, in 'incidents.js':
 
