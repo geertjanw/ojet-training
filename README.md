@@ -209,8 +209,7 @@ Be aware that the order in which the parameters are listed in a 'define' block m
 
 ```js #button { border: none; }
 define(['ojs/ojcore', 'knockout', 'jquery', 'text!../endpoints.json', 
-    'ojs/ojdatagrid', 'ojs/ojcollectiondatagriddatasource',
-    'jet-composites/my-employee-form/loader'],
+    'ojs/ojdatagrid', 'ojs/ojcollectiondatagriddatasource'],
         function (oj, ko, $, endpoints) {
 ```
 
