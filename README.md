@@ -746,7 +746,7 @@ self.employees = oj.KnockoutUtils.map(self.collection, null, true);
 
 **Note:** Add 'ojs/ojknockout-model' to the 'define' block of modules that use [oj.KnockoutUtils.map](http://www.oracle.com/webfolder/technetwork/jet/jsdocs/oj.KnockoutUtils.html).
 
-Once you have an observable array, such as 'employees' above, you can use it as follows, as shown earlier:
+Once you have an observable array, such as 'employees' above, you can use it as follows, as shown earlier. Paste the below into 'incidents.html', i.e., here you're not using the 'my-employee-form-container' CCA component anymore, though a next step could be to integrate the filter into that CCA component.
 
 ```html #button { border: none; }   
 <oj-bind-for-each data='[[employees]]'>
