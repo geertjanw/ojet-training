@@ -25,11 +25,10 @@ Part 3: Smart Usage of Oracle JET
    * Creating a Nested CCA Component
    * Creating CRUD Functionality
    
-Part 4: Centralized Data Management
-
-Part 5: Filtering
-
-Part 6: Internationalization
+Part 4: Advanced Usage of Oracle JET   
+   * Centralized Data Management
+   * Filtering
+   * Internationalization
 
 ## Part 1: Set Up the Environment
 
@@ -692,7 +691,9 @@ self.create = function (event) {
 
 3. In the application, try out your new Create functionality.
 
-## Part 4: Centralized Data Management
+## Part 4: Advanced Usage of Oracle JET
+
+### Centralized Data Management
 
 Rather than accessing common data separately in different modules, you can create a factory that can be shared between modules, as outlined below.
 
@@ -767,7 +768,7 @@ Once you have an observable array, such as 'employees' above, you can use it as 
     </template>
 </oj-bind-for-each>
 ```
-## Part 5: Filtering
+### Filtering
 
 In this part, we set up a client-side filter, based on the FIRST_NAME field from our endpoint, as shown below:
 
@@ -823,11 +824,11 @@ self.nameFilter = function (model, attr, value) {
 self.datasource = oj.KnockoutUtils.map(self.collection, null, true);
 ```
 
-## Part 6: Internationalization
+### Internationalization
 
 In this part, we're going to add a language switcher and related resources for switching from English to Arabic and back.
 
-### (a) Adding a Language Switcher with RTL Support
+#### (a) Adding a Language Switcher with RTL Support
 
 1. In 'index.html', find the responsive toolbar, oj-toolbar, and add new items to it for switching languages. Above the 'Preferences' oj-option, add the following:
 
@@ -866,7 +867,7 @@ Notice that we're dispatching an event, which can be finetuned further, so the m
 
 4. In the application, find the new 'Arabic' menu item, select it, and notice that the user interface switches from right to left.
 
-### (b) Adding Translation Bundles
+#### (b) Adding Translation Bundles
 
 1. In 'src/js', add a new folder named 'resources'. 
 
@@ -901,7 +902,7 @@ config: {
   }
 ```
 
-### (c) Internationalizing the Module Tabs
+#### (c) Internationalizing the Module Tabs
 
 Let's now internationalize the 'Dashboard', 'Incidents', 'Customers', and 'About' items in the tabs of the application, which are defined in the 'appController.js' file.
 
@@ -926,7 +927,7 @@ self.dashboardLabel(oj.Translations.getTranslatedString('dashboardLabel'));
 
 4. When you switch to 'Arabic' in the application, notice that the Dashboard label is now Arabic and it is English when you switch to 'English'.
 
-### (d) Internationalizing the Module Texts
+#### (d) Internationalizing the Module Texts
 
 1. Add a new string to your translation bundles, named 'dashboardHeader'.
 
@@ -954,7 +955,7 @@ document.addEventListener("localeListener", function () {
 
 6. Do the same for other texts, in the other modules in the application.
 
-### (e) Experiment with the Event Based Programming
+#### (e) Experiment with the Event Based Programming
 
 1. Replace the EventListener in 'appController.js', to include a 'params' variable with a 'detail' object for the second argument, as shown here:
 
@@ -978,7 +979,7 @@ This is a very powerful way of using event based programming.
 
 More details relating to this: https://javascript.info/bubbling-and-capturing
 
-### (f) Internationalizing the Oracle JET Components
+#### (f) Internationalizing the Oracle JET Components
 
 1. In 'dashboard.html', add the following:
 
