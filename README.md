@@ -302,13 +302,19 @@ on-selection-changed="[[handleSelectionChanged]]"
    
 ## Part 3: Smart Usage of Oracle JET
 
-In this part, you create a reusable CCA component that follows the W3C Web Component specification.
+In this part, you create a reusable CCA component that follows the W3C Web Component specification. 
 
 ### (a) Creating a CCA Component
 
-We'll create a new CCA component, add properties, and express them as attributes in the view of a module.
+We'll start by creating a new CCA component, add properties, and express them as attributes in the view of a module, by means of a new custom element, as shown below:
 
-1. In the Terminal window, first kill the 'ojet' process, using Ctrl-C, and then, in the root of your project, run the following:
+```html #button { border: none; }
+<my-employee-form first-name='[[inputFirstName]]' last-name='[[inputLastName]]'></my-employee-form>
+```
+
+1. In the Terminal window, first kill the 'ojet' process, using Ctrl-C. This is because you will be adding new files in this section. Whenever you add new files, first kill the 'ojet' process in the Terminal window, using Ctrl-C, and then restart it via 'ojet serve'. The 'watch' process, provided by 'ojet', will only look for changes to existing files; it will not build and re-serve new files.
+
+2. In the root of your project, run the following:
 
 ```js #button { border: none; }
 ojet create component my-employee-form
@@ -316,13 +322,13 @@ ojet create component my-employee-form
 
 Take a look at your source structure, find the new 'my-employee-form' CCA component, and explore its structure.
 
-2. Load the loader in the 'define' block of the ViewModel:
+3. Load the loader in the 'define' block of the ViewModel:
 
 ```js #button { border: none; }
 'jet-composites/my-employee-form/loader'
 ```
 
-3. Move the form-container (from step 5 in the previous section) into the 'my-employee-form-view.html' file of the 'my-employee-form' CCA component:
+4. Move the form-container (from step 5 in the previous section) into the 'my-employee-form-view.html' file of the 'my-employee-form' CCA component:
 
 ```html #button { border: none; }
 <oj-form-layout id="form-container" label-edge="top"> 
@@ -333,9 +339,9 @@ Take a look at your source structure, find the new 'my-employee-form' CCA compon
 </oj-form-layout> 
 ```
 
-4. Move the references to 'ojs/ojinputtext' and 'ojs/ojformlayout' from the end of the 'define' block of the 'dashboard.js' file to the end of the 'define' block of the 'my-employee-form-viewModel.js' file.
+5. Move the references to 'ojs/ojinputtext' and 'ojs/ojformlayout' from the end of the 'define' block of the 'dashboard.js' file to the end of the 'define' block of the 'my-employee-form-viewModel.js' file.
 
-5. In 'component.json', within your 'my-employee-form' CCA component, add content to the 'properties' section, like this:
+6. In 'component.json', within your 'my-employee-form' CCA component, add content to the 'properties' section, like this:
 
 ```js #button { border: none; }
 "properties": {
@@ -354,7 +360,7 @@ Take a look at your source structure, find the new 'my-employee-form' CCA compon
   },
 ```
 
-6. Back in the 'my-employee-form-view.html', reference the properties above via the '$props' construction:
+7. Back in the 'my-employee-form-view.html', reference the properties above via the '$props' construction:
 
 ```html #button { border: none; }
 <oj-input-text id="firstNameInput" label-hint="First Name" value="[[$props.firstName]]"></oj-input-text> 
@@ -365,7 +371,7 @@ Take a look at your source structure, find the new 'my-employee-form' CCA compon
 
 **Tip:** What is "$props"? Use ''$props'' to reference properties that need to be visualized in the view of CCA components.
 
-7. Use the 'my-employee-form' custom element a few times in 'dashboard.html', as shown below, instead of the form-container that you currently have there, then run 'ojet serve' in the Terminal again, and notice that you now see multiple forms.
+8. Use the 'my-employee-form' custom element a few times in 'dashboard.html', as shown below, instead of the form-container that you currently have there, then run 'ojet serve' in the Terminal again, and notice that you now see multiple forms.
 
 ```html #button { border: none; }
 <my-employee-form></my-employee-form>
@@ -384,6 +390,8 @@ You can refer to properties in the module so that when a row is selected in the 
 ```html #button { border: none; }
 <my-employee-form first-name='[[inputFirstName]]' last-name='[[inputLastName]]'></my-employee-form>
 ```
+
+**Note:** Remember to run 'ojet serve' to serve the application, since you killed the 'ojet' process in step 1 of this section.
 
 ### (b) Creating a Nested CCA Component
 
