@@ -1,0 +1,12 @@
+{
+    "description": "OJET-CLI hooks configuration file",
+    "hooks": {
+        "before_build": "scripts/hooks/before_build.js",
+        "before_release": "scripts/hooks/before_release.js",
+        "after_build": "scripts/hooks/after_build.js",
+        "before_hybrid_build": "scripts/hooks/before_hybrid_build.js",
+        "before_release_build": "scripts/hooks/before_release_build.js",
+        "before_serve": "scripts/hooks/before_serve.js",
+        "after_serve": "scripts/hooks/after_serve.js"
+    }
+}

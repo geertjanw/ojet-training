@@ -1,0 +1,36 @@
+{
+    "name": "my-employee-form",
+    "displayName": "my-employee-form",
+    "description": "Describe your component here",
+    "version": "1.0.0",
+    "jetVersion": "5.2.0",
+    "properties": {
+        "firstName": {
+            "type": "string",
+            "writeback": "true"
+        },
+        "lastName": {
+            "type": "string",
+            "writeback": "true"
+        },
+        "hireDate": {
+            "type": "string",
+            "writeback": "true"
+        },
+        "hireSalary": {
+            "type": "number",
+            "writeback": "true"
+        }
+    },
+    "methods": {
+
+    }, 
+    "events": {
+
+    }, 
+    "slots": {
+        "toolbar": {
+            "description": "Toolbar placed below employee form."
+        }
+    }
+}

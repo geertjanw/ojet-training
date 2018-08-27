@@ -1,0 +1,35 @@
+<!--
+ Copyright (c) 2014, 2018, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<div class="oj-hybrid-padding">
+  <h1>Incidents Content Area</h1>
+  <oj-input-text  
+      maxlength="30" 
+      placeholder="Type to filter first name" 
+      on-raw-value-changed="[[filterChanged]]" 
+      value="{{filter}}">
+  </oj-input-text>
+  <oj-bind-for-each data='[[datasource]]'>
+      <template> 
+          <oj-collapsible>
+              <span slot="header">
+                  <span>
+                      <oj-bind-text value="[[$current.data.FIRST_NAME]]"></oj-bind-text>
+                  </span>
+              </span>
+              <span>
+                  <my-employee-form 
+                      first-name="[[$current.data.FIRST_NAME]]" 
+                      last-name="[[$current.data.LAST_NAME]]" 
+                      team.name="Foo"
+                      team.manager="Bar"> 
+                  </my-employee-form>
+              </span>
+          </oj-collapsible>
+          <hr/> 
+      </template>
+  </oj-bind-for-each>
+
+  <!--<my-employee-form-container data="[[employees]]"/>-->
+</div>

@@ -1,0 +1,21 @@
+{
+    "name": "my-employee-form-container",
+    "displayName": "my-employee-form-container",
+    "description": "Describe your component here",
+    "version": "1.0.0",
+    "jetVersion": "5.2.0",
+    "properties": {
+        "data": {
+            "type": "array"
+        }
+    },
+    "methods": {
+
+    }, 
+    "events": {
+
+    }, 
+    "slots": {
+
+    }
+}

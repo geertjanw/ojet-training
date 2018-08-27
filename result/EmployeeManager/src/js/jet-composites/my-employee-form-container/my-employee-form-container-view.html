@@ -1,0 +1,22 @@
+<!--
+  Copyright (c) 2015, 2018, Oracle and/or its affiliates.
+  The Universal Permissive License (UPL), Version 1.0
+-->
+<oj-bind-for-each data="[[$props.data]]">
+    <template> 
+        <oj-collapsible>
+            <span slot="header">
+                <span>
+                    <oj-bind-text value="[[$current.data.empno]]"></oj-bind-text>
+                </span>
+            </span>
+            <my-employee-form 
+                first-name="[[$current.data.name]]" 
+                last-name="[[$current.data.lastname]]" 
+                hire-date="[[$current.data.hiredate]]" 
+                hire-salary="[[$current.data.hiresalary]]"> 
+            </my-employee-form>
+        </oj-collapsible>
+        <hr/> 
+    </template>
+</oj-bind-for-each>
