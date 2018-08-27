@@ -204,13 +204,15 @@ self.dataSource = new oj.CollectionDataGridDataSource(
 }
 ```
 
-Be aware that the order in which the parameters are listed in a 'define' block must match the order in which they are referenced in the callback function, i.e., 'text!../endpoints.json' is 4th in the list in the define block and therefore its reference 'endpoints' must be 4th in the list in the callback function, as shown below:
+**Note:** Be aware that the order in which the parameters are listed in a 'define' block must match the order in which they are referenced in the callback function, i.e., 'text!../endpoints.json' is 4th in the list in the define block and therefore its reference 'endpoints' must be 4th in the list in the callback function, as shown below:
 
 ```js #button { border: none; }
 define(['ojs/ojcore', 'knockout', 'jquery', 'text!../endpoints.json', 
     'ojs/ojdatagrid', 'ojs/ojcollectiondatagriddatasource'],
         function (oj, ko, $, endpoints) {
 ```
+
+What does 'text!' mean? That's the protocol defined by https://github.com/requirejs/text, which is part of Oracle JET, used for loading text resources, such as 'endpoints.json'.
 
 After adding new files, first kill the 'ojet' process in the Terminal window, using Ctrl-C, and then restart it. The 'watch' process, provided by 'ojet', will only look for changes to existing files; it will not build and re-serve new files.
 
