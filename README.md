@@ -305,7 +305,7 @@ In this part, you create a reusable CCA component that follows the W3C Web Compo
 
 ### (a) Creating a CCA Component
 
-We'll start by creating a new CCA component, add properties, and express them as attributes in the view of a module, by means of a new custom element, as shown below:
+We'll start by creating a new CCA component, add properties, and express them as attributes in the view of a module, by means of a new custom element. Wouldn't it be great if you could express the form that you defined in step 5 above, as below instead? That's what you're going to learn about in this section.
 
 ```html #button { border: none; }
 <my-employee-form first-name='[[inputFirstName]]' last-name='[[inputLastName]]'></my-employee-form>
