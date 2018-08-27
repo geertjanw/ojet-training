@@ -321,7 +321,7 @@ ojet create component my-employee-form
 
 Take a look at your source structure, find the new 'my-employee-form' CCA component, and explore its structure.
 
-3. Load the loader at the end of the 'define' block of the ViewModel:
+3. Load the loader, i.e., 'my-employee-form/loader', at the end of the 'define' block of the 'dashboard.js', as shown below:
 
 ```js #button { border: none; }
 define(['ojs/ojcore', 'knockout', 'jquery', 
