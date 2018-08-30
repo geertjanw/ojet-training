@@ -73,7 +73,7 @@ json-server --watch employeeData.json
 <img src="Screen%20Shot%202018-06-21%20at%2015.15.15.png" alt="alt text" width="400" height="250">
 </td></tr></table>
 
-**Tip:** Optionally, follow the steps at http://bit.ly/jet-api to use Oracle Apiary, which is a part of Oracle API Platform Cloud Service, to design an API. Name your new API Project *employees* and, following the instructions, your *get* API should be something like http://private-cdb8cc-employees3.apiary-mock.com/questions. The JavaScript code to be integrated in the instructions that follow, is also provided, as explained at http://bit.ly/jet-api.
+**Tip:** Optionally, follow the steps at http://bit.ly/jet-api to use Oracle Apiary, which is a part of Oracle API Platform Cloud Service, to design an API. Name your new API Project *employees*, copy the content from https://github.com/geertjanw/ojet-training/blob/master/employeeData.json, and following the instructions, your *get* API should be something like http://private-cdb8cc-employees3.apiary-mock.com/questions. The JavaScript code to be integrated in the instructions that follow, is also provided, as explained at http://bit.ly/jet-api. Make sure to use the Mock Server, as explained at http://bit.ly/jet-api, which will give you the same functionality as provided by the [JSON Server](https://scotch.io/tutorials/json-server-as-a-fake-rest-api-in-frontend-development).
 
 ### (c) Getting Oracle JET
 
