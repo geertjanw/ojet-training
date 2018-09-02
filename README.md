@@ -2,6 +2,8 @@
 
 The purpose of this script is to show how to put together a CRUD scenario in an Oracle JET application by means of Web Components. You'll start by setting up [JSON Server, which is a fake REST server](https://scotch.io/tutorials/json-server-as-a-fake-rest-api-in-frontend-development), next you'll set up an Oracle JET application that connects to it and displays its payload, and finally you'll use the Composite Component Architecture (CCA) to create a reusable Web Component for displaying the payload in different modules, interacting with CRUD functionality defined in the application.
 
+**Tip:** Go here to follow a free three week MOOC about Oracle JET: [oracle.com/goto/jet](https://www.oracle.com/goto/jet).
+
 **Troubleshooting:** If you run into problems, go here for the completed source files: [bit.ly/learn-jet-result](http://bit.ly/learn-jet-result)
 
 The application you'll create in this workshop will look as follows:
