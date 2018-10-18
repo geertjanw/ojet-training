@@ -81,7 +81,7 @@ json-server --watch employeeData.json
 
 ### (c) Getting Oracle JET
 
-In this part, you install the Oracle JET 5.2.0 command-line interface.
+In this part, you install the Oracle JET 6.0.0 command-line interface.
 
 1. Install the Oracle JET command-line interface:
 
