@@ -309,11 +309,11 @@ on-selection-changed="[[handleSelectionChanged]]"
    
 ## Part 3: Smart Usage of Oracle JET
 
-In this part, you create a reusable CCA component that follows the W3C Web Component specification. 
+In this part, you create a reusable Web Component that follows the W3C Web Component specification. 
 
 ### (a) Creating a CCA Component
 
-We'll start by creating a new CCA component, add properties, and express them as attributes in the view of a module, by means of a new custom element. Wouldn't it be great if you could express the form that you defined in step 5 above, as below instead? That's what you're going to learn about in this section.
+We'll start by creating a new Web Component, add properties, and express them as attributes in the view of a module, by means of a new custom element. Wouldn't it be great if you could express the form that you defined in step 5 above, as below instead? That's what you're going to learn about in this section.
 
 ```html #button { border: none; }
 <my-employee-form first-name='[[inputFirstName]]' last-name='[[inputLastName]]'></my-employee-form>
@@ -327,7 +327,7 @@ We'll start by creating a new CCA component, add properties, and express them as
 ojet create component my-employee-form
 ```
 
-Take a look at your source structure, find the new 'my-employee-form' CCA component, and explore its structure.
+Take a look at your source structure, find the new 'my-employee-form' Web Component, and explore its structure.
 
 3. Load the loader, i.e., 'my-employee-form/loader', at the end of the dependency list passed into the define() call of the 'dashboard.js', as shown below:
 
@@ -341,7 +341,7 @@ define(['ojs/ojcore', 'knockout', 'jquery',
     'my-employee-form/loader']
 ```
 
-4. Move the form-container (from step 5 in the previous section) into the 'my-employee-form-view.html' file of the 'my-employee-form' CCA component:
+4. Move the form-container (from step 5 in the previous section) into the 'my-employee-form-view.html' file of the 'my-employee-form' Web Component:
 
 ```html #button { border: none; }
 <oj-form-layout id="form-container" label-edge="top"> 
@@ -354,7 +354,7 @@ define(['ojs/ojcore', 'knockout', 'jquery',
 
 5. Move the references to 'ojs/ojinputtext' and 'ojs/ojformlayout' from the end of the dependency list passed into the define() call of the 'dashboard.js' file to the end of the dependency list passed into the define() call of the 'my-employee-form-viewModel.js' file.
 
-6. In 'component.json', within your 'my-employee-form' CCA component, add content to the 'properties' section, like this:
+6. In 'component.json', within your 'my-employee-form' Web Component, add content to the 'properties' section, like this:
 
 ```js #button { border: none; }
 "properties": {
@@ -382,7 +382,7 @@ define(['ojs/ojcore', 'knockout', 'jquery',
 <oj-input-text id="inputSalary" label-hint="Salary" value="[[$props.salary]]"></oj-input-text> 
 ```
 
-**Tip:** What is "$props"? Use ''$props'' to reference properties that need to be visualized in the view of CCA components.
+**Tip:** What is "$props"? Use ''$props'' to reference properties that need to be visualized in the view of Web Components.
 
 8. Use the 'my-employee-form' custom element a few times in 'dashboard.html', as shown below, instead of the form-container that you currently have there, then run 'ojet serve' in the Terminal again, and notice that you now see multiple forms.
 
@@ -408,13 +408,13 @@ You can refer to properties in the module so that when a row is selected in the 
 
 ### (b) Creating a Nested CCA Component
 
-In this part, we're going to reuse our CCA component inside a new CCA component, to provide a new view for the same type of data, i.e., employee data.
+In this part, we're going to reuse our Web Component inside a new Web Component, to provide a new view for the same type of data, i.e., employee data.
 
 <table><tr><td>   
 <img src="Screen%20Shot%202018-06-25%20at%2014.25.16.png" alt="alt text" width="500" height="420">
 </td></tr></table>
 
-1. Let's start by reusing the 'my-employee-form' CCA component in a different module, e.g., in the Incidents module, which consists of the 'incidents.html' and 'incidents.js' file. In the 'incidents.js' file, reference the CCA component at the end of the dependency list passed into the define() call:
+1. Let's start by reusing the 'my-employee-form' Web Component in a different module, e.g., in the Incidents module, which consists of the 'incidents.html' and 'incidents.js' file. In the 'incidents.js' file, reference the Web Component at the end of the dependency list passed into the define() call:
 
 ```js #button { border: none; }
 'my-employee-form/loader'
@@ -438,7 +438,7 @@ $.getJSON("http://localhost:3000/employees").
             self.employees(tempArray);
         });
 ```
-Next, display the CCA component for each of the 'employees', in 'incidents.html':
+Next, display the Web Component for each of the 'employees', in 'incidents.html':
 ```html #button { border: none; }
 <oj-bind-for-each data="[[employees]]"> 
       <template> 
@@ -457,7 +457,7 @@ Next, display the CCA component for each of the 'employees', in 'incidents.html'
 
 Now, in the application, you should see an employee form for each iteration of the 'employees' array.
 
-2. The HTML above is quite verbose, it could be expressed more compactly like this, assuming we had a CCA component named 'my-employee-container', which would automatically do the above for us:
+2. The HTML above is quite verbose, it could be expressed more compactly like this, assuming we had a Web Component named 'my-employee-container', which would automatically do the above for us:
 
 ```html #button { border: none; }
 <my-employee-form-container data="[[employees]]"/>
@@ -482,9 +482,9 @@ ojet create component my-employee-form-container
 <my-employee-form-container data="[[employees]]"/>
 ```
 
-Start the 'ojet serve' process again and note that you are now using a nested CCA component.
+Start the 'ojet serve' process again and note that you are now using a nested Web Component.
 
-6. We can make the container CCA component more interesting by including an [ojCollapsible](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=collapsible&demo=basicCollapsible):
+6. We can make the container Web Component more interesting by including an [ojCollapsible](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=collapsible&demo=basicCollapsible):
 
 ```html #button { border: none; }
 <oj-bind-for-each data="[[$props.data]]">
@@ -507,17 +507,17 @@ Start the 'ojet serve' process again and note that you are now using a nested CC
 </oj-bind-for-each>
 ```
 
-**Note:** To do the above, you'll need to reference 'ojs/ojcollapsible' in the dependency list passed into the define() call of the CCA component's ViewModel.
+**Note:** To do the above, you'll need to reference 'ojs/ojcollapsible' in the dependency list passed into the define() call of the Web Component's ViewModel.
 
 ### (c) Creating CRUD Functionality
 
-We're going to create a 'slot' (i.e., a placeholder) in the 'my-employee-form' CCA component and, in some of the usages of the 'my-employee-form' CCA component, we will fill it with buttons for doing CRUD functionality, as shown below:
+We're going to create a 'slot' (i.e., a placeholder) in the 'my-employee-form' Web Component and, in some of the usages of the 'my-employee-form' Web Component, we will fill it with buttons for doing CRUD functionality, as shown below:
 
 <table><tr><td>   
 <img src="Screen%20Shot%202018-06-24%20at%2022.35.42.png" alt="alt text" width="500" height="420">
 </td></tr></table>
 
-   1. In the 'component.json' file of the 'my-employee-form' CCA component, define the 'slots' section as follows:
+   1. In the 'component.json' file of the 'my-employee-form' Web Component, define the 'slots' section as follows:
 
 ```js #button { border: none; }
 "slots": {
@@ -527,7 +527,7 @@ We're going to create a 'slot' (i.e., a placeholder) in the 'my-employee-form' C
 }
 ```
 
-   2. In 'my-employee-form-view.html', i.e., in the 'my-employee-form' CCA component, define where the slot will be rendered, e.g., below the form paste the following:
+   2. In 'my-employee-form-view.html', i.e., in the 'my-employee-form' Web Component, define where the slot will be rendered, e.g., below the form paste the following:
    
 ```html #button { border: none; }   
 <div>
@@ -587,7 +587,7 @@ self.update = function () {
 
 **Note:** You could use on-click instead of on-oj-action, though note that on-oj-action has built-in accessibility across devices.
 
-3. We need to enable the 'my-employee-form' CCA component to push changes back to the Dashboard module. Therefore, change the 'component.json' file in the 'my-employee-form' CCA component to have writeback properties, as shown below:
+3. We need to enable the 'my-employee-form' Web Component to push changes back to the Dashboard module. Therefore, change the 'component.json' file in the 'my-employee-form' Web Component to have writeback properties, as shown below:
 
 ```js #button { border: none; }  
 "properties": {
@@ -610,7 +610,7 @@ self.update = function () {
   }
 ```
 
-{{}}, instead of [[]], enables us to push observable value changes from the CCA component back to the variables defined in the Dashboard module. We're going to use this construction below, because now that we have set our properties to be 'writeback', we can change our bindings from read-only, i.e., [[]], to read-write {{}}.
+{{}}, instead of [[]], enables us to push observable value changes from the Web Component back to the variables defined in the Dashboard module. We're going to use this construction below, because now that we have set our properties to be 'writeback', we can change our bindings from read-only, i.e., [[]], to read-write {{}}.
 
 Change the square braces in the view of the 'my-employee-form' component to curly braces because you want to not only display values but change the underlying properties too:
 
@@ -770,7 +770,7 @@ self.employees = oj.KnockoutUtils.map(self.collection, null, true);
 
 **Note:** Add 'ojs/ojknockout-model' to the dependency list passed into the define() call of modules that use [oj.KnockoutUtils.map](http://www.oracle.com/webfolder/technetwork/jet/jsdocs/oj.KnockoutUtils.html).
 
-Once you have an observable array, such as 'employees' above, you can use it as follows, as shown earlier. Paste the below into 'incidents.html', i.e., here you're not using the 'my-employee-form-container' CCA component anymore, though a next step could be to integrate the filter into that CCA component.
+Once you have an observable array, such as 'employees' above, you can use it as follows, as shown earlier. Paste the below into 'incidents.html', i.e., here you're not using the 'my-employee-form-container' Web Component anymore, though a next step could be to integrate the filter into that Web Component.
 
 ```html #button { border: none; }   
 <oj-bind-for-each data='[[employees]]'>
