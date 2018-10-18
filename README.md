@@ -544,7 +544,7 @@ define(['ojs/ojcore', 'knockout', 'jquery',
     'ojs/ojinputtext', 
     'ojs/ojformlayout', 
     'my-employee-form/loader',
-    'ojs/ojbutton]
+    'ojs/ojbutton']
 ```
 
 
