@@ -210,7 +210,7 @@ self.dataSource = new oj.CollectionDataGridDataSource(
 }
 ```
 
-**Note:** Be aware that the order in which the parameters are listed in a 'define' block must match the order in which they are referenced in the callback function, i.e., 'text!../endpoints.json' is 4th in the list in the define block and therefore its reference 'endpoints' must be 4th in the list in the callback function, as shown below:
+**Note:** Be aware that the order in which the parameters are listed in a 'define' block must match the order in which they are referenced in the callback function, i.e., 'text!../endpoints.json' is 4th in the list in the dependency list passed into the define() call and therefore its reference 'endpoints' must be 4th in the list in the callback function, as shown below:
 
 ```js #button { border: none; }
 define(['ojs/ojcore', 'knockout', 'jquery', 'text!../endpoints.json', 
@@ -534,7 +534,7 @@ We're going to create a 'slot' (i.e., a placeholder) in the 'my-employee-form' C
    <oj-slot name="toolbar"/>
 </div>
 ```
-   3. In 'my-employee-form-view.js', add a reference to the ojs/ojbutton module to the end of the define block:
+   3. In 'my-employee-form-view.js', add a reference to the ojs/ojbutton module to the end of the dependency list passed into a define() call:
    
 ```js #button { border: none; }   
 define(['ojs/ojcore', 'knockout', 'jquery', 
