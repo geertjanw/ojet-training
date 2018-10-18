@@ -63,7 +63,7 @@ Details: https://github.com/typicode/json-server
 
    2. Download and put this file anywhere on disk:
    
-https://github.com/geertjanw/ojet-training/blob/master/employeeData.json
+https://raw.githubusercontent.com/geertjanw/ojet-training/master/employeeData.json
 
 **Tip:** Do not put the above file in an Oracle JET application, instead, put it somewhere completely separate, e.g., on your Desktop, and run the command below in the Terminal window from there.
 
