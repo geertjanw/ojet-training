@@ -110,7 +110,7 @@ ojet --version
 You should see this:
 
 ```html #button { border: none; }
-Oracle JET Command Line Interface, version: 5.2.0
+Oracle JET Command Line Interface, version: 6.0.0
 ```
 
 **Tip:** If you have a different version of the Oracle JET command-line interface, please reinstall, using the command in step 1 above to do so.
