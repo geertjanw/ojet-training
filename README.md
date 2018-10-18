@@ -25,8 +25,8 @@ Part 2: Simple Usage of Oracle JET
    * Displaying the Selected Data in an Oracle JET Form
 
 Part 3: Smart Usage of Oracle JET
-   * Creating a CCA Component
-   * Creating a Nested CCA Component
+   * Creating a Web Component
+   * Creating a Nested Web Component
    * Creating CRUD Functionality
    
 Part 4: Advanced Usage of Oracle JET   
@@ -311,7 +311,7 @@ on-selection-changed="[[handleSelectionChanged]]"
 
 In this part, you create a reusable Web Component that follows the W3C Web Component specification. 
 
-### (a) Creating a CCA Component
+### (a) Creating a Web Component
 
 We'll start by creating a new Web Component, add properties, and express them as attributes in the view of a module, by means of a new custom element. Wouldn't it be great if you could express the form that you defined in step 5 above, as below instead? That's what you're going to learn about in this section.
 
@@ -406,7 +406,7 @@ You can refer to properties in the module so that when a row is selected in the 
 
 **Note:** Remember to run 'ojet serve' to serve the application, since you killed the 'ojet' process in step 1 of this section.
 
-### (b) Creating a Nested CCA Component
+### (b) Creating a Nested Web Component
 
 In this part, we're going to reuse our Web Component inside a new Web Component, to provide a new view for the same type of data, i.e., employee data.
 
