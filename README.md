@@ -190,7 +190,7 @@ self.dataSource = new oj.CollectionDataGridDataSource(
 
 **Note:** In the above, we're making use of constructs that help you to quickly and effectively model and display your underlying data, in particular, [oj.Model](https://docs.oracle.com/cd/E86256_01/jet/reference-jet/oj.Model.html), [oj.Collection](https://docs.oracle.com/cd/E86256_01/jet/reference-jet/oj.Collection.html), and [oj.CollectionDataGridDataSource](https://docs.oracle.com/cd/E86256_01/jet/reference-jet/oj.CollectionDataGridDataSource.html). In turn, these concepts are based on Backbone syntax, e.g., [Backbone 'Collections'](http://backbonejs.org/#Model-Collections).
 
-4. To use the 'ojDataGrid', reference the following at the end of the 'define' block of the 'dashboard.js' file:
+4. To use the 'ojDataGrid', reference the following at the end of the dependency list passed into the define() call of the 'dashboard.js' file:
 
 ```js #button { border: none; }
 'ojs/ojdatagrid', 'ojs/ojcollectiondatagriddatasource'
@@ -202,7 +202,7 @@ self.dataSource = new oj.CollectionDataGridDataSource(
 <img src="Screen%20Shot%202018-06-21%20at%2015.50.55.png" alt="alt text" width="400" height="250">
 </td></tr></table>
 
-**Tip:** Optionally, for centralized management of your endpoints, create an 'endpoints.json' file in your 'src/js' folder, load it in a 'define' block as 'text!../endpoints.json', reference it as 'endpoints' in the callback function, and then replace hardcoded references with 'JSON.parse(endpoints).employees', assuming the file's content is as follows:
+**Tip:** Optionally, for centralized management of your endpoints, create an 'endpoints.json' file in your 'src/js' folder, load it in the dependency list passed into the define() call as 'text!../endpoints.json', reference it as 'endpoints' in the callback function, and then replace hardcoded references with 'JSON.parse(endpoints).employees', assuming the file's content is as follows:
 
 ```js #button { border: none; }
 {
@@ -210,7 +210,7 @@ self.dataSource = new oj.CollectionDataGridDataSource(
 }
 ```
 
-**Note:** Be aware that the order in which the parameters are listed in a 'define' block must match the order in which they are referenced in the callback function, i.e., 'text!../endpoints.json' is 4th in the list in the dependency list passed into the define() call and therefore its reference 'endpoints' must be 4th in the list in the callback function, as shown below:
+**Note:** Be aware that the order in which the parameters are listed in the dependency list passed into the define() call must match the order in which they are referenced in the callback function, i.e., 'text!../endpoints.json' is 4th in the list in the dependency list passed into the define() call and therefore its reference 'endpoints' must be 4th in the list in the callback function, as shown below:
 
 ```js #button { border: none; }
 define(['ojs/ojcore', 'knockout', 'jquery', 'text!../endpoints.json', 
@@ -295,7 +295,7 @@ on-selection-changed="[[handleSelectionChanged]]"
 </oj-form-layout> 
 ```
 
-6. To use the 'ojInputText' and 'ojDialog', reference the following at the end of the 'define' block of the 'dashboard.js' file:
+6. To use the 'ojInputText' and 'ojDialog', reference the following at the end of the dependency list passed into the define() call of the 'dashboard.js' file:
 
 ```js #button { border: none; }
 'ojs/ojinputtext', 'ojs/ojformlayout'
@@ -329,7 +329,7 @@ ojet create component my-employee-form
 
 Take a look at your source structure, find the new 'my-employee-form' CCA component, and explore its structure.
 
-3. Load the loader, i.e., 'my-employee-form/loader', at the end of the 'define' block of the 'dashboard.js', as shown below:
+3. Load the loader, i.e., 'my-employee-form/loader', at the end of the dependency list passed into the define() call of the 'dashboard.js', as shown below:
 
 ```js #button { border: none; }
 define(['ojs/ojcore', 'knockout', 'jquery', 
@@ -352,7 +352,7 @@ define(['ojs/ojcore', 'knockout', 'jquery',
 </oj-form-layout> 
 ```
 
-5. Move the references to 'ojs/ojinputtext' and 'ojs/ojformlayout' from the end of the 'define' block of the 'dashboard.js' file to the end of the 'define' block of the 'my-employee-form-viewModel.js' file.
+5. Move the references to 'ojs/ojinputtext' and 'ojs/ojformlayout' from the end of the dependency list passed into the define() call of the 'dashboard.js' file to the end of the dependency list passed into the define() call of the 'my-employee-form-viewModel.js' file.
 
 6. In 'component.json', within your 'my-employee-form' CCA component, add content to the 'properties' section, like this:
 
@@ -414,7 +414,7 @@ In this part, we're going to reuse our CCA component inside a new CCA component,
 <img src="Screen%20Shot%202018-06-25%20at%2014.25.16.png" alt="alt text" width="500" height="420">
 </td></tr></table>
 
-1. Let's start by reusing the 'my-employee-form' CCA component in a different module, e.g., in the Incidents module, which consists of the 'incidents.html' and 'incidents.js' file. In the 'incidents.js' file, reference the CCA component at the end of the 'define' block:
+1. Let's start by reusing the 'my-employee-form' CCA component in a different module, e.g., in the Incidents module, which consists of the 'incidents.html' and 'incidents.js' file. In the 'incidents.js' file, reference the CCA component at the end of the dependency list passed into the define() call:
 
 ```js #button { border: none; }
 'my-employee-form/loader'
@@ -507,7 +507,7 @@ Start the 'ojet serve' process again and note that you are now using a nested CC
 </oj-bind-for-each>
 ```
 
-**Note:** To do the above, you'll need to reference 'ojs/ojcollapsible' in the 'define' block of the CCA component's ViewModel.
+**Note:** To do the above, you'll need to reference 'ojs/ojcollapsible' in the dependency list passed into the define() call of the CCA component's ViewModel.
 
 ### (c) Creating CRUD Functionality
 
@@ -747,7 +747,7 @@ define(['ojs/ojcore', 'text!../endpoints.json'], function (oj, endpoints) {
 });
 ```
 
-2. In 'dashboard.js' and/or 'incidents.js', you can load the above in the 'define' block as '../factories/EmployeeFactory' and reference it in the callback function in the corresponding position as, for example, 'EmployeeFactory'.
+2. In 'dashboard.js' and/or 'incidents.js', you can load the above in the dependency list passed into the define() call as '../factories/EmployeeFactory' and reference it in the callback function in the corresponding position as, for example, 'EmployeeFactory'.
 
 3. Now you can reuse the 'EmployeeFactory' as follows, when defining the data source of the DataGrid discussed earlier, in 'dashboard.js':
 
@@ -768,7 +768,7 @@ self.collection.fetch();
 self.employees = oj.KnockoutUtils.map(self.collection, null, true);
 ```
 
-**Note:** Add 'ojs/ojknockout-model' to the 'define' block of modules that use [oj.KnockoutUtils.map](http://www.oracle.com/webfolder/technetwork/jet/jsdocs/oj.KnockoutUtils.html).
+**Note:** Add 'ojs/ojknockout-model' to the dependency list passed into the define() call of modules that use [oj.KnockoutUtils.map](http://www.oracle.com/webfolder/technetwork/jet/jsdocs/oj.KnockoutUtils.html).
 
 Once you have an observable array, such as 'employees' above, you can use it as follows, as shown earlier. Paste the below into 'incidents.html', i.e., here you're not using the 'my-employee-form-container' CCA component anymore, though a next step could be to integrate the filter into that CCA component.
 
@@ -1010,7 +1010,7 @@ More details relating to this: https://javascript.info/bubbling-and-capturing
 <oj-input-date id="date"></oj-input-date>
 ```
 
-2. In 'dashboard.js', include the following in the 'define' block:
+2. In 'dashboard.js', include the following in the dependency list passed into the define() call:
 
 ```js #button { border: none; }
 'ojs/ojdatetimepicker'
