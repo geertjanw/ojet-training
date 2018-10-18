@@ -156,7 +156,7 @@ http://www.oracle.com/webfolder/technetwork/jet/jsdocs/oj.ojDataGrid.html
 
 In the above, look at the JS documentation, the description, variations, etc.
 
-2. Here is a simple ojDataGrid, a simplified version of the above references. Copy it below and paste it into the 'dashboard.html' file in your application:
+2. Here is a simple ojDataGrid, a simplified version of the above references. Copy it below and paste it into the 'dashboard.html' file in your application (make sure you are editing only files under /src directory):
 
 ```html #button { border: none; }
 <oj-data-grid 
