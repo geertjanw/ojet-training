@@ -379,7 +379,7 @@ define(['ojs/ojcore', 'knockout', 'jquery',
 <oj-input-text id="firstNameInput" label-hint="First Name" value="[[$props.firstName]]"></oj-input-text> 
 <oj-input-text id="lastNameInput" label-hint="Last Name" value="[[$props.lastName]]"></oj-input-text> 
 <oj-input-text id="inputHireDate" label-hint="Date Hired" value="[[$props.hireDate]]"></oj-input-text> 
-<oj-input-text id="inputSalary" label-hint="Salary" value="[[$props.hireSalary]]"></oj-input-text> 
+<oj-input-text id="inputSalary" label-hint="Salary" value="[[$props.salary]]"></oj-input-text> 
 ```
 
 **Tip:** What is "$props"? Use ''$props'' to reference properties that need to be visualized in the view of CCA components.
