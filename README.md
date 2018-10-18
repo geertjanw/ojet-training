@@ -534,6 +534,19 @@ We're going to create a 'slot' (i.e., a placeholder) in the 'my-employee-form' C
    <oj-slot name="toolbar"/>
 </div>
 ```
+   3. In 'my-employee-form-view.js', add a reference to the ojs/ojbutton module to the end of the define block:
+   
+```js #button { border: none; }   
+define(['ojs/ojcore', 'knockout', 'jquery', 
+    'text!../endpoints.json',
+    'ojs/ojdatagrid', 
+    'ojs/ojcollectiondatagriddatasource',
+    'ojs/ojinputtext', 
+    'ojs/ojformlayout', 
+    'my-employee-form/loader',
+    'ojs/ojbutton]
+```
+
 
 We now have a slot for a toolbar and, in the Dashboard module, we'll add functionality for updating, deleting, and creating items. We'll not need this functionality in the Incidents module, where we're using the 'my-employee-form' together with the 'my-employee-form-container' simply as a view on our data.  
 
