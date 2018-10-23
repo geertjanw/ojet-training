@@ -128,6 +128,8 @@ In this part, you set up a new Oracle JET application, explore the Oracle JET Co
 ```js #button { border: none; }
 ojet create EmployeeManager --template=navdrawer
 ```
+**Note:** This process may take some time.
+
 2. CD into 'EmployeeManager' and run the following in the terminal and look in the browser:
 
 ```js #button { border: none; }
