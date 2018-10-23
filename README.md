@@ -144,7 +144,7 @@ After a few moments, you should see this:
 
 3. In your editor, open the sources, explore the structure, and learn about what everything does.
 
-4. Make a change in the 'dashboard.html' file and notice what happens in the browser, without needing to refresh.
+4. Make a change in the 'src/js/views/dashboard.html' file and notice what happens in the browser, without needing to refresh.
 
 ### (b) Showing Data in an Oracle JET Grid
 
@@ -171,7 +171,7 @@ In the above, look at the JS documentation, the description, variations, etc.
 </oj-data-grid>
 ```
 
-3. Above, notice that 'dataSource' is referenced, which you need to define in 'dashboard.js'. Copy/paste the following code for that purpose into 'dashboard.js' (paste it directly below the 'var self = this' statement):
+3. Above, notice that 'dataSource' is referenced, which you need to define in 'src/js/viewmodels/dashboard.js'. Copy/paste the following code for that purpose into 'src/js/viewmodels/dashboard.js' (paste it directly below the 'var self = this' statement):
 
 ```js #button { border: none; }
 self.url = 'http://localhost:3000/employees';
