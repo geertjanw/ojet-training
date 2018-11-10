@@ -915,10 +915,10 @@ define({
 });
 ```
 
-4. In 'main.js', under the 'shim' section, add the following so that the translation bundles are found:
+4. In 'main.js', under the '//endinjector' comment, add the following so that the translation bundles are found:
 
 ```js #button { border: none; }
-config: {
+,config: {
     ojL10n: {
       merge: {
         'ojtranslations/nls/ojtranslations': 'resources/nls/l10'
