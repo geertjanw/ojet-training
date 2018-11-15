@@ -110,9 +110,15 @@ After a few moments, you should see this:
 <img src="Screen%20Shot%202018-06-21%20at%2015.37.46.png" alt="alt text" width="400" height="250">
 </td></tr></table>
 
-3. In your editor, open the sources, explore the structure, and learn about what everything does.
+3. Make sure you have a JavaScript editor. Simply using Notepad will not provide the syntax coloring and other JavaScript editor features you need. In your editor, open the sources, explore the structure, and learn about what everything does.
 
 4. Make a change in the 'src/js/views/dashboard.html' file and notice what happens in the browser, without needing to refresh.
+
+### (d) Using the Oracle JET Cookbook
+
+To support your work with Oracle JET, you can **copy and paste** code from the Oracle JET Cookbook. 
+
+   1. Go here to explore the Cookbbook: https://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html
             
 ## Part 2: Simple Usage of Oracle JET
 
