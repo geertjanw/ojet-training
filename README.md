@@ -141,7 +141,7 @@ As an example, we are now going to copy and paste the Bar Chart recipe into your
 <img src="Screen%20Shot%202018-11-15%20at%2010.13.34.png" alt="alt text" width="500" height="420">
 </td></tr></table>
 
-...and paste it into 'src/js/viewmodels/dashboard.js', below "var self = this;"
+...and paste it into 'src/js/viewmodels/dashboard.js'. Paste it directly below the 'var self = this' statement, as shown below:
    
    4. Add a dependency on 'ojs/ojchart' in the 'define' block in 'src/js/viewmodels/dashboard.js'.
    
@@ -189,7 +189,7 @@ http://www.oracle.com/webfolder/technetwork/jet/jsdocs/oj.ojDataGrid.html
 
 In the above, look at the JS documentation, the description, variations, etc.
 
-2. Here is a simple ojDataGrid, a simplified version of the above references. Copy it below and paste it into the 'dashboard.html' file in your application (make sure you are editing only files under /src directory):
+2. Here is a simple ojDataGrid, a simplified version of the above references. Copy it below and paste it into the 'src/js/views/dashboard.html' file in your application (make sure you are editing only the files under /src directory):
 
 ```html #button { border: none; }
 <oj-data-grid 
