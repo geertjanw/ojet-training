@@ -17,9 +17,9 @@ The application you'll create in this workshop will look as follows:
 Part 1: Set Up the Environment
    * Getting the Node Package Manager
    * Getting Oracle JET
+   * Creating an Oracle JET Application
 
 Part 2: Simple Usage of Oracle JET
-   * Creating an Oracle JET Application
    * Provide Mock Data via the JSON Server
    * Showing Data in an Oracle JET Grid
    * Displaying the Selected Data in an Oracle JET Form
@@ -88,12 +88,8 @@ Oracle JET Command Line Interface, version: 6.0.0
 **Tip:** If you have a different version of the Oracle JET command-line interface, please reinstall, using the command in step 1 above to do so.
 
 You are now ready to get started with Oracle JET!
-            
-## Part 2: Simple Usage of Oracle JET
 
-In this part, you set up a new Oracle JET application, explore the Oracle JET Cookbook, and set up a grid and form that display the data published in the previous part.
-   
-### (a) Creating an Oracle JET Application
+### (c) Creating an Oracle JET Application
 
 1. Run the following in the terminal:
 
@@ -117,8 +113,12 @@ After a few moments, you should see this:
 3. In your editor, open the sources, explore the structure, and learn about what everything does.
 
 4. Make a change in the 'src/js/views/dashboard.html' file and notice what happens in the browser, without needing to refresh.
+            
+## Part 2: Simple Usage of Oracle JET
 
-### (b) Provide Mock Data via the JSON Server
+In this part, you set up a new Oracle JET application, explore the Oracle JET Cookbook, and set up a grid and form that display the data published in the previous part.
+   
+### (a) Provide Mock Data via the JSON Server
 
 In this part, you set up the [JSON Server](https://scotch.io/tutorials/json-server-as-a-fake-rest-api-in-frontend-development) to publish mock data that will be visualized in the Oracle JET application that you'll create via the instructions that follow.
 
@@ -146,7 +146,7 @@ json-server --watch employeeData.json
 
 **Tip:** Optionally, follow the steps at http://bit.ly/jet-api to use Oracle Apiary, which is a part of Oracle API Platform Cloud Service, to design an API. Name your new API Project *employees*, copy the content from https://github.com/geertjanw/ojet-training/blob/master/employeeData.json, and following the instructions, your *get* API should be something like http://private-cdb8cc-employees3.apiary-mock.com/questions. The JavaScript code to be integrated in the instructions that follow, is also provided, as explained at http://bit.ly/jet-api. Make sure to use the Mock Server, as explained at http://bit.ly/jet-api, which will give you the same functionality as provided by the [JSON Server](https://scotch.io/tutorials/json-server-as-a-fake-rest-api-in-frontend-development).
 
-### (c) Showing Data in an Oracle JET Grid
+### (b) Showing Data in an Oracle JET Grid
 
 1. In the Oracle JET Cookbook, take a look at the ojDataGrid and the CRUD scenarios:
 
@@ -222,7 +222,7 @@ What does 'text!' mean? That's the protocol defined by https://github.com/requir
 
 After adding new files, first kill the 'ojet' process in the Terminal window, using Ctrl-C, and then restart it. The 'watch' process, provided by 'ojet', will only look for changes to existing files; it will not build and re-serve new files.
 
-### (d) Displaying the Selected Data in an Oracle JET Form
+### (c) Displaying the Selected Data in an Oracle JET Form
 
 In this section, you'll add a form that will display the values of the currently selected row, as shown here:
 
