@@ -98,6 +98,17 @@
                   <span><oj-bind-text value="[[userLogin]]"></oj-bind-text></span>
                   <span slot="endIcon" :class="[[{'oj-icon demo-appheader-avatar': smScreen(), 'oj-component-icon oj-button-menu-dropdown-icon': !smScreen()}]]"></span>
                   <oj-menu id="menu1" slot="menu" style="display:none">
+                    <oj-option id="languages">
+                        <span>Languages</span>
+                        <oj-menu id="languages_menu">
+                            <oj-option on-oj-action="[[setLangAction]]" id="english" value="english">
+                                <span class="oj-fwk-icon oj-fwk-icon-arrow-n" slot="startIcon"></span>English
+                            </oj-option>
+                            <oj-option on-oj-action="[[setLangAction]]" id="arabic" value="ar-EG">
+                                <span class="demo-icon-font demo-bookmark-icon-16" slot="startIcon"></span>Arabic
+                            </oj-option>
+                        </oj-menu>
+                    </oj-option>  
                     <oj-option id="pref" value="pref">Preferences</oj-option>
                     <oj-option id="help" value="help">Help</oj-option>
                     <oj-option id="about" value="about">About</oj-option>

@@ -34,7 +34,13 @@ requirejs.config(
     'css': 'libs/require-css/css',
   }
   //endinjector
-  ,
+  ,config: {
+    ojL10n: {
+      merge: {
+        'ojtranslations/nls/ojtranslations': 'resources/nls/l10'
+      }
+    }
+  },
   // Shim configurations for modules that do not expose AMD
   shim:
   {

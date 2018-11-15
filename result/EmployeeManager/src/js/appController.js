@@ -11,6 +11,23 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojmodule-element-utils', 'ojs/ojmodule-el
   function(oj, ko, moduleUtils) {
      function ControllerViewModel() {
        var self = this;
+       
+       self.setLangAction = function (event) {
+           var newLang = event.target.value;
+           oj.Config.setLocale(newLang,
+                   function () {
+                       $('html').attr('lang', newLang);
+                       if (newLang === 'ar-EG') {
+                           $('html').attr('dir', 'rtl');
+                       } else {
+                           $('html').attr('dir', 'ltr');
+                       }
+                       self.dashboardLabel(oj.Translations.getTranslatedString('dashboardLabel'));
+                       document.dispatchEvent(new CustomEvent('localeListener'));
+                   });
+       };
+       
+       self.dashboardLabel = ko.observable(oj.Translations.getTranslatedString('dashboardLabel'));
 
       // Media queries for repsonsive layouts
       var smQuery = oj.ResponsiveUtils.getFrameworkQuery(oj.ResponsiveUtils.FRAMEWORK_QUERY_KEY.SM_ONLY);
@@ -49,8 +66,8 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojmodule-element-utils', 'ojs/ojmodule-el
 
       // Navigation setup
       var navData = [
-      {name: 'Dashboard', id: 'dashboard',
-       iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-chart-icon-24'},
+      {name: self.dashboardLabel, id: 'dashboard',
+       iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-chart-icon-24'},    
       {name: 'Incidents', id: 'incidents',
        iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-fire-icon-24'},
       {name: 'Customers', id: 'customers',
