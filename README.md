@@ -127,19 +127,23 @@ As an example, we are now going to copy and paste the Bar Chart recipe into your
 
    1. Go here: https://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=barChart&demo=default
    
-   2. Click on 'demo.html' and copy the **oj-chart** tag, with all of its content, into 'src/js/views/dashboard.html'.
+   2. Click on 'demo.html' and copy the **oj-chart** tag, with all of its content, as shown below...
    
 <table><tr><td>   
 <img src="Screen%20Shot%202018-11-15%20at%2010.13.18.png" alt="alt text" width="500" height="420">
 </td></tr></table>
+
+...and paste it into 'src/js/views/dashboard.html'.
    
-   3. Click on 'demo.js' and copy the **properties** into 'src/js/viewmodels/dashboard.js'.
+   3. Click on 'demo.js' and copy the **properties**, as shown below:
    
 <table><tr><td>   
 <img src="Screen%20Shot%202018-11-15%20at%2010.13.34.png" alt="alt text" width="500" height="420">
 </td></tr></table>
+
+...and paste it into 'src/js/viewmodels/dashboard.js', below "var self = this;"
    
-   4. Set a dependency on 'ojs/ojchart' in the 'define' block in 'src/js/viewmodels/dashboard.js'.
+   4. Add a dependency on 'ojs/ojchart' in the 'define' block in 'src/js/viewmodels/dashboard.js'.
    
    5. Look in the browser and you should now see a chart.
             
