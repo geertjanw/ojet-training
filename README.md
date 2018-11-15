@@ -156,7 +156,13 @@ As an example, we are now going to copy and paste the Bar Chart recipe into your
 define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojchart'],
 ```
    
-   5. Look in the browser and you should now see a chart.
+   5. Look in the browser and you should now see a chart, as shown below:
+   
+<table><tr><td>   
+<img src="Screen Shot 2018-11-15 at 11.18.46.png" alt="alt text" width="600" height="443">
+</td></tr></table>
+
+Now experiment and have some more fun by copying some more Oracle JET components from the Oracle JET Cookbook! :-)  
             
 ## Part 2: Simple Usage of Oracle JET
 
@@ -202,7 +208,7 @@ http://www.oracle.com/webfolder/technetwork/jet/jsdocs/oj.ojDataGrid.html
 
 In the above, look at the JS documentation, the description, variations, etc.
 
-2. Here is a simple ojDataGrid, a simplified version of the above references. Copy it below and paste it into the 'src/js/views/dashboard.html' file in your application (make sure you are editing only the files under /src directory):
+2. Here is a simple ojDataGrid, a simplified version of the above references. Copy it below and paste it into the 'src/js/views/dashboard.html' file in your application (make sure you are editing only the files under /src directory) or into one of the other HTML files in 'src/js/views'.
 
 ```html #button { border: none; }
 <oj-data-grid 
@@ -215,7 +221,7 @@ In the above, look at the JS documentation, the description, variations, etc.
 </oj-data-grid>
 ```
 
-3. Above, notice that 'dataSource' is referenced, which you need to define in 'src/js/viewmodels/dashboard.js'. Copy/paste the following code for that purpose into 'src/js/viewmodels/dashboard.js' (paste it directly below the 'var self = this' statement):
+3. Above, notice that 'dataSource' is referenced, which you need to define in 'src/js/viewmodels/dashboard.js'. Copy/paste the following code for that purpose into 'src/js/viewmodels/dashboard.js' (paste it directly below the 'var self = this' statement) or into one of the other JavaScript files in 'src/js/viewmodels', but make sure you're copying into a file with a name that matches where you copied the HTML in the previosus step:
 
 ```js #button { border: none; }
 self.url = 'http://localhost:3000/employees';
