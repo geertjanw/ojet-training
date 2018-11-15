@@ -14,10 +14,11 @@ The application you'll create in this workshop will look as follows:
 
 #### Table of Contents
 
-Part 1: Set Up the Environment
+Part 1: Get Started
    * Getting the Node Package Manager
    * Getting Oracle JET
    * Creating an Oracle JET Application
+   * Using the Oracle JET Cookbook
 
 Part 2: Simple Usage of Oracle JET
    * Provide Mock Data via the JSON Server
@@ -34,7 +35,7 @@ Part 4: Advanced Usage of Oracle JET
    * Filtering
    * Internationalization
 
-## Part 1: Set Up the Environment
+## Part 1: Get Started
 
 All the activities in this section should be done on the command line in a Terminal window.
 
@@ -118,7 +119,13 @@ After a few moments, you should see this:
 
 To support your work with Oracle JET, you can **copy and paste** code from the Oracle JET Cookbook. 
 
-   1. Go here to explore the Cookbbook: https://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html
+Go here to explore the Cookbbook: https://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html
+   
+For example, take a look at the many data visualizations: https://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=dataVisualizations&demo=gallery
+   
+As an example, we are now going to copy and paste the Bar Chart recipe into your application.
+
+   1. Go here: https://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=barChart&demo=default
             
 ## Part 2: Simple Usage of Oracle JET
 
