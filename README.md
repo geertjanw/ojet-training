@@ -137,7 +137,7 @@ As an example, we are now going to copy and paste the Bar Chart recipe into your
             
 ## Part 2: Simple Usage of Oracle JET
 
-In this part, you set up a new Oracle JET application, explore the Oracle JET Cookbook, and set up a grid and form that display the data published in the previous part.
+In this part, you set up a JSON Server to provide mock data and you set up a grid and form to display and work with the data.
    
 ### (a) Provide Mock Data via the JSON Server
 
