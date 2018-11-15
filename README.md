@@ -51,35 +51,7 @@ If version 5.6.0 or higher is not shown, you need to install the latest LTS vers
 
 Download and install the latest LTS version of Node from http://nodejs.org.
 
-### (b) Getting Data
-
-In this part, you set up the [JSON Server](https://scotch.io/tutorials/json-server-as-a-fake-rest-api-in-frontend-development) to publish mock data that will be visualized in the Oracle JET application that you'll create via the instructions that follow.
-
-   1. Set up the JSON Server, as follows:
-```js #button { border: none; }   
-npm install -g json-server
-```   
-Details: https://github.com/typicode/json-server
-
-   2. Download and put this file anywhere on disk:
-   
-https://raw.githubusercontent.com/geertjanw/ojet-training/master/employeeData.json
-
-**Tip:** Do not put the above file in an Oracle JET application, instead, put it somewhere completely separate, e.g., on your Desktop, and run the command below in the Terminal window from the location of the employeeData.json file.
-
-   3. Run in the Terminal window: 
-```js #button { border: none; }
-json-server --watch employeeData.json
-```
-   4. Go to http://localhost:3000/employees and see your data via your fake REST endpoint:
-   
-<table><tr><td>   
-<img src="Screen%20Shot%202018-06-21%20at%2015.15.15.png" alt="alt text" width="400" height="250">
-</td></tr></table>
-
-**Tip:** Optionally, follow the steps at http://bit.ly/jet-api to use Oracle Apiary, which is a part of Oracle API Platform Cloud Service, to design an API. Name your new API Project *employees*, copy the content from https://github.com/geertjanw/ojet-training/blob/master/employeeData.json, and following the instructions, your *get* API should be something like http://private-cdb8cc-employees3.apiary-mock.com/questions. The JavaScript code to be integrated in the instructions that follow, is also provided, as explained at http://bit.ly/jet-api. Make sure to use the Mock Server, as explained at http://bit.ly/jet-api, which will give you the same functionality as provided by the [JSON Server](https://scotch.io/tutorials/json-server-as-a-fake-rest-api-in-frontend-development).
-
-### (c) Getting Oracle JET
+### (b) Getting Oracle JET
 
 In this part, you install the Oracle JET 6.0.0 command-line interface.
 
@@ -224,7 +196,35 @@ What does 'text!' mean? That's the protocol defined by https://github.com/requir
 
 After adding new files, first kill the 'ojet' process in the Terminal window, using Ctrl-C, and then restart it. The 'watch' process, provided by 'ojet', will only look for changes to existing files; it will not build and re-serve new files.
 
-### (c) Displaying the Selected Data in an Oracle JET Form
+### (c) Showing Real Data
+
+In this part, you set up the [JSON Server](https://scotch.io/tutorials/json-server-as-a-fake-rest-api-in-frontend-development) to publish mock data that will be visualized in the Oracle JET application that you'll create via the instructions that follow.
+
+   1. Set up the JSON Server, as follows:
+```js #button { border: none; }   
+npm install -g json-server
+```   
+Details: https://github.com/typicode/json-server
+
+   2. Download and put this file anywhere on disk:
+   
+https://raw.githubusercontent.com/geertjanw/ojet-training/master/employeeData.json
+
+**Tip:** Do not put the above file in an Oracle JET application, instead, put it somewhere completely separate, e.g., on your Desktop, and run the command below in the Terminal window from the location of the employeeData.json file.
+
+   3. Run in the Terminal window: 
+```js #button { border: none; }
+json-server --watch employeeData.json
+```
+   4. Go to http://localhost:3000/employees and see your data via your fake REST endpoint:
+   
+<table><tr><td>   
+<img src="Screen%20Shot%202018-06-21%20at%2015.15.15.png" alt="alt text" width="400" height="250">
+</td></tr></table>
+
+**Tip:** Optionally, follow the steps at http://bit.ly/jet-api to use Oracle Apiary, which is a part of Oracle API Platform Cloud Service, to design an API. Name your new API Project *employees*, copy the content from https://github.com/geertjanw/ojet-training/blob/master/employeeData.json, and following the instructions, your *get* API should be something like http://private-cdb8cc-employees3.apiary-mock.com/questions. The JavaScript code to be integrated in the instructions that follow, is also provided, as explained at http://bit.ly/jet-api. Make sure to use the Mock Server, as explained at http://bit.ly/jet-api, which will give you the same functionality as provided by the [JSON Server](https://scotch.io/tutorials/json-server-as-a-fake-rest-api-in-frontend-development).
+
+### (d) Displaying the Selected Data in an Oracle JET Form
 
 In this section, you'll add a form that will display the values of the currently selected row, as shown here:
 
