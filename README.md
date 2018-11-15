@@ -85,7 +85,7 @@ You should see this:
 Oracle JET Command Line Interface, version: 6.0.0
 ```
 
-**Tip:** If you have a different version of the Oracle JET command-line interface, please reinstall, using the command in step 1 above to do so.
+**Tip:** If the above shows that you have an **earlier** version of the Oracle JET command-line interface, i.e., below 6.0, please reinstall, using the command in step 1 above to do so.
 
 You are now ready to get started with Oracle JET!
 
