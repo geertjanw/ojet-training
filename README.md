@@ -150,6 +150,8 @@ As an example, we are now going to copy and paste the Bar Chart recipe into your
 ## Part 2: Simple Usage of Oracle JET
 
 In this part, you set up a JSON Server to provide mock data and you set up a grid and form to display and work with the data.
+
+**Tip:** During development, you don't always have access to the backend that provides your data. When you set up the JSON Server, below, you're able to mock your data, which can be very useful during development.
    
 ### (a) Provide Mock Data via the JSON Server
 
