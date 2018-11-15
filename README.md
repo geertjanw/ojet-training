@@ -30,10 +30,11 @@ Part 3: Smart Usage of Oracle JET
    * Creating a Nested Web Component
    * Creating CRUD Functionality
    
-Part 4: Advanced Usage of Oracle JET   
+Part 4: Miscellaneous Topics  
    * Centralized Data Management
    * Filtering
    * Internationalization
+   * Modern UX Design
 
 ## Part 1: Get Started
 
@@ -764,7 +765,7 @@ self.create = function (event) {
 
 3. In the application, try out your new Create functionality.
 
-## Part 4: Advanced Usage of Oracle JET
+## Part 4: Miscellaneous Topics
 
 The sections below are more challenging than the earlier parts, focusing on features that may become more relevant to an Oracle JET project in the later stages of development.
 
@@ -1073,6 +1074,20 @@ More details relating to this: https://javascript.info/bubbling-and-capturing
 4. Experiment with other components in the Oracle JET Cookbook and see what they look like in Arabic:
 
 http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html
+
+### Modern UX Design
+
+Certainly not an afterthought, but a topic that is in progress in being integrated into this workshop is focused on how to use Oracle JET components to create a modern user experience, as shown below, to create more visually appealing user interfaces – using an avatar, some different font treatments, and other features:
+
+<table><tr><td>   
+<img src="images/Screen%20Shot%202018-11-15%20at%2018.41.58.png" alt="alt text" width="600" height="485">
+</td></tr></table>
+
+The instructions are in progress, though the code is already available, here:
+
+https://github.com/geertjanw/ojet-training/blob/master/result/EmployeeManager/src/js/viewModels/customers.js
+
+https://github.com/geertjanw/ojet-training/blob/master/result/EmployeeManager/src/js/views/customers.html
 
 
 
