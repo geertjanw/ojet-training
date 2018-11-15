@@ -16,11 +16,11 @@ The application you'll create in this workshop will look as follows:
 
 Part 1: Set Up the Environment
    * Getting the Node Package Manager
-   * Getting Data
    * Getting Oracle JET
 
 Part 2: Simple Usage of Oracle JET
    * Creating an Oracle JET Application
+   * Provide Mock Data via the JSON Server
    * Showing Data in an Oracle JET Grid
    * Displaying the Selected Data in an Oracle JET Form
 
@@ -118,7 +118,7 @@ After a few moments, you should see this:
 
 4. Make a change in the 'src/js/views/dashboard.html' file and notice what happens in the browser, without needing to refresh.
 
-### (b) Provide Data
+### (b) Provide Mock Data via the JSON Server
 
 In this part, you set up the [JSON Server](https://scotch.io/tutorials/json-server-as-a-fake-rest-api-in-frontend-development) to publish mock data that will be visualized in the Oracle JET application that you'll create via the instructions that follow.
 
