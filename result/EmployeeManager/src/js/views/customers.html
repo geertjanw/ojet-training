@@ -1,10 +1,57 @@
 <!--
  Copyright (c) 2014, 2018, Oracle and/or its affiliates.
  The Universal Permissive License (UPL), Version 1.0
- -->
+-->
 <div class="oj-hybrid-padding">
-  <h1>Customers Content Area</h1>
-  <div>
-      To change the content of this section, you will make edits to the customers.html file located in the /js/views folder.
-  </div>
+    
+    <h1>Customers Content Area</h1>
+    
+    <oj-list-view id="listview" style="max-width:577px;height:298px;overflow-x:hidden" data="[[dataSourceTable]]"
+                  selection-mode="single" on-selection-changed="[[handleListSelectionChanged]]" item.renderer="[[oj.KnockoutTemplateUtils.getRenderer('item_template')]]"
+                  scroll-policy="loadMoreOnScroll" scroll-policy-options.fetch-size="15">
+    </oj-list-view>
+
+    <script type="text/html" id="item_template">
+        <li>
+            <div id="container" >
+                <div class="oj-flex oj-flex-items-pad">
+                    <div class="oj-flex-item  oj-sm-flex-initial"><oj-avatar role="img" size="xxs" data-bind="attr:{'src':Image}"></oj-avatar></div>
+                    <div class="oj-flex row oj-flex-items-pad">
+                        <div class="oj-flex-item"> <div style="width: 175px;"><span style="font-weight:bold" data-bind="text: FIRST_NAME"></span><span style="font-weight:bold" data-bind="text: ' ' + LAST_NAME"></span></div>
+                        </div>  
+                        <div class="oj-flex oj-sm-flex-direction-column oj-flex-items-pad"  >
+                            <div class="oj-flex-item "><span class="oj-text-xs oj-text-secondary-color" data-bind="text: 'Hire Date: ' + HIRE_DATE"></span></div>
+
+                            <div class="oj-flex-item "><span class="oj-text-xs oj-text-secondary-color" data-bind="text: 'Salary: ' + SALARY"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+
+    </script>
+    
+    <div style="margin-top:20px;"></div>
+    
+    <table>
+        <tr>
+            <td>
+        <oj-avatar role="img" size="md" src=[[inputImage]]>
+        </oj-avatar>
+        </td>
+        <td>
+        <oj-form-layout id="form-container" label-edge="start" style="max-width:477px">
+            <oj-label for='firstNameInput' style='font-size:14px;font-weight: bold;font-variant-caps: all-small-caps'>FirstName</oj-label>
+            <oj-input-text id="firstNameInput" label-hint="FirstName" value="[[inputFirstName]]"></oj-input-text>
+            <oj-label for='lastNameInput' style='font-size:14px;font-weight: bold;font-variant-caps: all-small-caps'>Last Name</oj-label>
+            <oj-input-text id="lastNameInput" label-hint="Last Name" value="[[inputLastName]]"></oj-input-text>
+            <oj-label for='inputHireDate' style='font-size:14px;font-weight: bold;font-variant-caps: all-small-caps'>Hire Date</oj-label>
+            <oj-input-text id="inputHireDate" label-hint="Date Hired" value="[[inputHireDate]]"></oj-input-text>
+            <oj-label for='inputSalary' style='font-size:14px;font-weight: bold;font-variant-caps: all-small-caps'>Salary</oj-label>
+            <oj-input-text id="inputSalary" label-hint="Salary" value="[[inputSalary]]"></oj-input-text>
+        </oj-form-layout>
+        </td>
+        </tr>
+    </table>
+    
 </div>

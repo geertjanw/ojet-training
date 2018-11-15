@@ -6,11 +6,35 @@
 /*
  * Your customer ViewModel code goes here
  */
-define(['ojs/ojcore', 'knockout', 'jquery'],
+define(['ojs/ojcore', 'knockout', 'jquery',
+  'ojs/ojinputtext', 'ojs/ojformlayout', 'ojs/ojavatar', 'ojs/ojlistview',
+  'ojs/ojcollectiontabledatasource', 'ojs/ojmodel'],
  function(oj, ko, $) {
   
     function CustomerViewModel() {
       var self = this;
+      var self = this;
+      var nextKey = 121;
+      self.inputEmployeeID = ko.observable(nextKey);
+      self.inputFirstName = ko.observable();
+      self.inputLastName = ko.observable();
+      self.inputHireDate = ko.observable();
+      self.inputSalary = ko.observable();
+      self.inputImage = ko.observable();
+
+      self.url = 'http://localhost:3000/employees';
+
+      self.collection = new oj.Collection(null, {
+        model: new oj.Model.extend({
+          idAttribute: 'id',
+          urlRoot: self.url
+        }),
+        url: self.url
+      });
+
+      self.dataSourceTable = new oj.CollectionTableDataSource(
+        self.collection, null);
+
       // Below are a set of the ViewModel methods invoked by the oj-module component.
       // Please reference the oj-module jsDoc for additional information.
 
@@ -22,14 +46,14 @@ define(['ojs/ojcore', 'knockout', 'jquery'],
        * and inserted into the DOM and after the View is reconnected 
        * after being disconnected.
        */
-      self.connected = function() {
+      self.connected = function () {
         // Implement if needed
       };
 
       /**
        * Optional ViewModel method invoked after the View is disconnected from the DOM.
        */
-      self.disconnected = function() {
+      self.disconnected = function () {
         // Implement if needed
       };
 
@@ -37,16 +61,44 @@ define(['ojs/ojcore', 'knockout', 'jquery'],
        * Optional ViewModel method invoked after transition to the new View is complete.
        * That includes any possible animation between the old and the new View.
        */
-      self.transitionCompleted = function() {
+      self.transitionCompleted = function () {
         // Implement if needed
       };
-    }
 
-    /*
-     * Returns a constructor for the ViewModel so that the ViewModel is constructed
-     * each time the view is displayed.  Return an instance of the ViewModel if
-     * only one instance of the ViewModel is needed.
-     */
+      //build a new model from the observables in the form
+      self.buildModel = function () {
+            return {
+                'id': self.inputEmployeeID(),
+                'FIRST_NAME': self.inputFirstName(),
+                'LAST_NAME': self.inputLastName(),
+                'HIRE_DATE': self.inputHireDate(),
+                'SALARY': self.inputSalary(),
+                'Image': self.inputImage()
+            };
+        };
+
+      //used to update the fields based on the selected row:
+      self.updateFields = function (model) {
+                    self.inputEmployeeID(model.get('id'));
+                    self.inputFirstName(model.get('FIRST_NAME'));
+                    self.inputLastName(model.get('LAST_NAME'));
+                    self.inputHireDate(model.get('HIRE_DATE'));
+                    self.inputSalary(model.get('SALARY'));
+                    self.inputImage(model.get('Image'));
+                };
+
+      self.handleListSelectionChanged = function (event) {
+        var selection = event.detail.value;
+        if (selection != null) {
+          self.modelToUpdate = self.collection.get(selection);
+          self.updateFields(self.modelToUpdate);
+        }
+      };
+      
+    }
+    
     return new CustomerViewModel();
+    
   }
+          
 );
