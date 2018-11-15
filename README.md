@@ -9,7 +9,7 @@ The purpose of this script is to show how to put together a CRUD scenario in an 
 The application you'll create in this workshop will look as follows:
 
 <table><tr><td>   
-<img src="Screen%20Shot%202018-06-24%20at%2022.35.42.png" alt="alt text" width="500" height="420">
+<img src="images/Screen%20Shot%202018-06-24%20at%2022.35.42.png" alt="alt text" width="500" height="420">
 </td></tr></table>
 
 #### Table of Contents
@@ -71,7 +71,7 @@ ojet help
 You should see this:
 
 <table><tr><td>   
-<img src="Screen%20Shot%202018-06-22%20at%2022.47.54.png" alt="alt text" width="400" height="250">
+<img src="images/Screen%20Shot%202018-06-22%20at%2022.47.54.png" alt="alt text" width="400" height="250">
 </td></tr></table>
 
 3. Run the following to check that you have the correct version of Oracle JET:
@@ -108,7 +108,7 @@ ojet serve
 After a few moments, you should see this:
 
 <table><tr><td>   
-<img src="Screen%20Shot%202018-06-21%20at%2015.37.46.png" alt="alt text" width="400" height="250">
+<img src="images/Screen%20Shot%202018-06-21%20at%2015.37.46.png" alt="alt text" width="400" height="250">
 </td></tr></table>
 
 3. Make sure you have a JavaScript editor. Simply using Notepad will not provide the syntax coloring and other JavaScript editor features you need. In your editor, open the sources, explore the structure, and learn about what everything does.
@@ -130,25 +130,25 @@ As an example, we are now going to copy and paste the Bar Chart recipe into your
    2. Click on 'demo.html' and copy the **oj-chart** tag, with all of its content, as shown below...
    
 <table><tr><td>   
-<img src="Screen%20Shot%202018-11-15%20at%2010.13.18.png" alt="alt text" width="500" height="420">
+<img src="images/Screen%20Shot%202018-11-15%20at%2010.13.18.png" alt="alt text" width="500" height="420">
 </td></tr></table>
 
 ...and paste it into 'src/js/views/dashboard.html', as shown below:
 
 <table><tr><td>   
-<img src="Screen%20Shot%202018-11-15%20at%2011.10.42.png" alt="alt text" width="600" height="357">
+<img src="images/Screen%20Shot%202018-11-15%20at%2011.10.42.png" alt="alt text" width="600" height="357">
 </td></tr></table>
    
    3. Click on 'demo.js' and copy the **properties**, as shown below:
    
 <table><tr><td>   
-<img src="Screen%20Shot%202018-11-15%20at%2010.13.34.png" alt="alt text" width="500" height="420">
+<img src="images/Screen%20Shot%202018-11-15%20at%2010.13.34.png" alt="alt text" width="500" height="420">
 </td></tr></table>
 
 ...and paste it into 'src/js/viewmodels/dashboard.js'. Paste it directly below the 'var self = this' statement, as shown below:
 
 <table><tr><td>   
-<img src="Screen%20Shot%202018-11-15%20at%2011.10.01.png" alt="alt text" width="600" height="436">
+<img src="images/Screen%20Shot%202018-11-15%20at%2011.10.01.png" alt="alt text" width="600" height="436">
 </td></tr></table>
    
    4. Add a dependency on 'ojs/ojchart' in the 'define' block in 'src/js/viewmodels/dashboard.js', as shown below:
@@ -159,7 +159,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojchart'],
    5. Look in the browser and you should now see a chart, as shown below:
    
 <table><tr><td>   
-<img src="Screen Shot 2018-11-15 at 11.18.46.png" alt="alt text" width="600" height="443">
+<img src="images/Screen Shot 2018-11-15 at 11.18.46.png" alt="alt text" width="600" height="443">
 </td></tr></table>
 
 Now experiment and have some more fun by copying some more Oracle JET components from the Oracle JET Cookbook!
@@ -193,7 +193,7 @@ json-server --watch employeeData.json
    4. Go to http://localhost:3000/employees and see your data via your fake REST endpoint:
    
 <table><tr><td>   
-<img src="Screen%20Shot%202018-06-21%20at%2015.15.15.png" alt="alt text" width="400" height="250">
+<img src="images/Screen%20Shot%202018-06-21%20at%2015.15.15.png" alt="alt text" width="400" height="250">
 </td></tr></table>
 
 **Tip:** Optionally, follow the steps at http://bit.ly/jet-api to use Oracle Apiary, which is a part of Oracle API Platform Cloud Service, to design an API. Name your new API Project *employees*, copy the content from https://github.com/geertjanw/ojet-training/blob/master/employeeData.json, and following the instructions, your *get* API should be something like http://private-cdb8cc-employees3.apiary-mock.com/questions. The JavaScript code to be integrated in the instructions that follow, is also provided, as explained at http://bit.ly/jet-api. Make sure to use the Mock Server, as explained at http://bit.ly/jet-api, which will give you the same functionality as provided by the [JSON Server](https://scotch.io/tutorials/json-server-as-a-fake-rest-api-in-frontend-development).
@@ -251,7 +251,7 @@ self.dataSource = new oj.CollectionDataGridDataSource(
 5. Save your changes. In your application, you should now see this:
 
 <table><tr><td>   
-<img src="Screen%20Shot%202018-06-21%20at%2015.50.55.png" alt="alt text" width="400" height="250">
+<img src="images/Screen%20Shot%202018-06-21%20at%2015.50.55.png" alt="alt text" width="400" height="250">
 </td></tr></table>
 
 **Tip:** Optionally, for centralized management of your endpoints, create an 'endpoints.json' file in your 'src/js' folder, load it in the dependency list passed into the define() call as 'text!../endpoints.json', reference it as 'endpoints' in the callback function, and then replace hardcoded references to http://localhost:3000/employees with 'JSON.parse(endpoints).employees', assuming the file's content is as follows:
@@ -279,7 +279,7 @@ After adding new files, first kill the 'ojet' process in the Terminal window, us
 In this section, you'll add a form that will display the values of the currently selected row, as shown here:
 
 <table><tr><td>   
-<img src="Screen%20Shot%202018-06-21%20at%2016.02.46.png" alt="alt text" width="400" height="250">
+<img src="images/Screen%20Shot%202018-06-21%20at%2016.02.46.png" alt="alt text" width="400" height="250">
 </td></tr></table>
 
 1. Add properties, using [Knockout observables](http://knockoutjs.com/documentation/observables.html), to the 'dashboard.js' file:
@@ -356,7 +356,7 @@ on-selection-changed="[[handleSelectionChanged]]"
 7. In your application, you should now see this, i.e., when a row is selected its values should be visible in the form:
 
 <table><tr><td>   
-<img src="Screen%20Shot%202018-06-21%20at%2016.02.46.png" alt="alt text" width="400" height="250">
+<img src="images/Screen%20Shot%202018-06-21%20at%2016.02.46.png" alt="alt text" width="400" height="250">
 </td></tr></table>
    
 ## Part 3: Smart Usage of Oracle JET
@@ -463,7 +463,7 @@ You can refer to properties in the module so that when a row is selected in the 
 In this part, we're going to reuse our Web Component inside a new Web Component, to provide a new view for the same type of data, i.e., employee data.
 
 <table><tr><td>   
-<img src="Screen%20Shot%202018-06-25%20at%2014.25.16.png" alt="alt text" width="500" height="420">
+<img src="images/Screen%20Shot%202018-06-25%20at%2014.25.16.png" alt="alt text" width="500" height="420">
 </td></tr></table>
 
 1. Let's start by reusing the 'my-employee-form' Web Component in a different module, e.g., in the Incidents module, which consists of the 'incidents.html' and 'incidents.js' file. In the 'incidents.js' file, reference the Web Component at the end of the dependency list passed into the define() call:
@@ -566,7 +566,7 @@ Start the 'ojet serve' process again and note that you are now using a nested We
 We're going to create a 'slot' (i.e., a placeholder) in the 'my-employee-form' Web Component and, in some of the usages of the 'my-employee-form' Web Component, we will fill it with buttons for doing CRUD functionality, as shown below:
 
 <table><tr><td>   
-<img src="Screen%20Shot%202018-06-24%20at%2022.35.42.png" alt="alt text" width="500" height="420">
+<img src="images/Screen%20Shot%202018-06-24%20at%2022.35.42.png" alt="alt text" width="500" height="420">
 </td></tr></table>
 
    1. In the 'component.json' file of the 'my-employee-form' Web Component, define the 'slots' section as follows:
@@ -848,7 +848,7 @@ Once you have an observable array, such as 'employees' above, you can use it as 
 In this part, we set up a client-side filter, based on the FIRST_NAME field from our endpoint, as shown below:
 
 <table><tr><td>   
-<img src="Screen%20Shot%202018-07-01%20at%2010.41.37.png" alt="alt text" width="500" height="420">
+<img src="images/Screen%20Shot%202018-07-01%20at%2010.41.37.png" alt="alt text" width="500" height="420">
 </td></tr></table>
 
 Details on the below are [here in the Cookbook](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=filter&demo=full).
