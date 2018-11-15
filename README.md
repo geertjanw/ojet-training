@@ -151,7 +151,10 @@ As an example, we are now going to copy and paste the Bar Chart recipe into your
 <img src="Screen%20Shot%202018-11-15%20at%2010.47.50.png" alt="alt text" width="600" height="333">
 </td></tr></table>
    
-   4. Add a dependency on 'ojs/ojchart' in the 'define' block in 'src/js/viewmodels/dashboard.js'.
+   4. Add a dependency on 'ojs/ojchart' in the 'define' block in 'src/js/viewmodels/dashboard.js', as shown below:
+```js #button { border: none; }   
+define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojchart'],
+```
    
    5. Look in the browser and you should now see a chart.
             
