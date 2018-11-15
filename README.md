@@ -136,19 +136,19 @@ As an example, we are now going to copy and paste the Bar Chart recipe into your
 ...and paste it into 'src/js/views/dashboard.html', as shown below:
 
 <table><tr><td>   
-<img src="Screen%20Shot%202018-11-15%20at%2010.41.38.png" alt="alt text" width="600" height="420">
+<img src="Screen%20Shot%202018-11-15%20at%2010.41.38.png" alt="alt text" width="600" height="333">
 </td></tr></table>
    
    3. Click on 'demo.js' and copy the **properties**, as shown below:
    
 <table><tr><td>   
-<img src="Screen%20Shot%202018-11-15%20at%2010.13.34.png" alt="alt text" width="600" height="420">
+<img src="Screen%20Shot%202018-11-15%20at%2010.13.34.png" alt="alt text" width="500" height="420">
 </td></tr></table>
 
 ...and paste it into 'src/js/viewmodels/dashboard.js'. Paste it directly below the 'var self = this' statement, as shown below:
 
 <table><tr><td>   
-<img src="Screen%20Shot%202018-11-15%20at%2010.47.50.png" alt="alt text" width="550" height="420">
+<img src="Screen%20Shot%202018-11-15%20at%2010.47.50.png" alt="alt text" width="600" height="333">
 </td></tr></table>
    
    4. Add a dependency on 'ojs/ojchart' in the 'define' block in 'src/js/viewmodels/dashboard.js'.
