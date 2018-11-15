@@ -126,6 +126,14 @@ For example, take a look at the many data visualizations: https://www.oracle.com
 As an example, we are now going to copy and paste the Bar Chart recipe into your application.
 
    1. Go here: https://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=barChart&demo=default
+   
+   2. Click on 'demo.html' and copy the **oj-chart** tag, with all of its content, into 'src/js/views/dashboard.html'.
+   
+   3. Click on 'demo.js' and copy the **properties** into 'src/js/viewmodels/dashboard.js'.
+   
+   4. Set a dependency on 'ojs/ojchart' in the 'define' block in 'src/js/viewmodels/dashboard.js'.
+   
+   5. Look in the browser and you should now see a chart.
             
 ## Part 2: Simple Usage of Oracle JET
 
