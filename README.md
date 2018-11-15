@@ -136,7 +136,7 @@ As an example, we are now going to copy and paste the Bar Chart recipe into your
    3. Click on 'demo.js' and copy the **properties** into 'src/js/viewmodels/dashboard.js'.
    
 <table><tr><td>   
-<img src="   Screen%20Shot%202018-11-15%20at%2010.13.34.png" alt="alt text" width="500" height="420">
+<img src="Screen%20Shot%202018-11-15%20at%2010.13.34.png" alt="alt text" width="500" height="420">
 </td></tr></table>
    
    4. Set a dependency on 'ojs/ojchart' in the 'define' block in 'src/js/viewmodels/dashboard.js'.
