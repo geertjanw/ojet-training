@@ -162,7 +162,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojchart'],
 <img src="Screen Shot 2018-11-15 at 11.18.46.png" alt="alt text" width="600" height="443">
 </td></tr></table>
 
-Now experiment and have some more fun by copying some more Oracle JET components from the Oracle JET Cookbook! :-)  
+Now experiment and have some more fun by copying some more Oracle JET components from the Oracle JET Cookbook!
             
 ## Part 2: Simple Usage of Oracle JET
 
