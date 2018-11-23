@@ -3,11 +3,60 @@
   "use": "local",
 
   "cdns": {
-    "jet": "https://static.oracle.com/cdn/jet/v5.2.0/default/js",
-    "3rdparty": "https://static.oracle.com/cdn/jet/v5.2.0/3rdparty"
+    "jet": "https://static.oracle.com/cdn/jet/v6.0.0/default/js",
+    "3rdparty": "https://static.oracle.com/cdn/jet/v6.0.0/3rdparty"
   },
 
   "libs": {
+        
+    "fullcalendar": {
+        "cwd": "node_modules/fullcalendar/dist",    
+        "debug": {
+            "src": "fullcalendar.min.js",
+            "path": "libs/fullcalendar/fullcalendar.js"
+        },
+        "release": {
+            "src": "fullcalendar.min.js",
+            "path": "libs/fullcalendar/fullcalendar.min.js"
+        }
+    },   
+    
+     "moment": {
+        "cwd": "node_modules/moment",
+        "debug": {
+            "src": "moment.js",        
+            "path": "libs/moment/moment.js"   
+        },
+        "release": {
+            "src": "min/moment.js",
+            "path": "libs/moment/moment.js"    
+        }
+    },
+        
+    "version": {
+        "cwd": "node_modules/version/lib",    
+        "debug": {
+            "src": "version.js",
+            "path": "libs/version/version.js"
+        },
+        "release": {
+            "src": "version.js",
+            "path": "libs/version/version.js"
+        }
+    }, 
+    
+     
+    "widgets": {
+      "cwd": "node_modules/jquery-ui/ui/widgets",
+      "debug": {
+        "src": ["**"],
+        "path": "libs/jquery-ui/ui/widgets"
+      },
+      "release": {
+        "src": ["**"],
+        "path": "libs/jquery-ui/ui/widgets"
+      }
+    },
 
     "knockout": {
       "cdn": "3rdparty",
@@ -158,6 +207,21 @@
         "src": "text.js",
         "path": "libs/require/text.js",
         "cdnPath": "require/text"
+      }
+    },
+
+    "touchr": {
+      "cdn": "3rdparty",
+      "cwd": "node_modules/touchr/js",
+      "debug": {
+        "src":  "touchr.js",
+        "path": "libs/touchr/touchr.js",
+        "cdnPath": "touchr/touchr"
+      },
+      "release": {
+        "src": "touchr.js",
+        "path": "libs/touchr/touchr.js",
+        "cdnPath": "touchr/touchr"
       }
     },
 

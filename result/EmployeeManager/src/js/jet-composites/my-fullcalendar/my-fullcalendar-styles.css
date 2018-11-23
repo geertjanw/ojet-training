@@ -1,0 +1,8 @@
+my-fullcalendar:not(.oj-complete){
+  visibility: hidden;
+}
+
+my-fullcalendar{
+	min-height: 50px;
+	width: 50px;
+}

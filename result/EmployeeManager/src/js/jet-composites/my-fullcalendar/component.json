@@ -1,0 +1,30 @@
+{
+    "name": "my-fullcalendar",
+    "version": "1.0.0",
+    "jetVersion": "^6.0.0",
+    "displayName": "A user friendly, translatable name of the pack.",
+    "description": "A translatable high-level description for the pack.",
+    "properties": {
+        "id": {
+            "type": "string"
+        }
+    },
+    "methods": {
+
+    }, 
+    "events": {
+        "dayClick": {
+            "description": "Triggered when a date is clicked and contains the value of the clicked date.",
+            "bubbles": true,
+            "detail": {
+                "value": {
+                    "description": "The value of the card.",
+                    "type": "string"
+                }
+            }
+        }
+    }, 
+    "slots": {
+
+    }
+}
