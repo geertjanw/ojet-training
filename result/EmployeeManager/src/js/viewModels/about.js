@@ -1,17 +1,25 @@
-define(['ojs/ojcore', 'knockout', 'jquery', 'my-fullcalendar/loader'],
+define(['ojs/ojcore', 'knockout', 'jquery', 'my-fullcalendar/loader', 'ojs/ojinputtext', 'ojs/ojcheckboxset', 'ojs/ojformlayout'],
         function (oj, ko, $) {
 
             function AboutViewModel() {
                 var self = this;
 
-                self.selectedDate = ko.observable();
-
+                self.selectedDate1 = ko.observable();
+                self.selectedDate2 = ko.observable();
+                self.selectedDate3 = ko.observable();
+                
                 self.clickListener = function (event) {
-                    if (event.type == 'dayClick') {
-                        self.selectedDate(event.detail.value);
+                    if (event.type === 'dayClick') {
+                        if (event.detail.id === "calendar1"){
+                            self.selectedDate1(event.detail.date);
+                        } else if (event.detail.id === "calendar2"){
+                            self.selectedDate2(event.detail.date);
+                        } else if (event.detail.id === "calendar3") {
+                            self.selectedDate3(event.detail.date);
+                        }
                     }
                 };
-
+                
                 self.connected = function () {
 
                 };

@@ -1,22 +1,35 @@
-
-<div class="oj-form oj-sm-odd-cols-12 oj-md-odd-cols-4 oj-md-labels-inline" >
-
-    <div class="oj-flex">
-        
-        <div class="oj-flex-item">
-
-            <my-fullcalendar id="calendar1" on-day-click="[[clickListener]]"></my-fullcalendar>
-            
-            <h3>Selected date: 
-                
-                <oj-bind-text value="[[selectedDate]]"></oj-bind-text>
-            
-            </h3>
-
-        </div>
-        
+<div class="oj-flex">
+    <div class="oj-md-3 oj-flex-item oj-panel oj-margin">
+        <my-fullcalendar 
+            id="calendar1" 
+            on-day-click="[[clickListener]]">
+        </my-fullcalendar>
+        <h3>Selected date: 
+            <oj-bind-text 
+                value="[[selectedDate1]]">
+            </oj-bind-text>
+        </h3>
     </div>
-
+    <div class="oj-md-3 oj-flex-item oj-panel oj-margin">
+        <my-fullcalendar 
+            id="calendar2" 
+            on-day-click="[[clickListener]]">
+        </my-fullcalendar>
+        <h3>Selected date: 
+            <oj-bind-text 
+                value="[[selectedDate2]]">
+            </oj-bind-text>
+        </h3>
+    </div>
+    <div class="oj-md-3 oj-flex-item oj-panel oj-margin">
+        <my-fullcalendar 
+            id="calendar3" 
+            on-day-click="[[clickListener]]">
+        </my-fullcalendar>
+        <h3>Selected date: 
+            <oj-bind-text 
+                value="[[selectedDate3]]">
+            </oj-bind-text>
+        </h3>
+    </div>
 </div>
-
-

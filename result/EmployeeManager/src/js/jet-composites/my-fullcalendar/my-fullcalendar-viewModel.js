@@ -39,31 +39,31 @@ define(
             if (event.type === 'click' || (event.type === 'keypress' && event.keyCode === 13)) {
                 var params = {
                     'bubbles': true,
-                    'detail': {'value': self.selectedDate()}
+                    'detail': {
+                        'id': context.properties.id,
+                        'date': self.selectedDate()
+                    }
                 };
                 element.dispatchEvent(new CustomEvent('dayClick', params));
             }
-        }
-        ;
+        };
 
         function addListener() {
             element.addEventListener('click', clickDay);
             element.addEventListener('keypress', clickDay);
-        }
-        ;
+        };
 
         function removeListener() {
             element.removeEventListener('click', clickDay);
             element.removeEventListener('keypress', clickDay);
-        }
-        ;
+        };
 
         self.attached = function (context) {
             $('#' + context.properties.id).fullCalendar({
                 dayClick: function (date) {
                     self.selectedDate(date.format());
                 },
-                selectable: true,
+                selectable: true
             });
             addListener();
         };
@@ -72,19 +72,17 @@ define(
             removeListener();
         };
 
-    }
-    ;
+    };
 
     //Lifecycle methods - uncomment and implement if necessary 
-    ExampleComponentModel.prototype.activated = function (context) {
-    };
+    //ExampleComponentModel.prototype.activated = function (context) {
+    //};
 
-    ExampleComponentModel.prototype.connected = function (context) {
-    };
+    //ExampleComponentModel.prototype.connected = function (context) {
+    //};
 
-    ExampleComponentModel.prototype.bindingsApplied = function (context) {
-
-    };
+    //ExampleComponentModel.prototype.bindingsApplied = function (context) {
+    //};
 
     //ExampleComponentModel.prototype.disconnect = function(context){
     //};
