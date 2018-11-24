@@ -21,7 +21,7 @@
         }
     },   
     
-     "moment": {
+    "moment": {
         "cwd": "node_modules/moment",
         "debug": {
             "src": "moment.js",        
@@ -33,31 +33,6 @@
         }
     },
         
-    "version": {
-        "cwd": "node_modules/version/lib",    
-        "debug": {
-            "src": "version.js",
-            "path": "libs/version/version.js"
-        },
-        "release": {
-            "src": "version.js",
-            "path": "libs/version/version.js"
-        }
-    }, 
-    
-     
-    "widgets": {
-      "cwd": "node_modules/jquery-ui/ui/widgets",
-      "debug": {
-        "src": ["**"],
-        "path": "libs/jquery-ui/ui/widgets"
-      },
-      "release": {
-        "src": ["**"],
-        "path": "libs/jquery-ui/ui/widgets"
-      }
-    },
-
     "knockout": {
       "cdn": "3rdparty",
       "cwd": "node_modules/knockout/build/output",
