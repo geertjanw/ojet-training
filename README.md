@@ -1,6 +1,6 @@
 # Workshop: Web Component Development with Oracle JET
 
-The purpose of this script is to show how to put together a CRUD scenario in an Oracle JET application, supported by Web Components. 
+The purpose of this script is to show how to put together a CRUD scenario in an [Oracle JET](https://www.oracle.com/webfolder/technetwork/jet/index.html) application, supported by Web Components. 
 
 **Tip 1:** Go here to follow a free three week MOOC about Oracle JET: [oracle.com/goto/jet](https://www.oracle.com/goto/jet).
 
