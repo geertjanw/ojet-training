@@ -2,7 +2,9 @@
 
 The purpose of this script is to show how to put together a CRUD scenario in an Oracle JET application, supported by Web Components. 
 
-**Tip:** Go here to follow a free three week MOOC about Oracle JET: [oracle.com/goto/jet](https://www.oracle.com/goto/jet).
+**Tip 1:** Go here to follow a free three week MOOC about Oracle JET: [oracle.com/goto/jet](https://www.oracle.com/goto/jet).
+
+**Tip 2:** Go here to follow a free two week MOOC about Web Components: [oracle.com/goto/jetwebcomponents](https://www.oracle.com/goto/jetwebcomponents).
 
 **Troubleshooting:** If you run into problems, go here for the completed source files: [bit.ly/learn-jet-result](http://bit.ly/learn-jet-result)
 
