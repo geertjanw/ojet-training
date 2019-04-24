@@ -271,6 +271,18 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'text!../endpoints.json',
 
 What does 'text!' mean? That's the protocol defined by https://github.com/requirejs/text, which is part of Oracle JET, used for loading text resources, such as 'endpoints.json'.
 
+In your code, change this line...
+
+```js #button { border: none; }
+self.url = 'http://localhost:3000/employees';
+```
+
+...to this line, so that you're now referencing the endpoints file and parsing it at the same time:
+
+```js #button { border: none; }
+self.url = JSON.parse(endpoints).employees;
+```
+
 After adding new files, first kill the 'ojet' process in the Terminal window, using Ctrl-C, and then restart it. The 'watch' process, provided by 'ojet', will only look for changes to existing files; it will not build and re-serve new files.
 
 ### (c) Displaying the Selected Data in an Oracle JET Form
