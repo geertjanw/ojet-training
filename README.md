@@ -329,10 +329,24 @@ self.handleSelectionChanged = function (event) {
 };
 ```
 
-4. Back in 'dashboard.html', add an attribute to connect selection changes to your handler above:
+4. Back in 'dashboard.html', add an attribute to the ojDataGrid, to connect selection changes to your handler above:
 
 ```html #button { border: none; }
 on-selection-changed="[[handleSelectionChanged]]"
+```
+
+The ojDataGrid should now look like this:
+
+```html #button { border: none; }
+<oj-data-grid 
+     id="datagrid" 
+     on-selection-changed="[[handleSelectionChanged]]"         
+     style="height:200px; max-width:477px" 
+     data="[[dataSource]]" 
+     selection-mode.row="single" 
+     dnd.reorder.row="enable" 
+     header.column.style="width:100px" > 
+</oj-data-grid>
 ```
 
 5. Display the values of the selected row in the table via the form below, add it below the grid in 'dashboard.html':
