@@ -98,7 +98,13 @@ ojet create EmployeeManager --template=navdrawer
 ```
 **Note:** This process may take some time.
 
-2. CD into 'EmployeeManager' and run the following in the terminal and look in the browser:
+2. CD into 'EmployeeManager' in the terminal:
+
+```js #button { border: none; }
+cd EmployeeManager
+```
+
+...and then run the following in the terminal and look in the browser:
 
 ```js #button { border: none; }
 ojet serve
